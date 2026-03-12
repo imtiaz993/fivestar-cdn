@@ -14,7 +14,7 @@
       class="absolute top-0 bottom-0 left-0 z-10 h-full w-full bg-[#0389A0] hidden"
     ></div>
     <div
-      id="clip-path"
+      id="clip-path-2"
       style="clip-path: polygon(0 0, 12% 0, 0 100%, 0% 100%)"
       class="absolute top-0 bottom-0 left-0 z-10 h-full w-full bg-[#F0592B] hidden"
     ></div>
@@ -409,10 +409,12 @@
 
         const wrapper = document.getElementById("app-wrapper");
         const clipPath = document.getElementById("clip-path");
+        const clipPath2 = document.getElementById("clip-path-2");
 
         wrapper.style.transform = "scale(" + scale + ")";
         wrapper.style.display = "block";
         clipPath.style.display = "block";
+        clipPath2.style.display = "block";
       }
 
       window.addEventListener("resize", scalePage);

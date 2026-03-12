@@ -15,7 +15,7 @@
     ></div>
 
     <div
-      id="clip-path"
+      id="clip-path-2"
       class="absolute top-0 right-0 h-[120%] w-44 bg-[#F0592B] hidden"
       style="clip-path: polygon(0 0, 56% 0, 100% 100%, 40% 100%)"
     ></div>
@@ -69,10 +69,12 @@
 
         const wrapper = document.getElementById("app-wrapper");
         const clipPath = document.getElementById("clip-path");
+        const clipPath2 = document.getElementById("clip-path-2");
         wrapper.style.transform = "scale(" + scale + ")";
         wrapper.style.height = `${(1 / scale) * 100}vh`;
         wrapper.style.display = "flex";
         clipPath.style.display = "block";
+        clipPath2.style.display = "block";
       }
 
       window.addEventListener("resize", scalePage);
