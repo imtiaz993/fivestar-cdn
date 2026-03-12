@@ -7,18 +7,111 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="../public/favicon.ico" />
   </head>
-  <body
-    class="hidden max-h-dvh min-h-dvh w-360 origin-top-left overflow-hidden"
-    id="app-wrapper"
-  >
+  <body class="max-h-dvh min-h-dvh overflow-hidden">
+    <div
+      id="clip-path"
+      class="absolute top-0 left-0 h-[300px] w-[300px] bg-[#F0592B]"
+      style="clip-path: polygon(0 0, 100% 0, 0 100%)"
+    ></div>
+
+    <div
+      id="clip-path"
+      class="absolute right-0 bottom-0 h-[300px] w-[300px] bg-[#0389A0]"
+      style="clip-path: polygon(100% 0, 100% 100%, 0 100%)"
+    ></div>
+    <div
+      class="hidden w-384 origin-top-left overflow-hidden flex-col justify-center"
+      id="app-wrapper"
+    >
+      <section class="flex h-screen w-full items-center justify-center px-24">
+        <div
+          class="relative z-10 grid w-full max-w-7xl grid-cols-2 items-center gap-20"
+        >
+          <div class="space-y-6">
+            <div class="space-y-2 uppercase">
+              <h1 class="text-8xl leading-none font-bold text-[#F0592B]">
+                Award
+              </h1>
+              <h2
+                class="text-8xl leading-[0.95] font-bold tracking-tight text-[#0389A0]"
+              >
+                Winners
+              </h2>
+            </div>
+
+            <p class="text-2xl leading-[1.45] text-[#4A4F55]">
+              Want to take advantage of really standing out, activating referral
+              and winning new prospects ... we offer a wide range of
+              opportunities to do just that!
+            </p>
+          </div>
+
+          <div class="relative flex items-center justify-center">
+            <div
+              class="relative flex h-[520px] w-[520px] items-center justify-center gap-10"
+            >
+              <div class="flex flex-col items-center gap-3">
+                <div
+                  class="h-[440px] w-[240px] overflow-hidden rounded-xl border border-gray-200 shadow-xl"
+                >
+                  <video muted controls class="h-full w-full object-cover">
+                    <source
+                      src="https://ags.s3.us-east-1.amazonaws.com/ago/img/SizzleVideo_Confetti_V.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+
+                <h1
+                  class="text-center text-[1.1rem] font-light leading-snug text-[#1F2937]"
+                >
+                  Fun, low-cost sizzle award announcement videos
+                </h1>
+              </div>
+
+              <div
+                class="flex flex-col items-start justify-between gap-y-10 -mt-6 text-[#374151]"
+              >
+                <div class="flex flex-col items-center gap-1">
+                  <div class="h-[90px] w-[220px] object-contain">
+                    <img
+                      src="../public/awardannouncement2.png"
+                      alt=""
+                      class="h-full w-full object-contain"
+                    />
+                  </div>
+
+                  <h1 class="text-[1.1rem] font-light leading-snug">
+                    Local publication appearance with supporting direct mail and
+                    digital
+                  </h1>
+                </div>
+
+                <div
+                  class="flex flex-col gap-4 text-2xl font-semibold text-[#1F2937]"
+                >
+                  <p>National publication brand associations</p>
+                  <p>Targeted direct mail</p>
+                  <p>Social media</p>
+                  <p>Other digital</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <script>
       function scalePage() {
-        const baseWidth = 1440;
+        const baseWidth = 1536;
         const scale = window.innerWidth / baseWidth;
 
         const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
         wrapper.style.transform = "scale(" + scale + ")";
-        wrapper.style.display = "block";
+        wrapper.style.height = `${(1 / scale) * 100}vh`;
+        wrapper.style.display = "flex";
+        clipPath.style.display = "block";
       }
 
       window.addEventListener("resize", scalePage);
