@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine -</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body class="max-h-dvh min-h-dvh overflow-hidden">
+    <div
+      class="absolute top-0 right-0 h-[120%] w-70 bg-[#0389A0]"
+      style="clip-path: polygon(0 0, 46% 0, 100% 100%, 25% 100%)"
+    ></div>
+
+    <div
+      class="absolute top-0 right-0 h-[120%] w-44 bg-[#F0592B]"
+      style="clip-path: polygon(0 0, 56% 0, 100% 100%, 40% 100%)"
+    ></div>
+    <div
+      class="hidden w-384 origin-top-left overflow-hidden flex-col justify-center"
+      id="app-wrapper"
+    >
+      <img
+        src="../public/eelogo.png"
+        alt="Essential Engine logo"
+        class="max-w-48 absolute top-0 left-0 ml-10 mt-10"
+      />
+      <main class="relative">
+        <section class="relative z-10 flex items-center justify-start">
+          <div class="flex w-[46%] flex-col px-18 pt-12 pb-12">
+            <div class="mt-28 space-y-2 uppercase">
+              <h1 class="text-8xl leading-none font-bold text-[#F0592B]">
+                Award
+              </h1>
+              <h2
+                class="text-8xl leading-[0.95] font-bold tracking-tight text-[#0389A0]"
+              >
+                Winners
+              </h2>
+            </div>
+
+            <div class="mt-10 space-y-8 leading-[1.45] text-[#4A4F55]">
+              <p class="text-2xl">
+                At no expense to you, you will be featured on
+                FiveStarProfessional.com
+              </p>
+              <p class="text-lg font-light">
+                You also have free rights to mention the award and add it to
+                your list of titles and awards.
+              </p>
+            </div>
+          </div>
+          <img
+            src="../public/award-announcement.jpg"
+            alt="Award Announcement"
+            class="max-w-200"
+          />
+        </section>
+      </main>
+    </div>
+
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        wrapper.style.transform = "scale(" + scale + ")";
+        wrapper.style.height = `${(1 / scale) * 100}vh`;
+        wrapper.style.display = "flex";
+        clipPath.style.display = "block";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>

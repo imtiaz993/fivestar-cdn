@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - EE Company Intro / FS Award Program Intro</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body class="max-h-dvh min-h-dvh overflow-hidden">
+    <div
+      class="absolute top-0 left-0 h-full w-[26%] bg-[#F0592B]"
+      style="clip-path: polygon(0 0, 70% 0, 25% 100%, 0 100%)"
+    ></div>
+    <div
+      class="mt-10 hidden w-384 origin-top-left overflow-hidden"
+      id="app-wrapper"
+    >
+      <section
+        class="absolute top-6 left-25 z-10 max-w-190 bg-[#0389A0] px-7 py-6 text-white shadow-md shadow-black"
+      >
+        <div class="flex gap-4">
+          <div class="border-4 border-white"></div>
+          <div class="space-y-1">
+            <h1 class="text-start text-5xl text-white">
+              Essential Engine Programs and Services
+            </h1>
+          </div>
+        </div>
+      </section>
+      <main>
+        <div class="h-screen px-4 py-8">
+          <div class="mt-10 flex justify-end">
+            <img src="../public/eelogo.png" alt="eelogo" class="max-w-48" />
+          </div>
+          <div class="mx-auto mt-28 w-220">
+            <div class="flex items-center justify-center gap-8">
+              <div>
+                <h2 class="text-4xl leading-tight font-semibold text-[#2f3843]">
+                  Five Star Professional Award Program:
+                </h2>
+
+                <p
+                  class="mt-6 max-w-225 text-2xl leading-[1.45] font-light text-[#454545]"
+                >
+                  This program conducts research to define and promote
+                  professional excellence and is the largest and longest running
+                  (established 2001) award program in the United States for the
+                  real estate, mortgage, home/auto insurance, and wealth
+                  management industries.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mx-auto mt-14 max-w-full">
+            <div class="mt-8">
+              <div class="flex justify-center">
+                <img
+                  src="../public/eeintro.png"
+                  alt="Essential Living"
+                  class="w-220"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        wrapper.style.transform = "scale(" + scale + ")";
+        wrapper.style.display = "block";
+        clipPath.style.display = "block";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>

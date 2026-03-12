@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine -</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body
+    class="hidden max-h-dvh min-h-dvh w-360 origin-top-left overflow-hidden"
+    id="app-wrapper"
+  >
+    <script>
+      function scalePage() {
+        const baseWidth = 1440;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        wrapper.style.transform = "scale(" + scale + ")";
+        wrapper.style.display = "block";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>

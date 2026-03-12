@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine -</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body class="max-h-dvh min-h-dvh overflow-hidden">
+    <div
+      id="clip-path"
+      style="clip-path: polygon(41% 0, 100% 0%, 100% 100%, 6% 100%)"
+      class="absolute top-0 right-0 bottom-0 z-0 hidden w-1/2 bg-[#0389A0]"
+    ></div>
+    <div
+      class="mt-10 hidden flex-col justify-center w-384 origin-top-left overflow-hidden"
+      id="app-wrapper"
+    >
+      <section>
+        <div class="flex w-full items-center justify-between">
+          <div class="flex w-1/2 flex-col items-center justify-center gap-8">
+            <h1 class="text-7xl font-bold text-[#0389A0]">Exclusive!</h1>
+            <div
+              class="relative flex h-104 w-104 items-center justify-center rounded-full bg-[#efefef] shadow-[0_10px_18px_rgba(0,0,0,0.22)]"
+              id="donut-chart"
+              style="
+                background: conic-gradient(
+                  #0f8aa0 0deg,
+                  #0f8aa0 0deg,
+                  #efefef 0deg,
+                  #efefef 360deg
+                );
+              "
+            >
+              <div
+                class="flex h-75 w-75 items-center justify-center rounded-full bg-[#f7f7f7] shadow-[inset_0_2px_8px_rgba(0,0,0,0.14)]"
+              >
+                <span
+                  class="text-[7rem] leading-none font-bold tracking-[-0.06em] text-black"
+                  id="donut-value"
+                >
+                  0%
+                </span>
+              </div>
+            </div>
+            <p class="text-3xl font-extralight">San Diego Real Estate Agents</p>
+          </div>
+          <div
+            class="relative flex w-1/3 flex-col items-center justify-center gap-8 px-12 text-center text-white"
+          >
+            <div class="flex flex-col items-center gap-3">
+              <h1 class="text-9xl leading-none font-bold text-white">2026</h1>
+              <div
+                style="clip-path: polygon(50% 100%, 0 0, 100% 0)"
+                class="h-15 w-80 bg-white"
+              ></div>
+            </div>
+            <div class="space-y-2">
+              <p class="text-3xl leading-tight font-bold">
+                Size of Your Market:
+              </p>
+              <p
+                class="bg-[#F0592B] px-2 py-4 text-5xl leading-none font-semibold"
+              >
+                32,507
+              </p>
+            </div>
+            <div class="space-y-2">
+              <p class="text-3xl leading-tight font-bold">Projected Winners:</p>
+              <p
+                class="bg-[#F0592B] px-2 py-4 text-5xl leading-none font-semibold"
+              >
+                326
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 w-[99vw] border border-[#F0592B]"></div>
+      </section>
+    </div>
+    <script>
+      function animateDonut(targetPercent) {
+        const donut = document.getElementById("donut-chart");
+        const value = document.getElementById("donut-value");
+
+        if (!donut || !value) return;
+
+        const duration = 1200;
+        const startTime = performance.now();
+
+        function updateFrame(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const currentPercent = targetPercent * progress;
+          const currentDegrees = (currentPercent / 100) * 360;
+
+          donut.style.background = `conic-gradient(#0f8aa0 0deg, #0f8aa0 ${currentDegrees}deg, #efefef ${currentDegrees}deg, #efefef 360deg)`;
+          value.textContent = `${Math.round(currentPercent)}%`;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateFrame);
+          }
+        }
+
+        requestAnimationFrame(updateFrame);
+      }
+
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+
+        wrapper.style.transform = "scale(" + scale + ")";
+        wrapper.style.display = "flex";
+        wrapper.style.height = `${(1 / scale) * 100}vh`;
+        clipPath.style.display = "block";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", () => {
+        scalePage();
+        animateDonut(2);
+      });
+    </script>
+  </body>
+</html>

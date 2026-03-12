@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Agenda</title>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="hidden max-h-dvh min-h-dvh w-360 origin-top-left overflow-hidden p-6"
+    id="app-wrapper"
+  >
+    <div class="flex flex-col justify-between">
+      <header>
+        <div class="flex items-center">
+          <img src="../public/eelogo.png" alt="eelogo" class="max-w-48" />
+          <div class="mx-2 -mt-5 h-0.5 w-full bg-[#FB2C37]"></div>
+        </div>
+      </header>
+      <section>
+        <div
+          class="top-0 right-0 z-10 flex h-50 w-120 items-center justify-center bg-[#0389A0] p-10 not-only:absolute"
+        >
+          <h1 class="text-center text-7xl font-bold text-white">AGENDA</h1>
+        </div>
+        <div class="absolute top-5 right-0 z-0 h-53 w-lg bg-[#F0592B]"></div>
+      </section>
+      <main class="pt-20">
+        <ul class="grid gap-10">
+          <li class="flex items-center gap-7">
+            <span class="text-5xl font-bold">1.</span>
+            <span class="max-w-1/2 text-3xl font-medium text-wrap"
+              >Essential Engine and the Five Star Award Program Introduction
+              <span class="text-normal text-xl">(couple minutes)</span>
+            </span>
+          </li>
+          <li>
+            <span class="flex items-center gap-5">
+              <span class="text-5xl font-bold">2.</span>
+              <span class="max-w-1/2 text-3xl font-medium text-wrap">
+                Finalize Your Award Status
+                <span class="text-normal text-xl">(10 minutes)</span>
+              </span>
+            </span>
+            <ul class="ml-24 list-disc text-2xl">
+              <li>
+                Review the award selection process, criteria, and marketing
+                usage guidelines <span class="text-xl">(short video)</span>
+              </li>
+              <li>
+                Complete the award certification process, including a final
+                regulatory check, and update your award status
+              </li>
+              <li>
+                Review your free rights to mention the award and add it to your
+                list of other key differentiators, titles, and awards!
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="flex items-center gap-5">
+              <span class="text-5xl font-bold">3.</span>
+              <span class="max-w-1/2 text-3xl font-medium text-wrap">
+                Explore How to Best Leverage Your Award
+              </span>
+            </span>
+            <ul class="ml-24 list-disc text-2xl">
+              <li>
+                Common tools and strategies to make the most of your achievement
+              </li>
+
+              <li>
+                Evaluate professional strategies to take your business to the
+                next level
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </main>
+    </div>
+    <footer class="flex justify-end">
+      <img src="../public/awardlogo.png" alt="awardlogo" class="max-w-32" />
+    </footer>
+    <script>
+      function scalePage() {
+        const baseWidth = 1440;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        wrapper.style.transform = "scale(" + scale + ")";
+        wrapper.style.display = "block";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>

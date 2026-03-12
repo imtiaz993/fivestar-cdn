@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine -</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./js/confetti.browser.min.js"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body class="max-h-dvh min-h-dvh overflow-hidden bg-[#0E1B3B]">
+    <div
+      id="app-wrapper"
+      class="hidden w-384 origin-top-left justify-center items-center"
+    >
+      <section class="text-white">
+        <div class="flex flex-col justify-between">
+          <div class="flex flex-1 items-center justify-center">
+            <div class="space-y-8 px-10">
+              <h1 class="text-9xl font-bold">Congratulations!</h1>
+
+              <div class="relative z-50">
+                <div class="relative z-50 w-full bg-[#F0592B] p-6">
+                  <p class="line-clamp-2 text-center text-4xl font-extralight">
+                    You have been officially certified as a
+                    <br />
+                    <span class="font-bold uppercase">
+                      2026 FIVE STAR REAL ESTATE AGENT
+                    </span>
+                  </p>
+                </div>
+
+                <div
+                  class="absolute top-1/2 left-1/2 z-0 h-20 w-260 -translate-x-1/2 -translate-y-1/2 border-3 border-white"
+                ></div>
+              </div>
+
+              <h2 class="text-center text-7xl font-semibold">5 YEAR WINNER</h2>
+            </div>
+          </div>
+
+          <div class="absolute bottom-0 left-0 ml-10 mb-10 py-4">
+            <img src="../public/eelogo.png" alt="awardlogo" class="max-w-48" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+        const wrapper = document.getElementById("app-wrapper");
+
+        wrapper.style.transform = "scale(" + scale + ")";
+        wrapper.style.height = `${(1 / scale) * 100}vh`;
+        wrapper.style.display = "flex";
+      }
+
+      function runCongratulationsConfetti() {
+        const count = 400;
+
+        const defaults = {
+          origin: { x: 0.5, y: 0.65 },
+          gravity: 0.5,
+          ticks: 300,
+        };
+
+        function fire(particleRatio, opts) {
+          confetti(
+            Object.assign({}, defaults, opts, {
+              particleCount: Math.floor(count * particleRatio),
+            }),
+          );
+        }
+
+        fire(0.25, {
+          spread: 26,
+          startVelocity: 55,
+        });
+
+        fire(0.2, {
+          spread: 60,
+        });
+
+        fire(0.35, {
+          spread: 100,
+          decay: 0.91,
+          scalar: 0.8,
+        });
+
+        fire(0.1, {
+          spread: 120,
+          startVelocity: 25,
+          decay: 0.92,
+          scalar: 1.2,
+        });
+
+        fire(0.1, {
+          spread: 120,
+          startVelocity: 45,
+        });
+      }
+
+      window.addEventListener("resize", scalePage);
+
+      window.addEventListener("load", () => {
+        scalePage();
+
+        setTimeout(() => {
+          runCongratulationsConfetti();
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
