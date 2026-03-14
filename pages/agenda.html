@@ -11,7 +11,7 @@
     class="hidden min-h-screen w-full overflow-x-hidden bg-white sm:p-4 sm:max-h-dvh sm:min-h-dvh sm:w-360 sm:origin-top-left sm:overflow-hidden sm:p-6"
     id="app-wrapper"
   >
-    <div class="flex min-h-screen flex-col justify-between sm:min-h-dvh">
+    <div class="flex flex-col justify-between">
       <header class="p-4 pb-0 sm:p-0 sm:pl-10">
         <div class="flex items-center justify-between">
           <img
@@ -25,23 +25,23 @@
             class="max-w-12 sm:hidden"
           />
           <div
-            class="hidden sm:blockmx-2 -mt-5 h-0.5 w-full bg-[#FB2C37]"
+            class="hidden sm:block mx-2 -mt-5 h-0.5 w-full bg-[#FB2C37]"
           ></div>
         </div>
       </header>
-      <section class="relative mt-6 sm:mt-4 sm:mb-6 min-h-28 sm:mt-0 sm:mb-0 sm:min-h-0">
+      <section class="relative sm:static mt-6 sm:m-0">
         <div
-          class="relative z-10 sm:ml-auto flex h-20 sm:h-24 w-full max-w-[calc(100%-1em)] items-center justify-center bg-[#0389A0] p-4 sm:absolute sm:top-0 sm:right-0 sm:h-50 sm:w-120 sm:p-10"
+          class="sm:absolute top-0 sm:right-0 z-10 flex h-20 sm:h-50 w-full max-w-[calc(100%-1em)] sm:w-120 items-center justify-center bg-[#0389A0] p-4 sm:p-10 not-only:absolute"
         >
-          <h1 class="text-center text-3xl font-bold text-white sm:text-7xl">
+          <h1 class="text-center text-3xl sm:text-7xl font-bold text-white">
             AGENDA
           </h1>
         </div>
         <div
-          class="absolute top-4 left-0 sm:left-auto sm:right-0 z-0 h-20 sm:h-24 w-full sm:w-[85%] sm:max-w-[18rem] bg-[#F0592B] sm:top-5 sm:h-53 sm:w-lg sm:max-w-none"
+          class="mt-5 sm:mt-5 sm:absolute top-5 left-0 sm:left-auto sm:right-0 z-0 h-20 sm:h-53 w-full sm:w-lg bg-[#F0592B]"
         ></div>
       </section>
-      <main class="p-4 sm:p-0 sm:pt-20 sm:pl-20">
+      <main class="p-4 pt-6 sm:p-0 sm:pt-20 sm:pl-20">
         <ul class="grid gap-6 sm:gap-10">
           <li class="flex items-start gap-3 sm:items-center sm:gap-7">
             <span class="text-3xl font-bold sm:text-5xl">1.</span>
@@ -65,7 +65,7 @@
                 >
               </span>
             </span>
-            <ul class="mt-3 ml-9 list-disc text-lg sm:ml-24 sm:text-2xl">
+            <ul class="ml-9 list-disc text-lg sm:ml-24 sm:text-2xl">
               <li>
                 Review the award selection process, criteria, and marketing
                 usage guidelines
@@ -90,7 +90,7 @@
                 Explore How to Best Leverage Your Award
               </span>
             </span>
-            <ul class="mt-3 ml-9 list-disc text-lg sm:ml-24 sm:text-2xl">
+            <ul class="ml-9 list-disc text-lg sm:ml-24 sm:text-2xl">
               <li>
                 Common tools and strategies to make the most of your achievement
               </li>
