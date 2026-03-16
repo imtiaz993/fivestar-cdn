@@ -25,7 +25,7 @@
       <section>
         <div class="flex w-full items-center justify-between">
           <div class="flex w-1/2 flex-col items-center justify-center gap-8">
-            <h1 class="text-7xl font-bold text-[#0389A0]">Exclusive!</h1>
+            <h1 class="text-6xl font-bold text-[#0389A0]">Exclusive!</h1>
             <div
               class="relative flex h-104 w-104 items-center justify-center rounded-full bg-[#efefef] shadow-[0_10px_18px_rgba(0,0,0,0.22)]"
               id="donut-chart"
@@ -49,7 +49,7 @@
                 </span>
               </div>
             </div>
-            <p class="text-3xl font-extralight">San Diego Real Estate Agents</p>
+            <p class="text-2xl font-light">San Diego Real Estate Agents</p>
           </div>
           <div
             class="relative flex w-1/3 flex-col items-center justify-center gap-8 px-12 text-center text-white"
@@ -62,7 +62,7 @@
               ></div>
             </div>
             <div class="space-y-2">
-              <p class="text-3xl leading-tight font-bold">
+              <p class="text-2xl leading-tight font-bold">
                 Size of Your Market:
               </p>
               <p
@@ -72,7 +72,7 @@
               </p>
             </div>
             <div class="space-y-2">
-              <p class="text-3xl leading-tight font-bold">Projected Winners:</p>
+              <p class="text-2xl leading-tight font-bold">Projected Winners:</p>
               <p
                 class="bg-[#F0592B] px-2 py-4 text-5xl leading-none font-semibold"
               >
@@ -117,10 +117,16 @@
 
         const wrapper = document.getElementById("app-wrapper");
         const clipPath = document.getElementById("clip-path");
+        const isDesktopLayout = window.innerWidth >= 640;
 
-        wrapper.style.transform = "scale(" + scale + ")";
-        wrapper.style.display = "flex";
-        wrapper.style.height = `${(1 / scale) * 100}vh`;
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.display = "flex";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+        }
+
         clipPath.style.display = "block";
       }
 

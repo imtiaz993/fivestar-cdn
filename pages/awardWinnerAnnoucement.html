@@ -43,11 +43,11 @@
             </div>
 
             <div class="mt-10 space-y-8 leading-[1.45] text-[#4A4F55]">
-              <p class="text-2xl">
+              <p class="text-3xl">
                 At no expense to you, you will be featured on
                 FiveStarProfessional.com
               </p>
-              <p class="text-lg font-light">
+              <p class="text-2xl font-light">
                 You also have free rights to mention the award and add it to
                 your list of titles and awards.
               </p>
@@ -70,8 +70,15 @@
         const wrapper = document.getElementById("app-wrapper");
         const clipPath = document.getElementById("clip-path");
         const clipPath2 = document.getElementById("clip-path-2");
-        wrapper.style.transform = "scale(" + scale + ")";
-        wrapper.style.height = `${(1 / scale) * 100}vh`;
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+        }
+
         wrapper.style.display = "flex";
         clipPath.style.display = "block";
         clipPath2.style.display = "block";

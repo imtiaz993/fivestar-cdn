@@ -36,7 +36,7 @@
         </div>
         <footer class="fixed right-0 bottom-0 z-30">
           <div class="flex h-36 w-270 items-center justify-start bg-[#0389A0]">
-            <p class="px-7 font-light text-white">
+            <p class="px-7 text-2xl font-light text-white">
               This short video explains the Award Selection Process, Winner
               Criteria, and Usage Guidelines
             </p>
@@ -50,8 +50,15 @@
         const scale = window.innerWidth / baseWidth;
 
         const wrapper = document.getElementById("app-wrapper");
-        wrapper.style.transform = "scale(" + scale + ")";
-        wrapper.style.height = `${(1 / scale) * 100}vh`;
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+        }
+
         wrapper.style.display = "flex";
       }
 

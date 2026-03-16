@@ -33,7 +33,7 @@
         <div
           class="sm:absolute top-0 sm:right-0 z-10 flex h-20 sm:h-50 w-full max-w-[calc(100%-1em)] sm:w-120 items-center justify-center bg-[#0389A0] p-4 sm:p-10 not-only:absolute"
         >
-          <h1 class="text-center text-3xl sm:text-7xl font-bold text-white">
+          <h1 class="text-center text-3xl sm:text-6xl font-bold text-white">
             AGENDA
           </h1>
         </div>
@@ -65,7 +65,7 @@
                 >
               </span>
             </span>
-            <ul class="ml-9 list-disc text-lg sm:ml-24 sm:text-2xl">
+            <ul class="ml-9 list-disc text-lg sm:ml-24 sm:text-2xl font-light">
               <li>
                 Review the award selection process, criteria, and marketing
                 usage guidelines
@@ -90,7 +90,7 @@
                 Explore How to Best Leverage Your Award
               </span>
             </span>
-            <ul class="ml-9 list-disc text-lg sm:ml-24 sm:text-2xl">
+            <ul class="ml-9 list-disc text-lg sm:ml-24 sm:text-2xl font-light">
               <li>
                 Common tools and strategies to make the most of your achievement
               </li>
@@ -115,10 +115,10 @@
       function scalePage() {
         const baseWidth = 1440;
         const wrapper = document.getElementById("app-wrapper");
+        const scale = window.innerWidth / baseWidth;
         const isDesktopLayout = window.innerWidth >= 640;
 
         if (isDesktopLayout) {
-          const scale = window.innerWidth / baseWidth;
           wrapper.style.transform = "scale(" + scale + ")";
         } else {
           wrapper.style.transform = "none";

@@ -44,7 +44,7 @@
               </h2>
             </div>
 
-            <p class="text-2xl leading-[1.45] text-[#4A4F55]">
+            <p class="text-2xl font-light leading-[1.45] text-[#4A4F55]">
               Want to take advantage of really standing out, activating referral
               and winning new prospects ... we offer a wide range of
               opportunities to do just that!
@@ -68,7 +68,7 @@
                 </div>
 
                 <h1
-                  class="text-center text-[1.1rem] leading-snug font-light text-[#1F2937]"
+                  class="text-center text-lg leading-snug font-light text-[#1F2937]"
                 >
                   Fun, low-cost sizzle award announcement videos
                 </h1>
@@ -86,7 +86,7 @@
                     />
                   </div>
 
-                  <h1 class="text-[1.1rem] leading-snug font-light text-center">
+                  <h1 class="text-lg leading-snug font-light text-center">
                     Local publication appearance with supporting direct mail and
                     digital
                   </h1>
@@ -114,8 +114,15 @@
         const wrapper = document.getElementById("app-wrapper");
         const clipPath = document.getElementById("clip-path");
         const clipPath2 = document.getElementById("clip-path-2");
-        wrapper.style.transform = "scale(" + scale + ")";
-        wrapper.style.height = `${(1 / scale) * 100}vh`;
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+        }
+
         wrapper.style.display = "flex";
         clipPath.style.display = "block";
         clipPath2.style.display = "block";

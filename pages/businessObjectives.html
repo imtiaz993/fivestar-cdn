@@ -19,7 +19,7 @@
         <div
           class="absolute top-0 left-0 z-10 flex h-50 w-120 items-center justify-center bg-[#0389A0] p-10"
         >
-          <h1 class="text-7xl font-bold text-white">Business Objectives</h1>
+          <h1 class="text-6xl font-bold text-white">Business Objectives</h1>
         </div>
         <div class="absolute top-5 left-0 z-0 h-53 w-lg bg-[#F0592B]"></div>
       </section>
@@ -44,7 +44,7 @@
               class="absolute top-0 left-0 flex h-40 w-80 flex-col justify-center gap-3 rounded-md bg-[#0389A0] px-6 text-center text-white shadow-[0_6px_18px_rgba(0,0,0,0.08)]"
             >
               <h2 class="text-3xl font-bold uppercase">Activate</h2>
-              <p class="text-lg leading-[1.18]">
+              <p class="text-xl leading-[1.18]">
                 Generate more referrals from your current network
               </p>
             </div>
@@ -52,7 +52,7 @@
               class="absolute top-28 right-0 flex h-40 w-80 flex-col justify-center gap-3 rounded-md bg-[#0389A0] px-6 text-center text-white shadow-[0_6px_18px_rgba(0,0,0,0.08)]"
             >
               <h2 class="text-3xl font-bold uppercase">Captivate</h2>
-              <p class="text-lg leading-[1.18]">
+              <p class="text-xl leading-[1.18]">
                 Win greater % of new prospective client presentations
               </p>
             </div>
@@ -60,7 +60,7 @@
               class="absolute top-64 left-0 flex h-40 w-80 flex-col justify-center gap-3 rounded-md bg-[#0389A0] px-6 text-center text-white shadow-[0_6px_18px_rgba(0,0,0,0.08)]"
             >
               <h2 class="text-3xl font-bold uppercase">Cultivate</h2>
-              <p class="text-lg leading-[1.18]">
+              <p class="text-xl leading-[1.18]">
                 Generate leads outside of your current network
               </p>
             </div>
@@ -68,7 +68,7 @@
               class="absolute top-92 right-0 flex h-40 w-80 flex-col justify-center gap-3 rounded-md bg-[#0389A0] px-6 text-center text-white shadow-[0_6px_18px_rgba(0,0,0,0.08)]"
             >
               <h2 class="text-3xl font-bold uppercase">Elevate</h2>
-              <p class="text-lg leading-[1.18]">
+              <p class="text-xl leading-[1.18]">
                 Improve brand recognition and what makes you different ... "the
                 right choice"
               </p>
@@ -83,7 +83,13 @@
         const scale = window.innerWidth / baseWidth;
 
         const wrapper = document.getElementById("app-wrapper");
-        wrapper.style.transform = "scale(" + scale + ")";
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+        } else {
+          wrapper.style.transform = "none";
+        }
         wrapper.style.display = "block";
       }
 

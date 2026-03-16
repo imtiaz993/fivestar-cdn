@@ -35,7 +35,7 @@
                 ></div>
               </div>
 
-              <h2 class="text-center text-7xl font-semibold">5 YEAR WINNER</h2>
+              <h2 class="text-center text-6xl font-semibold">5 YEAR WINNER</h2>
             </div>
           </div>
 
@@ -51,9 +51,15 @@
         const baseWidth = 1536;
         const scale = window.innerWidth / baseWidth;
         const wrapper = document.getElementById("app-wrapper");
+        const isDesktopLayout = window.innerWidth >= 640;
 
-        wrapper.style.transform = "scale(" + scale + ")";
-        wrapper.style.height = `${(1 / scale) * 100}vh`;
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+        }
+
         wrapper.style.display = "flex";
       }
 

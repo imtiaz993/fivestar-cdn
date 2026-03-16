@@ -23,7 +23,7 @@
         <div class="flex gap-4">
           <div class="border-4 border-white"></div>
           <div class="space-y-1">
-            <h1 class="text-start text-5xl text-white">
+            <h1 class="text-start text-6xl text-white">
               Essential Engine Programs and Services
             </h1>
           </div>
@@ -74,7 +74,14 @@
 
         const wrapper = document.getElementById("app-wrapper");
         const clipPath = document.getElementById("clip-path");
-        wrapper.style.transform = "scale(" + scale + ")";
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+        } else {
+          wrapper.style.transform = "none";
+        }
+
         wrapper.style.display = "block";
         clipPath.style.display = "block";
       }
