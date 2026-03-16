@@ -8,22 +8,24 @@
     <script src="./js/confetti.browser.min.js"></script>
     <link rel="shortcut icon" href="../public/favicon.ico" />
   </head>
-  <body class="max-h-dvh min-h-dvh overflow-hidden bg-[#0E1B3B]">
+  <body class="min-h-screen overflow-x-hidden bg-[#0E1B3B] sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden">
     <div
       id="app-wrapper"
-      class="hidden w-384 origin-top-left items-center justify-center"
+      class="hidden min-h-screen sm:min-h-auto w-full items-center justify-center sm:px-5 py-8 sm:w-384 sm:origin-top-left sm:px-0 sm:py-0"
     >
-      <section class="text-white">
-        <div class="flex flex-col justify-between">
+      <section class="w-full text-white">
+        <div class="flex flex-col justify-between sm:min-h-0">
           <div class="flex flex-1 items-center justify-center">
-            <div class="space-y-8 px-10">
-              <h1 class="text-9xl font-bold">Congratulations!</h1>
+            <div class="w-full max-w-4xl space-y-6 sm:space-y-8 sm:px-10">
+              <h1 class="text-center text-4xl font-bold leading-none sm:text-9xl">
+                Congratulations!
+              </h1>
 
               <div class="relative z-50">
-                <div class="relative z-50 w-full bg-[#F0592B] p-6">
-                  <p class="line-clamp-2 text-center text-4xl font-extralight">
+                <div class="relative z-50 w-full bg-[#F0592B] px-4 py-5 sm:p-6">
+                  <p class="text-center text-xl font-extralight leading-8 sm:text-4xl">
                     You have been officially certified as a
-                    <br />
+                    <br class="hidden sm:block" />
                     <span class="font-bold uppercase">
                       2026 FIVE STAR REAL ESTATE AGENT
                     </span>
@@ -31,16 +33,22 @@
                 </div>
 
                 <div
-                  class="absolute top-1/2 left-1/2 z-0 h-20 w-260 -translate-x-1/2 -translate-y-1/2 border-3 border-white"
+                  class="absolute top-1/2 left-1/2 z-0 h-16 w-[92%] -translate-x-1/2 -translate-y-1/2 border-2 border-white sm:h-20 sm:w-260 sm:border-3"
                 ></div>
               </div>
 
-              <h2 class="text-center text-6xl font-semibold">5 YEAR WINNER</h2>
+              <h2 class="text-center text-2xl font-semibold sm:text-6xl">
+                5 YEAR WINNER
+              </h2>
             </div>
           </div>
 
-          <div class="absolute bottom-0 left-0 mb-10 ml-10 py-4">
-            <img src="../public/eelogo.png" alt="awardlogo" class="max-w-48" />
+          <div class="absolute bottom-0 left-0 mb-10 ml-4 sm:ml-10 py-4">
+            <img
+              src="../public/eelogo.png"
+              alt="awardlogo"
+              class="max-w-32 sm:mx-0 sm:max-w-48"
+            />
           </div>
         </div>
       </section>
@@ -58,6 +66,7 @@
           wrapper.style.height = `${(1 / scale) * 100}vh`;
         } else {
           wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
         }
 
         wrapper.style.display = "flex";

@@ -7,44 +7,50 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="../public/favicon.ico" />
   </head>
-  <body class="max-h-dvh min-h-dvh overflow-hidden">
+  <body class="min-h-screen sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden">
     <div
       id="clip-path"
-      class="absolute top-0 left-0 h-[300px] w-[300px] bg-[#F0592B] hidden"
+      class="absolute sm:fixed top-0 left-0 hidden h-24 w-24 bg-[#F0592B] sm:h-[300px] sm:w-[300px]"
       style="clip-path: polygon(0 0, 100% 0, 0 100%)"
     ></div>
 
     <div
       id="clip-path-2"
-      class="absolute right-0 bottom-0 h-[300px] w-[300px] bg-[#0389A0] hidden"
+      class="absolute sm:fixed right-0 bottom-0 hidden h-24 w-24 bg-[#0389A0] sm:h-[300px] sm:w-[300px]"
       style="clip-path: polygon(100% 0, 100% 100%, 0 100%)"
     ></div>
     <div
-      class="hidden w-384 origin-top-left flex-col justify-center overflow-hidden"
+      class="hidden flex-col justify-start px-5 py-6 sm:w-384 sm:origin-top-left sm:justify-center sm:px-0 sm:py-0"
       id="app-wrapper"
     >
       <img
         src="../public/eelogo.png"
         alt="Essential Engine logo"
-        class="absolute top-0 right-0 mt-10 mr-10 max-w-48"
+        class="mb-6 ml-auto max-w-32 sm:fixed sm:top-0 sm:right-0 sm:mt-10 sm:mr-10 sm:mb-0 sm:max-w-48"
       />
-      <section class="relative flex flex-col justify-center px-24">
+      <section
+        class="relative flex flex-1 sm:flex-none flex-col justify-center sm:items-center"
+      >
         <div
-          class="relative z-10 grid w-full max-w-7xl grid-cols-2 items-center gap-20"
+          class="relative z-10 grid w-full max-w-7xl grid-cols-1 items-center gap-10 sm:grid-cols-2 sm:gap-20 sm:px-24"
         >
-          <div class="space-y-6">
-            <div class="space-y-2 uppercase">
-              <h1 class="text-8xl leading-none font-bold text-[#F0592B]">
+          <div class="space-y-5 text-center sm:text-left">
+            <div class="space-y-1 uppercase sm:space-y-2">
+              <h1
+                class="text-5xl leading-none font-bold text-[#F0592B] sm:text-8xl"
+              >
                 Award
               </h1>
               <h2
-                class="text-8xl leading-[0.95] font-bold tracking-tight text-[#0389A0]"
+                class="text-5xl leading-[0.95] font-bold tracking-tight text-[#0389A0] sm:text-8xl"
               >
                 Winners
               </h2>
             </div>
 
-            <p class="text-2xl font-light leading-[1.45] text-[#4A4F55]">
+            <p
+              class="mx-auto max-w-xl text-lg font-light leading-7 text-[#4A4F55] sm:leading-[1.45] sm:mx-0 sm:text-2xl"
+            >
               Want to take advantage of really standing out, activating referral
               and winning new prospects ... we offer a wide range of
               opportunities to do just that!
@@ -53,11 +59,11 @@
 
           <div class="relative flex items-center justify-center">
             <div
-              class="relative flex h-[520px] w-[520px] items-start justify-center gap-10"
+              class="relative flex w-full max-w-sm flex-col items-center gap-6 sm:h-[520px] sm:w-[520px] sm:flex-row sm:items-start sm:justify-center"
             >
               <div class="flex flex-col items-center gap-3">
                 <div
-                  class="h-[440px] w-[240px] overflow-hidden rounded-xl border border-gray-200 shadow-xl"
+                  class="h-[360px] w-[200px] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-xl sm:h-[440px] sm:w-[240px]"
                 >
                   <video muted controls class="h-full w-full object-cover">
                     <source
@@ -68,17 +74,19 @@
                 </div>
 
                 <h1
-                  class="text-center text-lg leading-snug font-light text-[#1F2937]"
+                  class="max-w-[18rem] text-center text-lg leading-snug font-light text-[#1F2937] sm:max-w-none sm:text-lg"
                 >
                   Fun, low-cost sizzle award announcement videos
                 </h1>
               </div>
 
               <div
-                class="flex flex-col items-start justify-between gap-y-10 text-[#374151]"
+                class="flex w-full flex-col items-center justify-between gap-y-8 text-center text-[#374151] sm:items-start sm:text-left"
               >
                 <div class="flex flex-col items-center gap-1">
-                  <div class="h-[90px] w-[220px] object-contain">
+                  <div
+                    class="h-[78px] w-[190px] object-contain sm:h-[90px] sm:w-[220px]"
+                  >
                     <img
                       src="../public/awardannouncement2.png"
                       alt=""
@@ -86,14 +94,16 @@
                     />
                   </div>
 
-                  <h1 class="text-lg leading-snug font-light text-center">
+                  <h1
+                    class="max-w-[20rem] text-lg leading-snug font-light text-center sm:text-lg"
+                  >
                     Local publication appearance with supporting direct mail and
                     digital
                   </h1>
                 </div>
 
                 <div
-                  class="flex flex-col gap-4 text-xl font-medium text-[#1F2937]"
+                  class="flex flex-col gap-3 text-lg font-medium text-[#1F2937] sm:gap-4 sm:text-xl"
                 >
                   <p>National publication brand associations</p>
                   <p>Targeted direct mail</p>
@@ -104,6 +114,10 @@
             </div>
           </div>
         </div>
+        <div
+          class="absolute -right-5 -bottom-6 sm:hidden h-24 w-24 bg-[#0389A0]"
+          style="clip-path: polygon(100% 0, 100% 100%, 0 100%)"
+        ></div>
       </section>
     </div>
     <script>
@@ -119,13 +133,14 @@
         if (isDesktopLayout) {
           wrapper.style.transform = "scale(" + scale + ")";
           wrapper.style.height = `${(1 / scale) * 100}vh`;
+          clipPath2.style.display = "block";
         } else {
           wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
         }
 
         wrapper.style.display = "flex";
         clipPath.style.display = "block";
-        clipPath2.style.display = "block";
       }
 
       window.addEventListener("resize", scalePage);

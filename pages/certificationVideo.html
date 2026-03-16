@@ -7,36 +7,47 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="../public/favicon.ico" />
   </head>
-  <body class="max-h-dvh min-h-dvh overflow-hidden">
-    <div id="app-wrapper" class="relative hidden w-384 origin-top-left">
+  <body class="min-h-screen sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden">
+    <div
+      id="app-wrapper"
+      class="relative hidden min-h-screen sm:min-h-auto w-full flex-col sm:w-384 sm:origin-top-left sm:px-0 sm:py-0"
+    >
       <img
         src="../public/eelogo.png"
         alt="Essential Engine logo"
-        class="absolute top-0 right-0 mt-10 mr-10 max-w-48"
+        class="mb-6 mt-4 ml-4 max-w-32 sm:absolute sm:top-0 sm:right-0 sm:mt-10 sm:mr-10 sm:mb-0 sm:max-w-48"
       />
-      <div class="relative min-h-screen w-full">
-        <section class="heading fixed top-0 left-0 z-30">
+      <div class="relative flex flex-1 w-full flex-col justify-between sm:block">
+        <section class="heading relative z-10 sm:fixed sm:top-0 sm:left-0">
           <div
-            class="relative z-10 flex h-40 w-200 items-center justify-start bg-[#0389A0] p-10"
+            class="relative z-10 flex min-h-20 max-w-[calc(100%-1em)] items-center justify-start bg-[#0389A0] p-2 sm:h-40 sm:w-200 sm:p-10"
           >
-            <h1 class="text-left text-6xl font-bold text-white">
+            <h1 class="text-left text-3xl font-bold text-white sm:text-6xl">
               CERTIFICATION VIDEO
             </h1>
           </div>
           <div
-            class="absolute top-10 left-15 z-0 h-38 w-3xl bg-[#F0592B]"
+            class="absolute top-4 left-0 z-0 w-full bg-[#F0592B] sm:top-10 sm:left-15 h-20 sm:h-38 sm:w-3xl"
           ></div>
         </section>
-        <div class="video fixed inset-0 z-50 flex items-center justify-center">
-          <video class="w-[60%]" preload="auto" controls>
+        <div
+          class="mt-10 sm:mt-0 video relative z-20 flex flex-1 items-center justify-center px-2 sm:fixed sm:inset-0 sm:mt-0 sm:z-50"
+        >
+          <video
+            class="w-full max-w-5xl border border-slate-200 bg-black shadow-[0_20px_60px_rgba(15,23,42,0.14)] sm:w-[60%] sm:rounded-none sm:border-0 sm:bg-transparent sm:shadow-none"
+            preload="auto"
+            controls
+          >
             <source
               src="https://ags.s3.amazonaws.com/2026/re/RE26_RecertVideo.mp4"
             />
           </video>
         </div>
-        <footer class="fixed right-0 bottom-0 z-30">
-          <div class="flex h-36 w-270 items-center justify-start bg-[#0389A0]">
-            <p class="px-7 text-2xl font-light text-white">
+        <footer class="relative z-30 mt-8 sm:fixed sm:right-0 sm:bottom-0 sm:mt-0">
+          <div
+            class="flex min-h-28 w-full items-center justify-start bg-[#0389A0] px-5 py-5 sm:h-36 sm:w-270 sm:px-0 sm:py-0"
+          >
+            <p class="text-center sm:text-left text-base leading-7 font-light text-white sm:px-7 sm:text-2xl">
               This short video explains the Award Selection Process, Winner
               Criteria, and Usage Guidelines
             </p>
@@ -57,6 +68,7 @@
           wrapper.style.height = `${(1 / scale) * 100}vh`;
         } else {
           wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
         }
 
         wrapper.style.display = "flex";
