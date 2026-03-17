@@ -7,24 +7,32 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="../public/favicon.ico" />
   </head>
-  <body class="max-h-dvh min-h-dvh overflow-hidden">
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
     <div
       id="clip-path"
       style="clip-path: polygon(95% 0, 100% 0%, 100% 100%, 80% 100%)"
-      class="absolute top-0 right-0 bottom-0 z-10 hidden h-full w-full bg-[#F0592B]"
+      class="absolute top-0 right-0 bottom-0 z-10 hidden h-56 w-full bg-[#F0592B] sm:h-full"
     ></div>
 
-    <div class="hidden w-384 origin-top-left overflow-hidden" id="app-wrapper">
+    <div
+      class="hidden min-h-screen w-full overflow-x-hidden py-5 sm:w-384 sm:origin-top-left sm:overflow-hidden sm:px-0 sm:py-0"
+      id="app-wrapper"
+    >
+      <div class="flex justify-start px-5 pb-5 sm:hidden">
+        <img src="../public/eelogo.png" alt="eelogo" class="max-w-32" />
+      </div>
       <section
-        class="absolute top-6 left-25 z-10 max-w-180 bg-[#0389A0] px-7 py-4 text-white shadow-md shadow-black"
+        class="relative z-10 w-full bg-[#0389A0] px-5 py-5 text-white shadow-md shadow-black sm:absolute sm:top-6 sm:left-25 sm:max-w-180 sm:px-7 sm:py-4"
       >
         <div class="flex gap-4">
-          <div class="border-4 border-white"></div>
+          <div class="border-2 border-white sm:border-4"></div>
           <div class="space-y-1">
-            <h1 class="text-start text-6xl text-white">
+            <h1 class="text-start text-3xl text-white sm:text-6xl">
               Certification Checklist
             </h1>
-            <p class="text-2xl font-light text-wrap">
+            <p class="text-lg font-light text-wrap sm:text-2xl">
               Please check the boxes below confirming your award and
               understanding of the process, criteria, and usage guidelines
             </p>
@@ -33,18 +41,22 @@
       </section>
       <main>
         <div
-          class="mt-20 mr-auto ml-30 h-screen w-[calc(100%-20%)] border-2 border-black px-4 py-8 shadow-2xl"
+          class="w-full sm:border-2 sm:border-black bg-white px-5 pt-5 sm:shadow-2xl sm:mt-20 sm:mr-auto sm:ml-30 sm:h-screen sm:w-[calc(100%-20%)] sm:px-4 sm:py-8"
         >
-          <div class="flex justify-end">
-            <img src="../public/eelogo.png" alt="eelogo" class="max-w-48" />
+          <div class="hidden justify-end sm:flex">
+            <img
+              src="../public/eelogo.png"
+              alt="eelogo"
+              class="max-w-48"
+            />
           </div>
-          <div class="mt-15 px-8">
-            <ul class="grid gap-8 text-2xl font-light">
-              <li class="flex items-center gap-5">
+          <div class="px-0 sm:mt-15 sm:px-8">
+            <ul class="grid gap-5 text-lg font-light sm:gap-8 sm:text-2xl">
+              <li class="flex items-start gap-4 sm:items-center sm:gap-5">
                 <div class="mt-2">
                   <input
                     type="checkbox"
-                    class="checked:after: relative size-6 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4.5 checked:after:-left-0.5 checked:after:text-[30px] checked:after:content-['✔']"
+                    class="checked:after: relative size-5 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4 checked:after:-left-0.5 checked:after:text-[26px] checked:after:content-['✔'] sm:size-6 sm:checked:after:-top-4.5 sm:checked:after:text-[30px]"
                   />
                 </div>
                 <span class="text-wrap"
@@ -52,11 +64,11 @@
                   how I was selected for the award
                 </span>
               </li>
-              <li class="flex items-start gap-5">
+              <li class="flex items-start gap-4 sm:gap-5">
                 <div class="mt-2">
                   <input
                     type="checkbox"
-                    class="checked:after: relative size-6 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4.5 checked:after:-left-0.5 checked:after:text-[30px] checked:after:content-['✔']"
+                    class="checked:after: relative size-5 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4 checked:after:-left-0.5 checked:after:text-[26px] checked:after:content-['✔'] sm:size-6 sm:checked:after:-top-4.5 sm:checked:after:text-[30px]"
                   />
                 </div>
                 <span class="text-wrap">
@@ -65,11 +77,11 @@
                   or via the phone.
                 </span>
               </li>
-              <li class="flex items-start gap-5">
+              <li class="flex items-start gap-4 sm:gap-5">
                 <div class="mt-2">
                   <input
                     type="checkbox"
-                    class="checked:after: relative size-6 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4.5 checked:after:-left-0.5 checked:after:text-[30px] checked:after:content-['✔']"
+                    class="checked:after: relative size-5 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4 checked:after:-left-0.5 checked:after:text-[26px] checked:after:content-['✔'] sm:size-6 sm:checked:after:-top-4.5 sm:checked:after:text-[30px]"
                   />
                 </div>
                 <span class="text-wrap"
@@ -77,11 +89,11 @@
                   violations since I submitted my award candidate form.
                 </span>
               </li>
-              <li class="flex items-start gap-5">
+              <li class="flex items-start gap-4 sm:gap-5">
                 <div class="mt-2">
                   <input
                     type="checkbox"
-                    class="checked:after: relative size-6 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4.5 checked:after:-left-0.5 checked:after:text-[30px] checked:after:content-['✔']"
+                    class="checked:after: relative size-5 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4 checked:after:-left-0.5 checked:after:text-[26px] checked:after:content-['✔'] sm:size-6 sm:checked:after:-top-4.5 sm:checked:after:text-[30px]"
                   />
                 </div>
                 <span class="text-wrap"
@@ -91,11 +103,11 @@
                   mention the award.
                 </span>
               </li>
-              <li class="flex items-center gap-5">
+              <li class="flex items-start gap-4 sm:items-center sm:gap-5">
                 <div class="mt-2">
                   <input
                     type="checkbox"
-                    class="checked:after: relative size-6 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4.5 checked:after:-left-0.5 checked:after:text-[30px] checked:after:content-['✔']"
+                    class="checked:after: relative size-5 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4 checked:after:-left-0.5 checked:after:text-[26px] checked:after:content-['✔'] sm:size-6 sm:checked:after:-top-4.5 sm:checked:after:text-[30px]"
                   />
                 </div>
                 <span class="text-wrap">
@@ -103,11 +115,11 @@
                   Five Star Professionals partner publications.
                 </span>
               </li>
-              <li class="flex items-center gap-5">
+              <li class="flex items-start gap-4 sm:items-center sm:gap-5">
                 <div class="mt-2">
                   <input
                     type="checkbox"
-                    class="checked:after: relative size-6 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4.5 checked:after:-left-0.5 checked:after:text-[30px] checked:after:content-['✔']"
+                    class="checked:after: relative size-5 cursor-pointer appearance-none border border-black checked:after:absolute checked:after:-top-4 checked:after:-left-0.5 checked:after:text-[26px] checked:after:content-['✔'] sm:size-6 sm:checked:after:-top-4.5 sm:checked:after:text-[30px]"
                   />
                 </div>
                 <span class="text-wrap"
@@ -132,11 +144,11 @@
 
         if (isDesktopLayout) {
           wrapper.style.transform = "scale(" + scale + ")";
+          clipPath.style.display = "block";
         } else {
           wrapper.style.transform = "none";
         }
         wrapper.style.display = "block";
-        clipPath.style.display = "block";
       }
 
       window.addEventListener("resize", scalePage);

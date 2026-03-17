@@ -7,67 +7,76 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="../public/favicon.ico" />
   </head>
-  <body class="max-h-dvh min-h-dvh overflow-hidden">
+  <body class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden">
     <div
       id="clip-path"
       style="clip-path: polygon(0 0, 5% 0, 12% 100%, 0% 100%)"
-      class="absolute top-0 bottom-0 left-0 z-10 h-full w-full bg-[#0389A0] hidden"
+      class="absolute top-0 bottom-0 left-0 z-10 hidden h-48 w-full bg-[#0389A0] sm:h-full"
     ></div>
     <div
       id="clip-path-2"
       style="clip-path: polygon(0 0, 12% 0, 0 100%, 0% 100%)"
-      class="absolute top-0 bottom-0 left-0 z-10 h-full w-full bg-[#F0592B] hidden"
+      class="absolute top-0 bottom-0 left-0 z-10 hidden h-48 w-full bg-[#F0592B] sm:h-full"
     ></div>
 
-    <div class="hidden w-384 origin-top-left overflow-hidden" id="app-wrapper">
+    <div
+      class="hidden min-h-screen w-full overflow-x-hidden py-5 sm:w-384 sm:origin-top-left sm:overflow-hidden sm:px-0 sm:py-0"
+      id="app-wrapper"
+    >
+      <div class="flex justify-start px-5 pb-5 sm:hidden">
+        <img src="../public/eelogo.png" alt="eelogo" class="max-w-32" />
+      </div>
       <section
-        class="absolute top-6 z-10 max-w-240 bg-[#0389A0] px-7 py-6 text-white shadow-md shadow-black"
-        style="left: 200px"
+        class="relative z-10 w-full bg-[#0389A0] px-5 py-5 text-white shadow-md shadow-black sm:absolute sm:top-6 sm:left-[200px] sm:max-w-240 sm:px-7 sm:py-6"
       >
         <div class="flex gap-4">
-          <div class="border-4 border-white"></div>
-          <h1 class="text-start text-6xl text-white">
+          <div class="border-2 border-white sm:border-4"></div>
+          <h1 class="text-start text-3xl text-white sm:text-6xl">
             How do you market your business?
           </h1>
         </div>
       </section>
-      <div class="mt-6 mr-6 flex justify-end">
-        <img src="../public/eelogo.png" alt="eelogo" class="max-w-48" />
+      <div class="mt-6 mr-5 hidden justify-end sm:mr-6 sm:flex">
+        <img
+          src="../public/eelogo.png"
+          alt="eelogo"
+          class="max-w-32 sm:max-w-48"
+        />
       </div>
-      <main class="mt-20 ml-44">
-        <div style="transform: scale(0.95)">
+      <main class="mt-6 ml-0 sm:mt-20 sm:ml-44 px-5 sm:px-0">
+        <div class="sm:[transform:scale(0.95)]">
           <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-[#1F2937]">
+            <h2 class="text-xl font-semibold text-[#1F2937] sm:text-2xl">
               Your content strategy / mix
             </h2>
 
-            <div class="mt-3 grid grid-cols-3 gap-6">
-              <label class="flex items-center gap-3">
+            <div class="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
+              <label class="flex items-start gap-3 sm:items-center">
                 <input
                   type="checkbox"
-                  class="mt-1 h-6 w-6 rounded-sm border-2 border-[#909090] bg-transparent"
+                  class="mt-0.5 h-5 w-5 rounded-sm border-2 border-[#909090] bg-transparent sm:mt-1 sm:h-6 sm:w-6"
                 />
-                <span class="text-xl  leading-snug text-[#4A4A4A]">
+                <span class="text-lg leading-snug text-[#4A4A4A] sm:text-xl">
                   Industry / Profession related
                 </span>
               </label>
 
-              <label class="flex items-center gap-3">
+              <label class="flex items-start gap-3 sm:items-center">
                 <input
                   type="checkbox"
-                  class="mt-1 h-6 w-6 rounded-sm border-2 border-[#909090] bg-transparent"
+                  class="mt-0.5 h-5 w-5 rounded-sm border-2 border-[#909090] bg-transparent sm:mt-1 sm:h-6 sm:w-6"
                 />
-                <span class="text-xl leading-snug text-[#4A4A4A]">
+                <span class="text-lg leading-snug text-[#4A4A4A] sm:text-xl">
                   Lifestyle
                 </span>
               </label>
 
-              <label class="flex items-center gap-3">
+              <label class="flex items-start gap-3 sm:items-center">
                 <input
                   type="checkbox"
-                  class="mt-1 h-6 w-6 rounded-sm border-2 border-[#909090] bg-transparent"
+                  class="mt-0.5 h-5 w-5 shrink-0 rounded-sm border-2 border-[#909090] bg-transparent sm:mt-1 sm:h-6 sm:w-6"
                 />
-                <span class="text-xl leading-snug text-[#4A4A4A]">
+                <span class="text-lg leading-snug text-[#4A4A4A] sm:text-xl">
                   Personal (helping clients to get to know me)
                 </span>
               </label>
@@ -76,9 +85,9 @@
 
           <!-- Marketing Table -->
           <section>
-            <div class="overflow-hidden rounded-md border border-[#D8D8D8]">
+            <div class="overflow-x-auto rounded-md border border-[#D8D8D8] bg-white">
               <div
-                class="grid grid-cols-[28rem_10rem_10rem_10rem_10rem_16rem] items-stretch"
+                class="grid min-w-[84rem] grid-cols-[28rem_10rem_10rem_10rem_10rem_16rem] items-stretch"
               >
                 <div
                   class="border-r border-b border-[#D8D8D8] px-5 py-4 text-center text-left text-lg font-semibold text-[#374151]"
@@ -415,12 +424,12 @@
 
         if (isDesktopLayout) {
           wrapper.style.transform = "scale(" + scale + ")";
+          clipPath.style.display = "block";
+          clipPath2.style.display = "block";
         } else {
           wrapper.style.transform = "none";
         }
         wrapper.style.display = "block";
-        clipPath.style.display = "block";
-        clipPath2.style.display = "block";
       }
 
       window.addEventListener("resize", scalePage);
