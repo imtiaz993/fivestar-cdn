@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine -</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <!-- <div
+      id="clip-path"
+      class="absolute top-0 right-0 z-50 hidden h-24 w-24 bg-[#F0592B] sm:fixed sm:h-75 sm:w-75"
+      style="clip-path: polygon(100% 0, 100% 100%, 0 0)"
+    ></div>
+
+    <div
+      id="clip-path-2"
+      class="absolute bottom-0 left-0 z-50 hidden h-24 w-24 bg-[#0389A0] sm:fixed sm:h-75 sm:w-75"
+      style="clip-path: polygon(0 0, 100% 100%, 0 100%)"
+    ></div> -->
+    <div
+      class="hidden min-h-screen w-full flex-col justify-start overflow-x-hidden p-5 sm:min-h-auto sm:w-384 sm:origin-top-left sm:justify-center sm:overflow-hidden sm:py-0"
+      id="app-wrapper"
+    >
+      <img
+        src="../public/eelogo.png"
+        alt="Essential Engine logo"
+        class="mb-8 max-w-32 sm:absolute sm:top-0 sm:left-0 sm:mt-10 sm:mb-0 sm:ml-10 sm:max-w-48"
+      />
+      <main class="relative flex flex-1 items-center pb-18 sm:flex-none sm:pb-0">
+        <section
+          class="mx-auto flex w-full max-w-screen-2xl flex-col px-4 pt-6 sm:px-10 sm:pt-8"
+        >
+          <h1
+            class="mx-auto max-w-full text-center text-xl leading-tight font-light text-[#c83232] sm:text-3xl"
+          >
+            Marketing Tools That Fit Your Approach to Marketing and Your
+            Business Objectives
+          </h1>
+
+          <div
+            class="mt-10 flex flex-col gap-10 text-[#404040] sm:mt-12 sm:flex-row sm:items-start sm:justify-between sm:gap-8"
+          >
+            <div class="flex w-full flex-col gap-8 sm:w-[47%]">
+              <div class="grid gap-8 sm:grid-cols-2 sm:gap-10">
+                <article class="flex flex-col items-center">
+                  <h2 class="mb-4 text-center text-2xl sm:text-3xl">
+                    Magazine Appearance
+                  </h2>
+                  <img
+                    src="../public/RE26_MagazineAppearance.png"
+                    alt="Magazine appearance examples"
+                    class="w-full max-w-lg"
+                  />
+                  <p
+                    class="mt-5 max-w-md text-center text-xl leading-tight sm:text-base"
+                  >
+                    85% of Profile Buyers Repeat Each Year
+                  </p>
+                </article>
+
+                <article class="flex flex-col items-center">
+                  <h2 class="mb-4 text-center text-2xl sm:text-3xl">
+                    Managed Social Media
+                  </h2>
+                  <img
+                    src="../public/RE26_MS_SocialMedia.png"
+                    alt="Managed social media examples"
+                    class="w-full max-w-md"
+                  />
+                </article>
+              </div>
+            </div>
+
+            <div
+              class="w-full border-[3px] border-[#7a7a7a] px-4 py-5 sm:w-[48%] sm:px-8 sm:py-6"
+            >
+              <div class="grid gap-8 sm:grid-cols-2 sm:gap-6">
+                <article class="flex flex-col items-center">
+                  <h2
+                    class="mb-4 max-w-[360px] text-center text-2xl leading-tight sm:text-2xl"
+                  >
+                    Digital Award Announcement Tools
+                  </h2>
+                  <img
+                    src="../public/RE26_DigitalTools.png"
+                    alt="Digital award announcement tools"
+                    class="w-full max-w-lg"
+                  />
+                </article>
+
+                <article class="flex flex-col items-center">
+                  <h2
+                    class="mb-4 max-w-[360px] text-center text-2xl leading-tight sm:text-2xl"
+                  >
+                    Display/marketing Tools
+                  </h2>
+                  <img
+                    src="../public/RE26_DisplayTools.png"
+                    alt="Display marketing tools"
+                    class="w-full max-w-md"
+                  />
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>

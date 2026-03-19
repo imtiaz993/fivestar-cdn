@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine -</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <div
+      id="clip-path"
+      class="absolute top-0 left-0 hidden h-60 w-34 bg-[#F0592B] sm:h-full sm:w-[26%]"
+      style="clip-path: polygon(0 0, 70% 0, 0% 100%, 0 100%)"
+    ></div>
+    <div
+      class="hidden min-h-screen w-full flex-col justify-start overflow-x-hidden sm:min-h-auto sm:w-384 sm:origin-top-left sm:justify-center sm:overflow-hidden sm:py-0"
+      id="app-wrapper"
+    >
+      <img
+        src="../public/eelogo.png"
+        alt="Essential Engine logo"
+        class="mb-8 max-w-32 ml-auto mr-5 mt-5 sm:absolute sm:top-0 sm:right-0 sm:mt-10 sm:mb-0 sm:mr-10 sm:max-w-48"
+      />
+      <section
+        class="relative z-10 w-full bg-[#0389A0] px-5 py-5 text-white shadow-md shadow-black sm:absolute sm:top-6 sm:left-25 sm:max-w-190 sm:px-7 sm:py-6"
+      >
+        <div class="flex gap-4">
+          <div class="border-2 border-white sm:border-4"></div>
+          <div class="space-y-1">
+            <h1 class="text-start text-3xl text-white sm:text-6xl">
+              Power of the Profile
+            </h1>
+          </div>
+        </div>
+      </section>
+      <main
+        class="relative flex flex-1 items-center justify-center sm:flex-none sm:pt-24 sm:pb-0"
+      >
+        <section
+          class="mx-auto flex w-full max-w-5xl flex-col justify-center px-4 py-4 sm:px-0 sm:py-6"
+        >
+          <div
+            class="mt-8 grid gap-10 text-[#404040] sm:mt-10 sm:grid-cols-2 sm:items-start"
+          >
+            <div class="px-2 py-4">
+              <div
+                class="grid gap-5 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-start"
+              >
+                <img
+                  src="../public/RE26_Magazine.png"
+                  alt="Magazine appearance page"
+                  class="mx-auto h-auto max-h-92 w-full max-w-56 shrink-0 border border-gray-200 bg-white p-1 shadow-sm sm:mx-0"
+                />
+                <ul
+                  class="min-w-0 space-y-3 pl-6 text-left text-lg leading-snug list-disc sm:pt-1 sm:text-xl"
+                >
+                  <li>Mail to clients/professional network</li>
+                  <li>Open houses/events</li>
+                  <li>Listings/new client presentations</li>
+                  <li>85% of profile buyers repeat each year</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="px-2 py-4">
+              <div
+                class="grid gap-5 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-start"
+              >
+                <img
+                  src="../public/RE26_Reprint_EReprint.png"
+                  alt="Digital e-reprint preview"
+                  class="mx-auto h-auto max-h-92 w-full max-w-56 shrink-0 border border-gray-300 bg-white p-1 shadow-md sm:mx-0"
+                />
+                <ul
+                  class="min-w-0 space-y-3 pl-6 text-left text-lg leading-snug list-disc sm:pt-1 sm:text-xl"
+                >
+                  <li>Generate more referrals</li>
+                  <li>Win more prospective presentations</li>
+                  <li>Retain clients</li>
+                  <li>Expand network/geography</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+        clipPath.style.display = "block";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Essential Engine - Award Specific Marketing – Virtual Onboarding (DAMP
+      Only)
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <div
+      id="clip-path"
+      class="absolute top-0 right-0 z-50 hidden h-24 w-24 bg-[#F0592B] sm:fixed sm:h-75 sm:w-75"
+      style="clip-path: polygon(100% 0, 100% 100%, 0 0)"
+    ></div>
+    <div
+      id="clip-path-2"
+      class="absolute top-0 right-0 z-20 hidden h-44 w-44 bg-[#0389A0] sm:fixed sm:h-95 sm:w-95"
+      style="clip-path: polygon(100% 0, 100% 100%, 0 0)"
+    ></div>
+
+    <div
+      class="hidden min-h-screen w-full flex-col justify-start overflow-x-hidden p-5 sm:min-h-auto sm:w-384 sm:origin-top-left sm:justify-center sm:overflow-hidden sm:py-0"
+      id="app-wrapper"
+    >
+      <img
+        src="../public/eelogo.png"
+        alt="Essential Engine logo"
+        class="mb-8 max-w-32 sm:absolute sm:top-0 sm:left-0 sm:mt-10 sm:mb-0 sm:ml-10 sm:max-w-48"
+      />
+      <main class="relative py-5 flex-1 sm:flex-none sm:pb-0">
+        <section
+          class="relative z-10 flex flex-col items-center justify-center gap-8 sm:flex-row"
+        >
+          <div class="flex flex-col justify-between px-5 sm:px-0 items-center gap-8">
+            <h1 class="text-xl sm:text-3xl font-medium">
+              Virtual Onboarding Appointment
+            </h1>
+            <img
+              src="../public/vo.png"
+              alt="Award Announcement"
+              class="max-w-92 px-5 sm:px-0"
+            />
+          </div>
+          <div class="flex w-full flex-col sm:w-[46%] text-[#444444]">
+            <ul class="grid gap-4 font-light">
+              <li class="max-w-full text-xl text-wrap sm:text-2xl">
+                Exciting news! You qualify for our new Virtual Onboarding
+                Appointment, which means you get to skip the wait for an
+                appointment with your Client Success Representative.
+              </li>
+              <li class="max-w-full text-xl text-wrap sm:text-2xl">
+                It’s self-guided and takes just 10 minutes to complete. Be sure
+                to keep an eye out for an email with login instructions.
+              </li>
+              <li class="max-w-full text-xl text-wrap sm:text-2xl">
+                It’s important to complete your Virtual Onboarding Appointment
+                as soon as possible so:
+              </li>
+              <li>
+                <ul class="ml-9 list-disc text-lg sm:text-xl">
+                  <li>
+                    You can immediately download and access your award emblem!
+                  </li>
+                  <li>
+                    We can expedite the creation of your remaining award
+                    marketing products and get them working for you.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const clipPath2 = document.getElementById("clip-path-2");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+          clipPath2.style.display = "block";
+          clipPath.style.display = "block";
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>
