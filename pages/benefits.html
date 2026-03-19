@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <div
+      id="clip-path"
+      class="absolute top-0 left-0 hidden h-60 w-34 bg-[#F0592B] sm:h-full sm:w-[26%]"
+      style="clip-path: polygon(0 0, 70% 0, 0% 100%, 0 100%)"
+    ></div>
+    <div
+      class="hidden min-h-screen w-full overflow-x-hidden py-5 sm:mt-10 sm:min-h-auto sm:w-384 sm:origin-top-left sm:overflow-hidden sm:py-0"
+      id="app-wrapper"
+    >
+      <div class="flex justify-end px-5 pb-5 sm:hidden">
+        <img src="../public/eelogo.png" alt="eelogo" class="max-w-32" />
+      </div>
+      <section
+        class="relative z-10 w-full bg-[#0389A0] px-5 py-5 text-white shadow-md shadow-black sm:absolute sm:top-6 sm:left-25 sm:max-w-190 sm:px-7 sm:py-6"
+      >
+        <div class="flex gap-4">
+          <div class="border-2 border-white sm:border-4"></div>
+          <div class="space-y-1">
+            <h1 class="text-start text-3xl text-white sm:text-6xl">
+             Benefits of our media partner
+            </h1>
+          </div>
+        </div>
+      </section>
+      <main class="px-5 sm:px-0">
+        <div class="sm:h-screen sm:px-4 sm:py-8">
+          <div class="mt-6 hidden justify-end sm:mt-10 sm:flex">
+            <img
+              src="../public/eelogo.png"
+              alt="eelogo"
+              class="max-w-32 sm:max-w-48"
+            />
+          </div>
+          <div class="mx-auto mt-10 sm:mt-14 flex flex-1 flex-col items-center">
+            <div class="mt-6 sm:mt-8">
+              <div class="flex justify-center items-center sm:mt-10">
+                <img
+                  src="../public/awardannouncement2.png"
+                  alt="Essential Living"
+                  class="w-full sm:w-[70%]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+        } else {
+          wrapper.style.transform = "none";
+        }
+
+        wrapper.style.display = "block";
+        clipPath.style.display = "block";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>
