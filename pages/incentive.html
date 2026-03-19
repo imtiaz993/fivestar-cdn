@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Certification Day Incentive</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body
+    class="min-h-screen overflow-x-hidden bg-[#0E1B3B] sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <div
+      id="app-wrapper"
+      class="hidden min-h-screen w-full items-center justify-center py-8 sm:min-h-auto sm:w-384 sm:origin-top-left sm:py-0"
+    >
+      <section class="w-full text-white">
+        <div class="flex flex-col justify-between sm:min-h-0">
+          <div class="flex flex-1 items-center justify-center">
+            <div class="w-full max-w-4xl space-y-6 sm:space-y-8 sm:px-10">
+              <h1
+                class="text-center text-4xl leading-none font-bold sm:text-6xl"
+              >
+                Certification Day Purchase Incentive
+              </h1>
+
+              <div class="relative z-50">
+                <div class="relative z-50 w-full bg-[#0389A0] px-4 py-5 sm:p-6">
+                  <p
+                    class="text-center text-xl leading-8 font-extralight sm:text-4xl"
+                  >
+                    Lock in your order at your certification day appointment and
+                    apply a
+                    <br class="hidden sm:block" />
+                    <h1 class="text-center text-6xl uppercase sm:text-9xl">
+                      10%
+                    </h1>
+                    <p class="text-center text-xl leading-8 font-extralight sm:text-4xl">
+                        to today’s purchase!
+                    </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute bottom-0 left-0 mb-10 ml-4 py-4 sm:ml-10">
+            <img
+              src="../public/eelogo.png"
+              alt="awardlogo"
+              class="max-w-32 sm:mx-0 sm:max-w-48"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+        const wrapper = document.getElementById("app-wrapper");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+      }
+
+      window.addEventListener("resize", scalePage);
+
+      window.addEventListener("load", () => {
+        scalePage();
+      });
+    </script>
+  </body>
+</html>
