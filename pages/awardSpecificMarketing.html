@@ -15,12 +15,12 @@
   >
     <div
       id="clip-path"
-      class="absolute top-0 right-0 z-50 hidden h-24 w-24 bg-[#F0592B] sm:fixed sm:h-75 sm:w-75"
+      class="absolute top-0 right-0 z-50 hidden h-20 w-20 bg-[#F0592B] sm:fixed sm:h-75 sm:w-75"
       style="clip-path: polygon(100% 0, 100% 100%, 0 0)"
     ></div>
     <div
       id="clip-path-2"
-      class="absolute top-0 right-0 z-20 hidden h-44 w-44 bg-[#0389A0] sm:fixed sm:h-95 sm:w-95"
+      class="absolute top-0 right-0 z-20 hidden h-28 w-28 bg-[#0389A0] sm:fixed sm:h-95 sm:w-95"
       style="clip-path: polygon(100% 0, 100% 100%, 0 0)"
     ></div>
 
@@ -35,47 +35,50 @@
       />
       <main class="relative py-5 flex-1 sm:flex-none sm:pb-0">
         <section
-          class="relative z-10 flex flex-col items-center justify-center gap-8 sm:flex-row"
+          class="relative z-10 flex flex-col items-center justify-center gap-8"
         >
+          <h1 class="text-xl sm:text-5xl font-medium text-center">
+            Virtual Onboarding Appointment
+          </h1>
           <div
-            class="flex flex-col justify-between px-5 sm:px-0 items-center gap-8"
+            class="flex flex-col sm:flex-row items-center justify-center gap-8 w-full"
           >
-            <h1 class="text-xl sm:text-3xl font-medium">
-              Virtual Onboarding Appointment
-            </h1>
-            <img
-              src="../public/vo.png"
-              alt="Award Announcement"
-              class="max-w-92 px-5 sm:px-0"
-            />
-          </div>
-          <div class="flex w-full flex-col sm:w-[46%] text-[#444444]">
-            <ul class="grid gap-4 font-light">
-              <li class="max-w-full text-xl text-wrap sm:text-2xl">
-                Exciting news! You qualify for our new Virtual Onboarding
-                Appointment, which means you get to skip the wait for an
-                appointment with your Client Success Representative.
-              </li>
-              <li class="max-w-full text-xl text-wrap sm:text-2xl">
-                It’s self-guided and takes just 10 minutes to complete. Be sure
-                to keep an eye out for an email with login instructions.
-              </li>
-              <li class="max-w-full text-xl text-wrap sm:text-2xl">
-                It’s important to complete your Virtual Onboarding Appointment
-                as soon as possible so:
-              </li>
-              <li>
-                <ul class="ml-9 list-disc text-lg sm:text-xl">
-                  <li>
-                    You can immediately download and access your award emblem!
-                  </li>
-                  <li>
-                    We can expedite the creation of your remaining award
-                    marketing products and get them working for you.
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <div class="flex justify-center w-full sm:w-auto">
+              <img
+                src="../public/vo.png"
+                alt="Award Announcement"
+                class="max-w-92 px-5 sm:px-0"
+              />
+            </div>
+
+            <div class="flex w-full sm:w-[46%] text-[#444444]">
+              <ul class="grid gap-4 font-light">
+                <li class="text-xl sm:text-xl">
+                  Exciting news! You qualify for our new Virtual Onboarding
+                  Appointment, which means you get to skip the wait for an
+                  appointment with your Client Success Representative.
+                </li>
+                <li class="text-xl sm:text-xl">
+                  It’s self-guided and takes just 10 minutes to complete. Be
+                  sure to keep an eye out for an email with login instructions.
+                </li>
+                <li class="text-xl sm:text-xl">
+                  It’s important to complete your Virtual Onboarding Appointment
+                  as soon as possible so:
+                </li>
+                <li>
+                  <ul class="ml-9 list-disc text-lg sm:text-lg">
+                    <li>
+                      You can immediately download and access your award emblem!
+                    </li>
+                    <li>
+                      We can expedite the creation of your remaining award
+                      marketing products and get them working for you.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </main>
@@ -94,13 +97,12 @@
         if (isDesktopLayout) {
           wrapper.style.transform = "scale(" + scale + ")";
           wrapper.style.height = `${(1 / scale) * 100}vh`;
-          clipPath2.style.display = "block";
-          clipPath.style.display = "block";
         } else {
           wrapper.style.transform = "none";
           wrapper.style.height = "auto";
         }
-
+        clipPath2.style.display = "block";
+        clipPath.style.display = "block";
         wrapper.style.display = "flex";
       }
 
