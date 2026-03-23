@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Award Sizzle Video 5-Pack</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body class="min-h-screen overflow-x-hidden bg-white">
+    <div
+      id="clip-path"
+      class="absolute top-0 left-0 z-50 hidden h-20 w-20 bg-[#F0592B] sm:fixed sm:h-65 sm:w-65"
+      style="clip-path: polygon(0 0, 100% 0, 0 100%)"
+    ></div>
+
+    <div
+      id="clip-path-2"
+      class="absolute top-0 left-0 z-20 hidden h-28 w-28 bg-[#0389A0] sm:fixed sm:h-75 sm:w-75"
+      style="clip-path: polygon(0 0, 100% 0, 0 100%)"
+    ></div>
+    <div
+      class="hidden w-full flex-col justify-start overflow-x-hidden p-5 sm:w-384 sm:origin-top-left sm:justify-center sm:items-center sm:py-0"
+      id="app-wrapper"
+    >
+      <img
+        src="../public/eelogo.png"
+        alt="Essential Engine logo"
+        class="mb-8 ml-auto max-w-32 sm:absolute sm:top-0 sm:right-0 sm:mt-10 sm:mb-0 sm:mr-10 sm:max-w-48"
+      />
+
+      <main
+        class="relative flex flex-1 items-center justify-center sm:pb-0 sm:mt-60"
+      >
+        <section class="flex w-full max-w-7xl flex-col justify-center">
+          <h1
+            class="max-w-full font-medium text-center sm:pl-12 text-3xl sm:text-5xl"
+          >
+            Award Celebration 5-Pack Sizzle Video Package - $59
+          </h1>
+
+          <div
+            class="mt-8 grid gap-8 text-[#444444] sm:mt-10 sm:grid-cols-[minmax(0,34rem)_minmax(0,1fr)] sm:items-center sm:justify-center sm:gap-10"
+          >
+            <div class="flex justify-center">
+              <div
+                class="w-full max-w-xl overflow-auto border border-gray-200 bg-white shadow-md sm:h-[34rem]"
+              >
+                <video
+                  class="h-full w-full bg-black object-cover"
+                  preload="metadata"
+                  controls
+                  playsinline
+                >
+                  <source
+                    src="../public/SizzleVideo_Confetti_V.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+
+            <div class="space-y-6 sm:max-h-[34rem] sm:pt-1">
+              <p class="text-xl leading-snug sm:text-2xl">
+                A sizzling fun way to highlight your care of clients!
+              </p>
+
+              <div class="space-y-3">
+                <h2 class="text-2xl leading-none sm:text-3xl">Features</h2>
+                <ul
+                  class="space-y-2 pl-7 text-xl leading-snug list-disc sm:text-2xl"
+                >
+                  <li>
+                    5 Fun Sizzle Videos Celebrating and Differentiating You!
+                  </li>
+                </ul>
+                <ul
+                  class="space-y-2 pl-12 text-xl leading-snug list-[circle] sm:text-2xl"
+                >
+                  <li>
+                    Engaging, impactful, fun videos celebrating your award
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      id="open-sizzle-modal"
+                      class="cursor-pointer text-[#0b6a97] underline-offset-4 hover:underline"
+                    >
+                      Click here to see all 5 sizzle videos
+                    </button>
+                  </li>
+                  <li>
+                    Have ideas on other fun videos you would like to see created
+                    ... we would love to hear them
+                    <span class="block">
+                      (Share them with your Account Manager and
+                      <span class="underline">win prizes</span>)
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="space-y-3">
+                <h2 class="text-2xl leading-none sm:text-3xl">Benefits</h2>
+                <ul
+                  class="space-y-2 pl-7 text-xl leading-snug list-disc sm:text-2xl"
+                >
+                  <li>
+                    Provides one more reminder why you are the “right choice”.
+                  </li>
+                </ul>
+                <ul
+                  class="space-y-2 pl-12 text-xl leading-snug list-[circle] sm:text-2xl"
+                >
+                  <li>
+                    Differentiate your self from the competition and win new
+                    prospective business
+                  </li>
+                  <li>
+                    Stay top of mind with your network and generate additional
+                    referrals
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      id="open-templates-modal"
+                      class="cursor-pointer text-[#0b6a97] underline-offset-4 hover:underline"
+                    >
+                      Click here to see sample communication templates
+                    </button>
+                    <span
+                      >on how to best incorporate your sizzle videos into
+                      emails, social media, your web site and other digital
+                      media</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div
+        id="sizzle-modal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 px-4 py-6"
+      >
+        <div
+          class="flex max-h-full w-full max-w-4xl flex-col overflow-hidden rounded-sm bg-white shadow-2xl"
+        >
+          <div
+            class="flex items-center justify-between border-b border-gray-200 px-5 py-4"
+          >
+            <h2 class="text-xl font-medium text-[#444444] sm:text-2xl">
+              All 5 Sizzle Videos
+            </h2>
+            <button
+              type="button"
+              id="close-sizzle-modal"
+              class="text-3xl leading-none text-[#666666]"
+              aria-label="Close modal"
+            >
+              &times;
+            </button>
+          </div>
+
+          <div class="space-y-6 overflow-y-auto px-5 py-5">
+            <video
+              class="w-full bg-black"
+              preload="metadata"
+              controls
+              playsinline
+            >
+              <source
+                src="https://ags.s3.us-east-1.amazonaws.com/ago/img/SizzleVideo_Confetti_V.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <video
+              class="w-full bg-black"
+              preload="metadata"
+              controls
+              playsinline
+            >
+              <source
+                src="https://ags.s3.us-east-1.amazonaws.com/ago/img/SizzleVideo_Confetti_V.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <video
+              class="w-full bg-black"
+              preload="metadata"
+              controls
+              playsinline
+            >
+              <source
+                src="https://ags.s3.us-east-1.amazonaws.com/ago/img/SizzleVideo_Confetti_V.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <video
+              class="w-full bg-black"
+              preload="metadata"
+              controls
+              playsinline
+            >
+              <source
+                src="https://ags.s3.us-east-1.amazonaws.com/ago/img/SizzleVideo_Confetti_V.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <video
+              class="w-full bg-black"
+              preload="metadata"
+              controls
+              playsinline
+            >
+              <source
+                src="https://ags.s3.us-east-1.amazonaws.com/ago/img/SizzleVideo_Confetti_V.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="templates-modal"
+        class="fixed inset-0 z-[110] hidden items-center justify-center bg-black/60 px-4 py-6"
+      >
+        <div
+          class="flex max-h-full w-full max-w-5xl flex-col overflow-hidden rounded-sm bg-white shadow-2xl"
+        >
+          <div
+            class="flex items-center justify-between border-b border-gray-200 px-5 py-4"
+          >
+            <h2 class="text-xl font-medium text-[#444444] sm:text-2xl">
+              Sample Communication Templates
+            </h2>
+            <button
+              type="button"
+              id="close-templates-modal"
+              class="text-3xl leading-none text-[#666666]"
+              aria-label="Close modal"
+            >
+              &times;
+            </button>
+          </div>
+
+          <div class="space-y-6 overflow-y-auto px-5 py-5">
+            <div class="flex flex-col items-center gap-3">
+              <img
+                src="../public/sizzletemplate1.png"
+                alt="Email template preview"
+                class="w-full max-w-3xl border border-gray-200 bg-white p-1 shadow-sm"
+              />
+              <p class="text-center text-lg text-[#444444]">
+                Include videos in emails
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center gap-3">
+              <img
+                src="../public/sizzletemplate2.png"
+                alt="Social media template preview"
+                class="w-full max-w-3xl border border-gray-200 bg-white p-1 shadow-sm"
+              />
+              <p class="text-center text-lg text-[#444444]">
+                Post videos to social media
+              </p>
+            </div>
+
+            <div class="flex flex-col items-center gap-3">
+              <img
+                src="../public/sizzletemplate3.png"
+                alt="Website or blog template preview"
+                class="w-full max-w-3xl border border-gray-200 bg-white p-1 shadow-sm"
+              />
+              <p class="text-center text-lg text-[#444444]">
+                Post videos to your blog or website!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const clipPath2 = document.getElementById("clip-path-2");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+        clipPath2.style.display = "block";
+        clipPath.style.display = "block";
+      }
+
+      const modal = document.getElementById("sizzle-modal");
+      const openModalButton = document.getElementById("open-sizzle-modal");
+      const closeModalButton = document.getElementById("close-sizzle-modal");
+      const templatesModal = document.getElementById("templates-modal");
+      const openTemplatesModalButton = document.getElementById(
+        "open-templates-modal",
+      );
+      const closeTemplatesModalButton = document.getElementById(
+        "close-templates-modal",
+      );
+
+      function openSizzleModal() {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeSizzleModal() {
+        modal.style.display = "none";
+        document.body.style.overflow = "";
+      }
+
+      function openTemplatesModal() {
+        templatesModal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeTemplatesModal() {
+        templatesModal.style.display = "none";
+        document.body.style.overflow = "";
+      }
+
+      openModalButton.addEventListener("click", openSizzleModal);
+      closeModalButton.addEventListener("click", closeSizzleModal);
+      openTemplatesModalButton.addEventListener("click", openTemplatesModal);
+      closeTemplatesModalButton.addEventListener("click", closeTemplatesModal);
+
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          closeSizzleModal();
+        }
+      });
+
+      templatesModal.addEventListener("click", function (event) {
+        if (event.target === templatesModal) {
+          closeTemplatesModal();
+        }
+      });
+
+      window.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && modal.style.display === "flex") {
+          closeSizzleModal();
+        }
+        if (event.key === "Escape" && templatesModal.style.display === "flex") {
+          closeTemplatesModal();
+        }
+      });
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>
