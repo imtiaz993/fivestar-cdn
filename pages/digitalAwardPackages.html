@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Digital Award Packages</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+
+  <body class="min-h-screen">
+    <div
+      id="clip-path"
+      class="absolute top-0 left-0 hidden h-16 w-16 bg-[#F0592B] sm:fixed sm:h-40 sm:w-40"
+      style="clip-path: polygon(0 0, 100% 0, 0 100%)"
+    ></div>
+
+    <div
+      id="clip-path-2"
+      class="absolute top-0 right-0 hidden h-16 w-16 bg-[#0389A0] sm:fixed sm:h-40 sm:w-40"
+      style="clip-path: polygon(100% 0, 100% 100%, 0 0)"
+    ></div>
+    <div
+      class="hidden flex-col justify-start p-5 sm:w-384 sm:origin-top-left"
+      id="app-wrapper"
+    >
+      <div class="flex items-center justify-center sm:mx-40 sm:mt-6">
+        <img
+          src="../public/eelogo.png"
+          alt="Essential Engine logo"
+          class="max-w-32 sm:max-w-48 ml-10 mb-6 mx-auto sm:ml-0 sm:mr-auto"
+        />
+      </div>
+
+      <main class="flex flex-1 items-center justify-center">
+        <section
+          class="mx-auto w-full max-w-7xl text-[#444444] sm:px-6 sm:py-6"
+        >
+          <h1 class="text-center text-3xl text-black sm:text-5xl">
+            Digital Award Marketing Package with Listing - $689
+          </h1>
+
+          <section
+            class="mt-8 border-2 border-black bg-white px-4 py-5 shadow-md sm:mt-10 sm:px-6 sm:py-6"
+          >
+            <div
+              class="flex flex-col gap-8 sm:flex-row sm:items-stretch sm:gap-8"
+            >
+              <div class="sm:w-[35%] sm:pr-8 sm:border-r sm:border-[#737373]">
+                <h2
+                  class="text-center text-2xl font-medium text-black sm:text-3xl"
+                >
+                  Media Appearances
+                </h2>
+
+                <div class="mt-5 space-y-5 text-center">
+                  <img
+                    src="../public/awardannouncement2.png"
+                    alt="San Diego Magazine"
+                    class="mx-auto w-full max-w-sm"
+                  />
+
+                  <p class="text-xl font-light text-[#0B5F8A] sm:text-2xl">
+                    Listing in San Diego Magazine
+                  </p>
+
+                  <img
+                    src="../public/RE26_PremiumProfile.png"
+                    alt="Four-page microsite"
+                    class="mx-auto w-full max-w-md"
+                  />
+                  <button
+                    type="button"
+                    class="cursor-pointer font-light text-xl leading-snug text-[#0B5F8A] sm:text-2xl underline-offset-4 hover:underline"
+                  >
+                    Four-Page Microsite on
+                    <br />
+                    www.fivestarprofessional.com
+                  </button>
+                </div>
+              </div>
+
+              <div class="sm:w-[65%]">
+                <h2
+                  class="text-center text-2xl font-medium text-black sm:text-3xl"
+                >
+                  Award Announcement Tools
+                </h2>
+
+                <div
+                  class="mt-5 grid gap-8 sm:grid-cols-2 sm:gap-8 items-center"
+                >
+                  <div class="space-y-4 text-center">
+                    <img
+                      src="../public/RE26_Emblem.png"
+                      alt="Personalized emblem"
+                      class="mx-auto w-full max-w-sm"
+                    />
+                    <button
+                      type="button"
+                      class="cursor-pointer font-light text-xl leading-snug text-[#0B5F8A] sm:text-2xl underline-offset-4 hover:underline"
+                    >
+                      Personalized Emblem
+                      <br />
+                      multiple options available
+                    </button>
+                    <img
+                      src="../public/RE26_Video.png"
+                      alt="Personalized video"
+                      class="mx-auto w-full max-w-md"
+                    />
+                    <button
+                      type="button"
+                      class="cursor-pointer font-light text-xl leading-snug text-[#0B5F8A] sm:text-2xl underline-offset-4 hover:underline"
+                    >
+                      Personalized Video
+                    </button>
+                  </div>
+
+                  <div class="space-y-4 text-center">
+                    <img
+                      src="../public/RE26_NewDampPost.png"
+                      alt="Social campaign"
+                      class="mx-auto w-full max-w-md"
+                    />
+                    <button
+                      type="button"
+                      class="cursor-pointer font-light text-xl leading-snug text-[#0B5F8A] sm:text-2xl underline-offset-4 hover:underline"
+                    >
+                      3-Month Social Campaign (8x)
+                      <br />
+                      Social Posts/Videos and
+                      <br />
+                      Announcement Letter
+                    </button>
+
+                    <img
+                      src="../public/RE26_EReprint_Listing.png"
+                      alt="Listing e-reprint"
+                      class="mx-auto w-full max-w-md"
+                    />
+                    <button
+                      type="button"
+                      class="cursor-pointer font-light text-xl leading-snug text-[#0B5F8A] sm:text-2xl underline-offset-4 hover:underline"
+                    >
+                      Listing E-Reprint
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const clipPath2 = document.getElementById("clip-path-2");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+        clipPath.style.display = "block";
+        clipPath2.style.display = "block";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>

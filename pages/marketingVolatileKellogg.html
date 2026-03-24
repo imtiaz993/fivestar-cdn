@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Marketing Volatile Times - Kellogg</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <div
+      id="clip-path"
+      class="absolute top-0 left-0 hidden h-60 w-34 bg-[#F0592B] sm:h-full sm:w-[26%]"
+      style="clip-path: polygon(0 0, 70% 0, 0% 100%, 0 100%)"
+    ></div>
+    <div
+      class="hidden flex-col justify-start py-5 sm:w-384 sm:origin-top-left sm:p-0"
+      id="app-wrapper"
+    >
+      <img
+        src="../public/eelogo.png"
+        alt="Essential Engine logo"
+        class="mb-5 mr-5 max-w-32 ml-auto sm:absolute sm:top-0 sm:right-0 sm:mt-10 sm:mb-0 sm:mr-10 sm:max-w-48"
+      />
+      <section
+        class="relative z-10 w-full bg-[#0389A0] px-5 py-5 text-white sm:absolute sm:top-6 sm:left-25 sm:max-w-190 sm:px-7 sm:py-6"
+      >
+        <div class="flex gap-4">
+          <div class="border-2 border-white sm:border-4"></div>
+          <div class="space-y-1">
+            <h1 class="text-start text-3xl text-white sm:text-6xl">
+              Marketing in Volatile Times
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <main
+        class="flex flex-1 items-end justify-end px-5 sm:px-0 sm:pb-0 sm:mt-20"
+      >
+        <section
+          class="flex w-full max-w-7xl flex-col text-[#444444] sm:px-8 sm:py-4"
+        >
+          <section class="flex flex-1 flex-col justify-center">
+            <div
+              class="mt-4 grid items-start gap-5 sm:mt-4 sm:grid-cols-[1fr_auto_3fr] sm:gap-6"
+            >
+              <div class="text-center sm:text-end">
+                <p
+                  class="text-6xl font-semibold leading-none text-[#333333] sm:text-9xl"
+                >
+                  +2.5
+                </p>
+              </div>
+
+              <div class="hidden h-full w-px bg-[#8e8e8e] sm:block"></div>
+
+              <div class="space-y-3 text-center sm:text-left ">
+                <p class="text-xl leading-snug sm:text-2xl">
+                  A study on the 2001 recession showed:
+                </p>
+                <p
+                  class="max-w-5xl text-2xl leading-tight text-black sm:text-3xl"
+                >
+                  Businesses that aggressively marketed during the downturn
+                  increased market share 2½ times the average for all businesses
+                  in the post-recession
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-4 flex justify-center sm:mt-5">
+              <img
+                src="../public/bullandbear.png"
+                alt="Bull and bear market graphic"
+                class="w-full max-w-3xl"
+              />
+            </div>
+
+            <div
+              class="mt-3 grid items-end gap-4 border-t border-[#d9e2e8] pt-4 sm:mt-4 sm:grid-cols-[1fr_4fr] sm:gap-5"
+            >
+              <div class="flex justify-center sm:justify-start">
+                <img
+                  src="../public/kellogg.png"
+                  alt="Northwestern Kellogg logo"
+                  class="w-full max-w-32 sm:max-w-42"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <p
+                  class="text-center text-xl leading-snug text-[#0B5F8A] sm:text-left sm:text-2xl"
+                >
+                  When times are good you should advertise. When times are bad
+                  you <strong>must</strong> advertise.
+                </p>
+                <p
+                  class="text-center text-base italic leading-snug sm:text-left sm:text-lg"
+                >
+                  Source: Innovating Through Recession (Andrew Razeghi, Kellogg
+                  School of Management)
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+        clipPath.style.display = "block";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>
