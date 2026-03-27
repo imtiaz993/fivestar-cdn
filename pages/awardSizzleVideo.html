@@ -7,44 +7,42 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="../public/favicon.ico" />
   </head>
-  <body class="min-h-screen overflow-x-hidden bg-white">
+  <body class="min-h-screen">
     <div
-      id="clip-path"
-      class="absolute top-0 left-0 z-50 hidden h-20 w-20 bg-[#F0592B] sm:fixed sm:h-65 sm:w-65"
-      style="clip-path: polygon(0 0, 100% 0, 0 100%)"
-    ></div>
-
-    <div
-      id="clip-path-2"
-      class="absolute top-0 left-0 z-20 hidden h-28 w-28 bg-[#0389A0] sm:fixed sm:h-75 sm:w-75"
-      style="clip-path: polygon(0 0, 100% 0, 0 100%)"
-    ></div>
-    <div
-      class="hidden w-full flex-col justify-start overflow-x-hidden p-5 sm:w-384 sm:origin-top-left sm:justify-center sm:items-center sm:py-0"
+      class="hidden w-full flex-col justify-start overflow-x-hidden p-5 sm:w-384 sm:origin-top-left sm:items-center sm:py-0"
       id="app-wrapper"
     >
+      <div
+        id="clip-path"
+        class="absolute top-0 left-0 z-50 hidden h-20 w-20 bg-[#F0592B] sm:fixed sm:h-65 sm:w-65"
+        style="clip-path: polygon(0 0, 100% 0, 0 100%)"
+      ></div>
+
+      <div
+        id="clip-path-2"
+        class="absolute top-0 left-0 z-20 hidden h-28 w-28 bg-[#0389A0] sm:fixed sm:h-75 sm:w-75"
+        style="clip-path: polygon(0 0, 100% 0, 0 100%)"
+      ></div>
       <img
         src="../public/eelogo.png"
         alt="Essential Engine logo"
         class="mb-8 ml-auto max-w-32 sm:absolute sm:top-0 sm:right-0 sm:mt-10 sm:mb-0 sm:mr-10 sm:max-w-48"
       />
 
-      <main
-        class="relative flex flex-1 items-center justify-center sm:pb-0 sm:mt-60"
-      >
+      <main class="relative flex items-center justify-center sm:pb-0 sm:mt-36">
         <section class="flex w-full max-w-7xl flex-col justify-center">
           <h1
-            class="max-w-full font-medium text-center sm:pl-12 text-3xl sm:text-5xl"
+            class="max-w-full font-bold text-center sm:pl-12 text-2xl sm:text-5xl"
           >
             Award Celebration 5-Pack Sizzle Video Package - $59
           </h1>
 
           <div
-            class="mt-8 grid gap-8 text-[#444444] sm:mt-10 sm:grid-cols-[minmax(0,34rem)_minmax(0,1fr)] sm:items-center sm:justify-center sm:gap-10"
+            class="mt-8 grid gap-8 sm:mt-10 sm:grid-cols-[minmax(0,34rem)_minmax(0,1fr)] sm:items-start sm:justify-center sm:gap-10"
           >
             <div class="flex justify-center">
               <div
-                class="w-full max-w-xl overflow-auto border border-gray-200 bg-white shadow-md sm:h-[34rem]"
+                class="w-full max-w-xl overflow-auto border border-gray-200 bg-white shadow-md"
               >
                 <video
                   class="h-full w-full bg-black object-cover"
@@ -60,30 +58,31 @@
               </div>
             </div>
 
-            <div class="space-y-6 sm:max-h-[34rem] sm:pt-1">
-              <p class="text-xl leading-snug sm:text-2xl">
+            <div class="space-y-6 sm:pb-8">
+              <p class="text-lg leading-snug sm:text-xl font-light">
                 A sizzling fun way to highlight your care of clients!
               </p>
 
               <div class="space-y-3">
-                <h2 class="text-2xl leading-none sm:text-3xl">Features</h2>
+                <h2 class="text-xl leading-none sm:text-2xl font-medium">
+                  Features
+                </h2>
                 <ul
-                  class="space-y-2 pl-7 text-xl leading-snug list-disc sm:text-2xl"
+                  class="space-y-2 pl-7 text-lg leading-snug list-disc sm:text-xl"
                 >
                   <li>
                     5 Fun Sizzle Videos Celebrating and Differentiating You!
                   </li>
                 </ul>
                 <ul
-                  class="space-y-2 pl-12 text-xl leading-snug list-[circle] sm:text-2xl"
+                  class="space-y-2 pl-12 text-lg leading-snug list-[circle] sm:text-xl"
                 >
                   <li>
                     Engaging, impactful, fun videos celebrating your award
                   </li>
                   <li>
                     <button
-                      type="button"
-                      id="open-sizzle-modal"
+                      data-modal-open="sample-modal-1"
                       class="cursor-pointer text-[#0b6a97] underline-offset-4 hover:underline"
                     >
                       Click here to see all 5 sizzle videos
@@ -101,16 +100,18 @@
               </div>
 
               <div class="space-y-3">
-                <h2 class="text-2xl leading-none sm:text-3xl">Benefits</h2>
+                <h2 class="text-xl leading-none sm:text-2xl font-medium">
+                  Benefits
+                </h2>
                 <ul
-                  class="space-y-2 pl-7 text-xl leading-snug list-disc sm:text-2xl"
+                  class="space-y-2 pl-7 text-lg leading-snug list-disc sm:text-xl"
                 >
                   <li>
                     Provides one more reminder why you are the “right choice”.
                   </li>
                 </ul>
                 <ul
-                  class="space-y-2 pl-12 text-xl leading-snug list-[circle] sm:text-2xl"
+                  class="space-y-2 pl-12 text-lg leading-snug list-[circle] sm:text-xl"
                 >
                   <li>
                     Differentiate your self from the competition and win new
@@ -122,8 +123,7 @@
                   </li>
                   <li>
                     <button
-                      type="button"
-                      id="open-templates-modal"
+                      data-modal-open="sample-modal-2"
                       class="cursor-pointer text-[#0b6a97] underline-offset-4 hover:underline"
                     >
                       Click here to see sample communication templates
@@ -140,151 +140,223 @@
           </div>
         </section>
       </main>
+    </div>
 
+    <div
+      id="sample-modal-1"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto max-h-screen bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
       <div
-        id="sizzle-modal"
-        class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 px-4 py-6"
+        data-modal-panel
+        class="relative my-auto w-full max-w-5xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
       >
-        <div
-          class="flex max-h-full w-full max-w-4xl flex-col overflow-hidden rounded-sm bg-white shadow-2xl"
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
         >
-          <div
-            class="flex items-center justify-between border-b border-gray-200 px-5 py-4"
-          >
-            <h2 class="text-xl font-medium text-[#444444] sm:text-2xl">
-              All 5 Sizzle Videos
-            </h2>
-            <button
-              type="button"
-              id="close-sizzle-modal"
-              class="text-3xl leading-none text-[#666666]"
-              aria-label="Close modal"
-            >
-              &times;
-            </button>
-          </div>
+          ×
+        </button>
+        <div class="space-y-4 px-2 py-2 sm:px-4 sm:py-4">
+          <section class="space-y-4">
+            <div class="relative overflow-hidden rounded-sm">
+              <button
+                type="button"
+                id="sizzle-prev"
+                class="absolute left-1000 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/90 text-2xl leading-none text-[#0b6a97] shadow-md sm:left-4 sm:h-12 sm:w-12"
+                aria-label="Previous video"
+              >
+                &#8249;
+              </button>
+              <div
+                id="sizzle-slider-track"
+                class="flex transition-transform duration-300 ease-out"
+              >
+                <div class="w-full shrink-0">
+                  <video
+                    class="mx-auto max-h-[70vh] w-full max-w-4xl bg-black object-contain"
+                    preload="metadata"
+                    controls
+                    playsinline
+                  >
+                    <source
+                      src="https://ags.s3.amazonaws.com/ago/img/SizzleVideo_ChampagnePop_H.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div class="w-full shrink-0">
+                  <video
+                    class="mx-auto max-h-[70vh] w-full max-w-4xl bg-black object-contain"
+                    preload="metadata"
+                    controls
+                    playsinline
+                  >
+                    <source
+                      src="https://ags.s3.amazonaws.com/ago/img/SizzleVideo_Confetti_H.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div class="w-full shrink-0">
+                  <video
+                    class="mx-auto max-h-[70vh] w-full max-w-4xl bg-black object-contain"
+                    preload="metadata"
+                    controls
+                    playsinline
+                  >
+                    <source
+                      src="https://ags.s3.amazonaws.com/ago/img/SizzleVideo_Fireworks_H.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div class="w-full shrink-0">
+                  <video
+                    class="mx-auto max-h-[70vh] w-full max-w-4xl bg-black object-contain"
+                    preload="metadata"
+                    controls
+                    playsinline
+                  >
+                    <source
+                      src="https://ags.s3.amazonaws.com/ago/img/SizzleVideo_RedCarpet_H.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div class="w-full shrink-0">
+                  <video
+                    class="mx-auto max-h-[70vh] w-full max-w-4xl bg-black object-contain"
+                    preload="metadata"
+                    controls
+                    playsinline
+                  >
+                    <source
+                      src="https://ags.s3.amazonaws.com/ago/img/SizzleVideo_Space_H.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+              <button
+                type="button"
+                id="sizzle-next"
+                class="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/90 text-2xl leading-none text-[#0b6a97] shadow-md sm:right-4 sm:h-12 sm:w-12"
+                aria-label="Next video"
+              >
+                &#8250;
+              </button>
+            </div>
 
-          <div class="space-y-6 overflow-y-auto px-5 py-5">
-            <video
-              class="w-full bg-black"
-              preload="metadata"
-              controls
-              playsinline
-            >
-              <source
-                src="https://ags.s3.us-east-1.amazonaws.com/ago/img/SizzleVideo_Confetti_V.mp4"
-                type="video/mp4"
-              />
-            </video>
-            <video
-              class="w-full bg-black"
-              preload="metadata"
-              controls
-              playsinline
-            >
-              <source
-                src="https://ags.s3.us-east-1.amazonaws.com/ago/img/SizzleVideo_Confetti_V.mp4"
-                type="video/mp4"
-              />
-            </video>
-            <video
-              class="w-full bg-black"
-              preload="metadata"
-              controls
-              playsinline
-            >
-              <source
-                src="https://ags.s3.us-east-1.amazonaws.com/ago/img/SizzleVideo_Confetti_V.mp4"
-                type="video/mp4"
-              />
-            </video>
-            <video
-              class="w-full bg-black"
-              preload="metadata"
-              controls
-              playsinline
-            >
-              <source
-                src="https://ags.s3.us-east-1.amazonaws.com/ago/img/SizzleVideo_Confetti_V.mp4"
-                type="video/mp4"
-              />
-            </video>
-            <video
-              class="w-full bg-black"
-              preload="metadata"
-              controls
-              playsinline
-            >
-              <source
-                src="https://ags.s3.us-east-1.amazonaws.com/ago/img/SizzleVideo_Confetti_V.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
+            <div class="flex items-center justify-center gap-4">
+              <div class="flex items-center justify-center gap-2">
+                <button
+                  type="button"
+                  class="sizzle-dot h-3 w-3 cursor-pointer rounded-full bg-[#0b6a97]"
+                  data-slide-index="0"
+                  aria-label="Go to video 1"
+                ></button>
+                <button
+                  type="button"
+                  class="sizzle-dot h-3 w-3 cursor-pointer rounded-full bg-[#c7dbe6]"
+                  data-slide-index="1"
+                  aria-label="Go to video 2"
+                ></button>
+                <button
+                  type="button"
+                  class="sizzle-dot h-3 w-3 cursor-pointer rounded-full bg-[#c7dbe6]"
+                  data-slide-index="2"
+                  aria-label="Go to video 3"
+                ></button>
+                <button
+                  type="button"
+                  class="sizzle-dot h-3 w-3 cursor-pointer rounded-full bg-[#c7dbe6]"
+                  data-slide-index="3"
+                  aria-label="Go to video 4"
+                ></button>
+                <button
+                  type="button"
+                  class="sizzle-dot h-3 w-3 cursor-pointer rounded-full bg-[#c7dbe6]"
+                  data-slide-index="4"
+                  aria-label="Go to video 5"
+                ></button>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
-
+    </div>
+    <div
+      id="sample-modal-2"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto max-h-screen bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
       <div
-        id="templates-modal"
-        class="fixed inset-0 z-[110] hidden items-center justify-center bg-black/60 px-4 py-6"
+        data-modal-panel
+        class="relative my-auto w-full max-w-5xl rounded-lg bg-white px-4 py-4 sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
       >
-        <div
-          class="flex max-h-full w-full max-w-5xl flex-col overflow-hidden rounded-sm bg-white shadow-2xl"
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
         >
-          <div
-            class="flex items-center justify-between border-b border-gray-200 px-5 py-4"
-          >
-            <h2 class="text-xl font-medium text-[#444444] sm:text-2xl">
-              Sample Communication Templates
-            </h2>
-            <button
-              type="button"
-              id="close-templates-modal"
-              class="text-3xl leading-none text-[#666666]"
-              aria-label="Close modal"
-            >
-              &times;
-            </button>
-          </div>
+          ×
+        </button>
+        <div
+          class="flex max-h-full w-full max-w-5xl flex-col overflow-hidden rounded-sm bg-white"
+        >
+          <div class="overflow-y-auto px-5 py-5">
+            <div class="grid gap-6 sm:grid-cols-2 sm:gap-8">
+              <div class="space-y-6">
+                <div class="flex flex-col items-center gap-3">
+                  <img
+                    src="../public/sizzletemplate3.png"
+                    alt="Website or blog template preview"
+                    class="w-full max-w-2xl border border-gray-200 bg-white p-1"
+                  />
+                  <p class="text-center text-base text-black">
+                    Post videos to your blog or website!
+                  </p>
+                </div>
 
-          <div class="space-y-6 overflow-y-auto px-5 py-5">
-            <div class="flex flex-col items-center gap-3">
-              <img
-                src="../public/sizzletemplate1.png"
-                alt="Email template preview"
-                class="w-full max-w-3xl border border-gray-200 bg-white p-1 shadow-sm"
-              />
-              <p class="text-center text-lg text-[#444444]">
-                Include videos in emails
-              </p>
-            </div>
+                <div class="flex flex-col items-center gap-3">
+                  <img
+                    src="../public/sizzletemplate2.png"
+                    alt="Social media template preview"
+                    class="w-full max-w-2xl border border-gray-200 bg-white p-1"
+                  />
+                  <p class="text-center text-base text-black">
+                    Post videos to social media
+                  </p>
+                </div>
+              </div>
 
-            <div class="flex flex-col items-center gap-3">
-              <img
-                src="../public/sizzletemplate2.png"
-                alt="Social media template preview"
-                class="w-full max-w-3xl border border-gray-200 bg-white p-1 shadow-sm"
-              />
-              <p class="text-center text-lg text-[#444444]">
-                Post videos to social media
-              </p>
-            </div>
-
-            <div class="flex flex-col items-center gap-3">
-              <img
-                src="../public/sizzletemplate3.png"
-                alt="Website or blog template preview"
-                class="w-full max-w-3xl border border-gray-200 bg-white p-1 shadow-sm"
-              />
-              <p class="text-center text-lg text-[#444444]">
-                Post videos to your blog or website!
-              </p>
+              <div class="flex flex-col items-center gap-3">
+                <img
+                  src="../public/sizzletemplate1.png"
+                  alt="Email template preview"
+                  class="w-full max-w-2xl border border-gray-200 bg-white p-1"
+                />
+                <p class="text-center text-base text-black">
+                  Include videos in emails
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <script>
       function scalePage() {
         const baseWidth = 1536;
@@ -308,65 +380,96 @@
         clipPath.style.display = "block";
       }
 
-      const modal = document.getElementById("sizzle-modal");
-      const openModalButton = document.getElementById("open-sizzle-modal");
-      const closeModalButton = document.getElementById("close-sizzle-modal");
-      const templatesModal = document.getElementById("templates-modal");
-      const openTemplatesModalButton = document.getElementById(
-        "open-templates-modal",
-      );
-      const closeTemplatesModalButton = document.getElementById(
-        "close-templates-modal",
-      );
-
-      function openSizzleModal() {
-        modal.style.display = "flex";
-        document.body.style.overflow = "hidden";
+      function openModal(modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("overflow-hidden");
       }
 
-      function closeSizzleModal() {
-        modal.style.display = "none";
-        document.body.style.overflow = "";
-      }
+      function closeModal(modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        modal.setAttribute("aria-hidden", "true");
 
-      function openTemplatesModal() {
-        templatesModal.style.display = "flex";
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeTemplatesModal() {
-        templatesModal.style.display = "none";
-        document.body.style.overflow = "";
-      }
-
-      openModalButton.addEventListener("click", openSizzleModal);
-      closeModalButton.addEventListener("click", closeSizzleModal);
-      openTemplatesModalButton.addEventListener("click", openTemplatesModal);
-      closeTemplatesModalButton.addEventListener("click", closeTemplatesModal);
-
-      modal.addEventListener("click", function (event) {
-        if (event.target === modal) {
-          closeSizzleModal();
+        const openModals = document.querySelectorAll("[data-modal].flex");
+        if (openModals.length === 0) {
+          document.body.classList.remove("overflow-hidden");
         }
+      }
+
+      const sizzleSliderTrack = document.getElementById("sizzle-slider-track");
+      const sizzlePrev = document.getElementById("sizzle-prev");
+      const sizzleNext = document.getElementById("sizzle-next");
+      const sizzleDots = Array.from(document.querySelectorAll(".sizzle-dot"));
+      let currentSizzleSlide = 0;
+
+      function updateSizzleSlider(index) {
+        if (!sizzleSliderTrack) return;
+
+        currentSizzleSlide = Math.max(
+          0,
+          Math.min(index, sizzleDots.length - 1),
+        );
+        sizzleSliderTrack.style.transform = `translateX(-${currentSizzleSlide * 100}%)`;
+
+        sizzleDots.forEach((dot, dotIndex) => {
+          dot.classList.toggle("bg-[#0b6a97]", dotIndex === currentSizzleSlide);
+          dot.classList.toggle("bg-[#c7dbe6]", dotIndex !== currentSizzleSlide);
+        });
+      }
+
+      if (sizzlePrev && sizzleNext) {
+        sizzlePrev.addEventListener("click", () => {
+          updateSizzleSlider(currentSizzleSlide - 1);
+        });
+
+        sizzleNext.addEventListener("click", () => {
+          updateSizzleSlider(currentSizzleSlide + 1);
+        });
+      }
+
+      sizzleDots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          updateSizzleSlider(Number(dot.dataset.slideIndex));
+        });
       });
 
-      templatesModal.addEventListener("click", function (event) {
-        if (event.target === templatesModal) {
-          closeTemplatesModal();
-        }
+      document.querySelectorAll("[data-modal-open]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const modalId = button.getAttribute("data-modal-open");
+          const modal = document.getElementById(modalId);
+          if (modal) openModal(modal);
+        });
       });
 
-      window.addEventListener("keydown", function (event) {
-        if (event.key === "Escape" && modal.style.display === "flex") {
-          closeSizzleModal();
-        }
-        if (event.key === "Escape" && templatesModal.style.display === "flex") {
-          closeTemplatesModal();
+      document.querySelectorAll("[data-modal]").forEach((modal) => {
+        const panel = modal.querySelector("[data-modal-panel]");
+
+        modal.querySelectorAll("[data-modal-close]").forEach((button) => {
+          button.addEventListener("click", () => closeModal(modal));
+        });
+
+        modal.addEventListener("click", (event) => {
+          if (!panel.contains(event.target)) {
+            closeModal(modal);
+          }
+        });
+      });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          document.querySelectorAll("[data-modal].flex").forEach((modal) => {
+            closeModal(modal);
+          });
         }
       });
 
       window.addEventListener("resize", scalePage);
-      window.addEventListener("load", scalePage);
+      window.addEventListener("load", () => {
+        scalePage();
+        updateSizzleSlider(0);
+      });
     </script>
   </body>
 </html>

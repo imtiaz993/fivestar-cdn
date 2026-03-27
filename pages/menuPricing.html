@@ -1,0 +1,2141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Menu Pricing</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+
+  <body class="min-h-screen">
+    <div
+      class="hidden flex-col justify-start px-4 py-4 sm:w-384 sm:origin-top-left sm:px-0 sm:py-0"
+      id="app-wrapper"
+    >
+      <header class="px-2 pt-2 sm:px-8 sm:pt-6">
+        <img
+          src="../public/eelogo.png"
+          alt="Essential Engine logo"
+          class="w-28 sm:w-44"
+        />
+      </header>
+
+      <main class="px-2 pb-6 sm:px-6 sm:pb-10">
+        <section class="mx-auto w-full max-w-6xl">
+          <p class="mt-6 text-2xl sm:text-2xl">Browse by product:</p>
+
+          <div
+            class="mt-2 flex flex-col sm:flex-row font-light text-sm sm:text-lg"
+          >
+            <button
+              class="menu-tab cursor-pointer underline-offset-4 hover:underline bg-[#4A4A4A] px-4 py-3 text-left text-white sm:flex-1"
+              data-tab-target="display-ads"
+            >
+              Award Marketing Display Ads
+            </button>
+            <button
+              class="menu-tab cursor-pointer underline-offset-4 hover:underline bg-[#0B5F8A] px-4 py-3 text-left text-white sm:flex-1"
+              data-tab-target="marketing-tools"
+            >
+              Award Marketing Tools
+            </button>
+            <button
+              class="menu-tab cursor-pointer underline-offset-4 hover:underline bg-[#4A4A4A] px-4 py-3 text-left text-white sm:flex-1"
+              data-tab-target="non-award"
+            >
+              Non-award-based Marketing Services
+            </button>
+          </div>
+
+          <div
+            class="border-2 border-[#0B5F8A] bg-white px-4 py-4 sm:px-6 sm:py-6"
+          >
+            <section class="menu-panel hidden" data-tab-panel="display-ads">
+              <div
+                class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
+              >
+                <h1 class="text-xl text-black sm:text-3xl">
+                  Display opportunities
+                </h1>
+                <p class="text-base font-light sm:text-lg">
+                  Click on images for more details!
+                </p>
+              </div>
+
+              <div class="mt-3 border-b border-[#2A78A0] pb-2">
+                <p class="text-lg sm:text-xl">
+                  <span class="font-semibold text-[#0B5F8A]">Profiles</span> in
+                  San Diego Magazine
+                </p>
+              </div>
+
+              <div class="mt-6 grid gap-8 sm:grid-cols-4 sm:items-end">
+                <div class="space-y-4 text-center">
+                  <div
+                    data-modal-open="sample-modal-13"
+                    class="cursor-pointer space-y-4"
+                  >
+                    <img
+                      src="../public/RE26_EighthPage.png"
+                      alt="Eighth page"
+                      class="mx-auto w-full max-w-xs"
+                    />
+                    <p
+                      class="text-base text-[#0B5F8A] underline-offset-4 hover:underline sm:text-lg"
+                    >
+                      Eighth Page
+                      <br />
+                      <span class="text-[#444444] text-sm sm:text-base"
+                        >$1,815</span
+                      >
+                    </p>
+                  </div>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+
+                <div class="space-y-4 text-center">
+                  <img
+                    src="../public/RE26_QuarterPage.png"
+                    alt="Quarter page"
+                    class="mx-auto w-full max-w-xs"
+                  />
+                  <p
+                    class="text-base text-[#0B5F8A] sm:text-lg text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                  >
+                    Quarter Page
+                    <br />
+                    <span
+                      class="text-[#444444] text-sm sm:text-base hover:no-underline"
+                      >$2,680</span
+                    >
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+
+                <div class="space-y-4 text-center">
+                  <img
+                    src="../public/RE26_HalfPage.png"
+                    alt="Half page"
+                    class="mx-auto w-full max-w-sm"
+                  />
+                  <p class="text-base text-[#0B5F8A] sm:text-lg">
+                    Half Page
+                    <br />
+                    <span class="text-[#444444] text-sm sm:text-base"
+                      >$3,945</span
+                    >
+                  </p>
+                </div>
+
+                <div class="space-y-4 text-center">
+                  <img
+                    src="../public/RE26_FullPage.png"
+                    alt="Full page"
+                    class="mx-auto w-full max-w-sm"
+                  />
+                  <p class="text-base text-[#0B5F8A] sm:text-lg">
+                    Full Page
+                    <br />
+                    <span class="text-[#444444] text-sm sm:text-base"
+                      >$5,920</span
+                    >
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+              </div>
+
+              <div class="mt-8 grid gap-8 sm:grid-cols-3 sm:items-end">
+                <div class="space-y-4 text-center">
+                  <img
+                    src="../public/RE26_Spread.png"
+                    alt="Spread"
+                    class="mx-auto w-full max-w-md"
+                  />
+                  <p class="text-base text-[#0B5F8A] sm:text-lg">
+                    Spread
+                    <br />
+                    <span class="text-[#444444] text-sm sm:text-base"
+                      >$10,355</span
+                    >
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+
+                <div class="space-y-4 text-center">
+                  <img
+                    src="../public/RE26_ShowcaseFull.png"
+                    alt="Showcase full"
+                    class="mx-auto w-full max-w-xs"
+                  />
+                  <p class="text-base text-[#0B5F8A] sm:text-lg">
+                    Showcase Full
+                    <br />
+                    <span class="text-[#444444] text-sm sm:text-base"
+                      >$7,295</span
+                    >
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+
+                <div class="space-y-4 text-center">
+                  <img
+                    src="../public/RE26_ShowcaseSpread.png"
+                    alt="Showcase spread"
+                    class="mx-auto w-full max-w-md"
+                  />
+                  <p class="text-base text-[#0B5F8A] sm:text-lg">
+                    Showcase Spread
+                    <br />
+                    <span class="text-[#444444] text-sm sm:text-base"
+                      >$12,815</span
+                    >
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+              </div>
+
+              <div class="mt-8 border-b border-[#2A78A0] pb-2">
+                <p class="text-lg sm:text-xl">
+                  <span class="font-semibold text-[#0B5F8A]"
+                    >Award winner listing</span
+                  >
+                  in San Diego Magazine
+                </p>
+              </div>
+
+              <div class="mt-6 text-center">
+                <p class="text-lg sm:text-xl">
+                  Listing in publication
+                  <br />
+                  $195
+                </p>
+                <button
+                  class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                >
+                  Buy now
+                </button>
+              </div>
+            </section>
+
+            <section class="menu-panel" data-tab-panel="marketing-tools">
+              <div
+                class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
+              >
+                <h1 class="text-xl text-black sm:text-3xl">
+                  Award Marketing Tools
+                </h1>
+                <p class="text-base font-light sm:text-lg">
+                  Click on images for more details!
+                </p>
+              </div>
+
+              <div
+                class="mt-4 flex w-full max-w-md text-sm sm:text-lg text-white"
+              >
+                <button
+                  class="cursor-pointer sub-tab flex-1 bg-[#0B5F8A] px-4 py-3 text-center"
+                  data-subtab-target="standard-tools"
+                >
+                  Standard
+                </button>
+                <button
+                  class="cursor-pointer sub-tab flex-1 bg-[#4A4A4A] px-4 py-3 text-center"
+                  data-subtab-target="premium-tools"
+                >
+                  Premium
+                </button>
+              </div>
+
+              <div
+                class="subtab-panel mt-0 border-2 border-[#0B5F8A] p-4 sm:p-6"
+                data-subtab-panel="standard-tools"
+              >
+                <p class="text-center text-xl text-black sm:text-2xl">
+                  Digital Award Marketing Package with Listing - $689
+                </p>
+                <p class="mt-2 text-center font-light text-lg sm:text-xl">
+                  Optimize your award marketing strategy by getting all of our
+                  most popular tools bundled together!
+                </p>
+                <div class="mt-4 text-center">
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+
+                <div class="mt-6 flex flex-col gap-8 sm:flex-row">
+                  <div
+                    class="sm:w-[36%] sm:pr-6 sm:border-r sm:border-[#737373]"
+                  >
+                    <h2
+                      class="text-center text-xl font-medium text-black sm:text-2xl"
+                    >
+                      Media Appearances
+                    </h2>
+                    <div class="mt-4 space-y-4 text-center">
+                      <img
+                        src="../public/awardannouncement2.png"
+                        alt="San Diego Magazine"
+                        class="mx-auto w-full max-w-sm"
+                      />
+                      <p class="text-base text-[#0B5F8A] sm:text-lg">
+                        Listing in San Diego Magazine
+                      </p>
+                      <div
+                        data-modal-open="sample-modal-1"
+                        class="flex cursor-pointer flex-col items-center"
+                      >
+                        <img
+                          src="../public/RE26_PremiumProfile.png"
+                          alt="Four-page microsite"
+                          class="mx-auto w-full max-w-md"
+                        />
+
+                        <span
+                          class="mt-2 font-light text-base leading-snug text-[#0B5F8A] sm:text-lg underline-offset-4 hover:underline"
+                        >
+                          Four-Page Microsite on
+                          <br />
+                          www.fivestarprofessional.com
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="sm:w-[64%]">
+                    <h2
+                      class="text-center text-xl font-medium text-black sm:text-2xl"
+                    >
+                      Award Announcement Tools
+                    </h2>
+                    <div class="mt-4 grid gap-6 sm:grid-cols-2">
+                      <div class="space-y-4 text-center">
+                        <div
+                          data-modal-open="sample-modal-2"
+                          class="flex cursor-pointer flex-col items-center"
+                        >
+                          <img
+                            src="../public/RE26_Emblem.png"
+                            alt="Four-page microsite"
+                            class="mx-auto w-full max-w-md"
+                          />
+
+                          <span
+                            class="mt-2 font-light text-lg leading-snug text-[#0B5F8A] sm:text-xl underline-offset-4 hover:underline"
+                          >
+                            Personalized Emblem
+                            <br />
+                            multiple options available
+                          </span>
+                        </div>
+                        <div
+                          data-modal-open="sample-modal-3"
+                          class="flex cursor-pointer flex-col items-center"
+                        >
+                          <img
+                            src="../public/RE26_Video.png"
+                            alt="Four-page microsite"
+                            class="mx-auto w-full max-w-md"
+                          />
+
+                          <span
+                            class="mt-2 font-light text-lg leading-snug text-[#0B5F8A] sm:text-xl underline-offset-4 hover:underline"
+                          >
+                            Personalized Video
+                          </span>
+                        </div>
+                      </div>
+                      <div class="space-y-4 text-center">
+                        <div
+                          data-modal-open="sample-modal-4"
+                          class="flex cursor-pointer flex-col items-center"
+                        >
+                          <img
+                            src="../public/RE26_NewDampPost.png"
+                            alt="Four-page microsite"
+                            class="mx-auto w-full max-w-md"
+                          />
+
+                          <span
+                            class="mt-2 font-light text-lg leading-snug text-[#0B5F8A] sm:text-xl underline-offset-4 hover:underline"
+                          >
+                            3-Month Social Campaign (8x)
+                            <br />
+                            Social Posts/Videos and
+                            <br />
+                            Announcement Letter
+                          </span>
+                        </div>
+                        <div
+                          data-modal-open="sample-modal-5"
+                          class="flex cursor-pointer flex-col items-center"
+                        >
+                          <img
+                            src="../public/RE26_EReprint_Listing.png"
+                            alt="Four-page microsite"
+                            class="mx-auto w-full max-w-md"
+                          />
+
+                          <span
+                            class="mt-2 font-light text-lg leading-snug text-[#0B5F8A] sm:text-xl underline-offset-4 hover:underline"
+                          >
+                            Listing E-Reprint
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="mt-6 text-center text-xl text-black sm:text-2xl">
+                  A la carte Award Marketing Tools
+                </p>
+
+                <div class="mt-5 border-b border-[#2A78A0] pb-2">
+                  <p class="text-lg sm:text-xl">
+                    <span class="font-semibold text-[#0B5F8A]"
+                      >Digital tools</span
+                    >
+                    to amplify your award marketing online
+                  </p>
+                </div>
+                <div class="mt-5 grid gap-8 sm:grid-cols-2 sm:max-w-3xl">
+                  <div class="text-center space-y-3">
+                    <img
+                      src="../public/RE26_Video.png"
+                      alt="Videos"
+                      data-modal-open="sample-modal-3"
+                      class="mx-auto w-full max-w-xs cursor-pointer"
+                    />
+                    <p
+                      data-modal-open="sample-modal-3"
+                      class="text-base sm:text-lg text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Videos<br />
+                      <span class="text-[#444444] text-sm sm:text-base"
+                        >$360</span
+                      >
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                  <div class="text-center space-y-3">
+                    <img
+                      data-modal-open="sample-modal-2"
+                      src="../public/RE26_Emblem.png"
+                      alt="Emblem"
+                      class="mx-auto w-full max-w-xs cursor-pointer"
+                    />
+                    <p
+                      data-modal-open="sample-modal-2"
+                      class="text-base sm:text-lg text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Emblem<br />
+                      <span class="text-[#444444] text-sm sm:text-base"
+                        >$360</span
+                      >
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                </div>
+
+                <div class="mt-6 border-b border-[#2A78A0] pb-2">
+                  <p class="text-lg sm:text-xl">
+                    <span class="font-semibold text-[#0B5F8A]"
+                      >Direct-mail tools</span
+                    >
+                    that will get you noticed!
+                  </p>
+                </div>
+                <div class="mt-5 grid gap-8 sm:grid-cols-4">
+                  <div class="text-center space-y-3">
+                    <img
+                      data-modal-open="sample-modal-6"
+                      src="../public/RE26_AnnouncementBands.png"
+                      alt="Announcement bands"
+                      class="mx-auto w-full max-w-[10rem] cursor-pointer"
+                    />
+                    <p
+                      data-modal-open="sample-modal-6"
+                      class="text-base sm:text-lg text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Announcement Bands (25)<br />
+                      <span class="text-[#444444] text-sm sm:text-base"
+                        >$355</span
+                      >
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                  <div class="text-center space-y-3">
+                    <img
+                      data-modal-open="sample-modal-7"
+                      src="../public/RE26_Reprints.png"
+                      alt="Profile reprints"
+                      class="mx-auto w-full max-w-[10rem] cursor-pointer"
+                    />
+                    <p
+                      data-modal-open="sample-modal-7"
+                      class="text-base sm:text-lg text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Profile Reprints (100)<br />
+                      <span class="text-[#444444] text-sm sm:text-base"
+                        >$265</span
+                      >
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                  <div class="text-center space-y-3">
+                    <img
+                      data-modal-open="sample-modal-8"
+                      src="../public/RE26_Postcard_Front.png"
+                      alt="Announcement postcards"
+                      class="mx-auto w-full max-w-sm cursor-pointer"
+                    />
+                    <p
+                      data-modal-open="sample-modal-8"
+                      class="text-base sm:text-lg text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Award Announcement Postcards (250)<br />
+                      <span class="text-[#444444] text-sm sm:text-base"
+                        >$210</span
+                      >
+                    </p>
+                  </div>
+                  <div class="text-center space-y-3 cursor-pointer">
+                    <img
+                      data-modal-open="sample-modal-9"
+                      src="../public/RE26_AwardBrochure.png"
+                      alt="Award brochures"
+                      class="mx-auto w-full max-w-[12rem]"
+                    />
+                    <p
+                      data-modal-open="sample-modal-9"
+                      class="text-base sm:text-lg text-[#0b6a97] underline-offset-4 hover:underline"
+                    >
+                      Award Brochures (100)<br />
+                      <span class="text-[#444444] text-sm sm:text-base"
+                        >$385</span
+                      >
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                </div>
+
+                <div class="mt-6 border-b border-[#2A78A0] pb-2">
+                  <p class="text-lg sm:text-xl">
+                    <span class="font-semibold text-[#0B5F8A]"
+                      >Display tools</span
+                    >
+                    that do the talking for you
+                  </p>
+                </div>
+                <div class="mt-5 grid gap-8 sm:grid-cols-2 sm:max-w-4xl">
+                  <div class="text-center space-y-3">
+                    <img
+                      data-modal-open="sample-modal-10"
+                      src="../public/RE26_SingleWallPlaque.png"
+                      alt="Wall plaques"
+                      class="mx-auto w-full max-w-xs cursor-pointer"
+                    />
+                    <p
+                      data-modal-open="sample-modal-10"
+                      class="text-base sm:text-lg text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Wall plaques<br />
+                      <span class="text-[#444444] text-sm sm:text-base"
+                        >$405</span
+                      >
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                  <div class="text-center space-y-3">
+                    <img
+                      data-modal-open="sample-modal-11"
+                      src="../public/RE26_DeskAward.png"
+                      alt="Desk award"
+                      class="mx-auto w-full max-w-[8rem] cursor-pointer"
+                    />
+                    <p
+                      data-modal-open="sample-modal-11"
+                      class="text-base sm:text-lg text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Desk award<br />
+                      <span class="text-[#444444] text-sm sm:text-base"
+                        >$385</span
+                      >
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="subtab-panel mt-0 hidden border-2 border-[#0B5F8A] p-4 sm:p-6"
+                data-subtab-panel="premium-tools"
+              >
+                <p class="text-center text-xl text-black sm:text-2xl">
+                  Premium Digital Award Marketing Packages - $989
+                </p>
+                <p class="mt-2 text-center font-light text-lg sm:text-xl">
+                  Optimize your award marketing strategy by getting all of our
+                  most popular tools bundled together!
+                </p>
+
+                <div class="mt-6 flex flex-col gap-8 sm:flex-row">
+                  <div
+                    class="sm:w-[34%] sm:pr-6 sm:border-r sm:border-[#737373]"
+                  >
+                    <h2
+                      class="text-center text-xl font-medium text-black sm:text-2xl"
+                    >
+                      Media Appearances
+                    </h2>
+                    <div class="mt-4 space-y-4 text-center">
+                      <img
+                        src="../public/awardannouncement2.png"
+                        alt="San Diego Magazine"
+                        class="mx-auto w-full max-w-sm"
+                      />
+                      <p class="text-base text-[#0B5F8A] sm:text-lg">
+                        Listing in San Diego Magazine
+                      </p>
+                      <div
+                        data-modal-open="sample-modal-1"
+                        class="flex cursor-pointer flex-col items-center"
+                      >
+                        <img
+                          src="../public/RE26_PremiumProfile.png"
+                          alt="Four-page microsite"
+                          class="mx-auto w-full max-w-md"
+                        />
+
+                        <span
+                          class="mt-2 font-light text-base leading-snug text-[#0b6a97] sm:text-lg underline-offset-4 hover:underline"
+                        >
+                          Four-Page Microsite on
+                          <br />
+                          www.fivestarprofessional.com
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="sm:w-[66%]">
+                    <h2
+                      class="text-center text-xl font-medium text-black sm:text-2xl"
+                    >
+                      Award Announcement Tools
+                    </h2>
+                    <div class="mt-4 grid gap-6 sm:grid-cols-2">
+                      <div class="space-y-4 text-center">
+                        <div class="grid gap-4 sm:grid-cols-1">
+                          <video controls>
+                            <source
+                              src="//ags.s3.amazonaws.com/2026/re/RE26_Video_Celebration.mp4#t=2"
+                              type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                          </video>
+                          <video controls>
+                            <source
+                              src="//ags.s3.amazonaws.com/2026/re/RE26_Video_WorkWithaWinner.mp4#t=2"
+                              type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                        <div
+                          data-modal-open="sample-modal-2"
+                          class="flex cursor-pointer flex-col items-center"
+                        >
+                          <img
+                            src="../public/RE26_Emblem.png"
+                            alt="Four-page microsite"
+                            class="mx-auto w-full max-w-md"
+                          />
+
+                          <span
+                            class="mt-2 font-light text-lg leading-snug text-[#0B5F8A] sm:text-xl underline-offset-4 hover:underline"
+                          >
+                            Personalized Emblem
+                            <br />
+                            multiple options available
+                          </span>
+                        </div>
+                        <div
+                          data-modal-open="sample-modal-3"
+                          class="flex cursor-pointer flex-col items-center"
+                        >
+                          <img
+                            src="../public/RE26_Video.png"
+                            alt="Four-page microsite"
+                            class="mx-auto w-full max-w-md"
+                          />
+
+                          <span
+                            class="mt-2 font-light text-lg leading-snug text-[#0B5F8A] sm:text-xl underline-offset-4 hover:underline"
+                          >
+                            Personalized Video
+                          </span>
+                        </div>
+                      </div>
+                      <div class="space-y-4 text-center">
+                        <img
+                          src="../public/RE26_NewDampPost.png"
+                          alt="Campaign"
+                          class="mx-auto w-full max-w-sm"
+                        />
+                        <p
+                          data-modal-open="sample-modal-4"
+                          class="text-base leading-snug text-[#0b6a97] sm:text-lg underline-offset-4 hover:underline cursor-pointer"
+                        >
+                          3-Month Social Campaign (12x)<br />Social Posts/Videos
+                          and Announcement Letter
+                        </p>
+                        <div
+                          data-modal-open="sample-modal-12"
+                          class="flex cursor-pointer flex-col items-center"
+                        >
+                          <img
+                            src="../public/RE26_LeaveBehind.png"
+                            alt="Four-page microsite"
+                            class="mx-auto w-full max-w-sm"
+                          />
+
+                          <span
+                            class="mt-2 font-light text-lg leading-snug text-[#0B5F8A] sm:text-xl underline-offset-4 hover:underline"
+                          >
+                            100 Award Winner Leave<br />Behinds
+                          </span>
+                        </div>
+                        <div
+                          data-modal-open="sample-modal-5"
+                          class="flex cursor-pointer flex-col items-center"
+                        >
+                          <img
+                            src="../public/RE26_EReprint_Listing.png"
+                            alt="Four-page microsite"
+                            class="mx-auto w-full max-w-md"
+                          />
+
+                          <span
+                            class="mt-2 font-light text-lg leading-snug text-[#0B5F8A] sm:text-xl underline-offset-4 hover:underline"
+                          >
+                            Listing E-Reprint
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="mt-6 text-center text-xl text-black sm:text-2xl">
+                  A la carte Award Marketing Tools
+                </p>
+
+                <div class="mt-5 border-b border-[#2A78A0] pb-2">
+                  <p class="text-lg sm:text-xl">
+                    <span class="font-semibold text-[#0B5F8A]"
+                      >Digital tools</span
+                    >
+                    to amplify your award marketing online
+                  </p>
+                </div>
+                <div class="mt-5 grid gap-8 sm:grid-cols-2 sm:max-w-3xl">
+                  <div
+                    data-modal-open="sample-modal-3"
+                    class="text-center space-y-3"
+                  >
+                    <img
+                      src="../public/RE26_Video.png"
+                      alt="Videos"
+                      class="mx-auto w-full max-w-xs cursor-pointer"
+                    />
+                    <p
+                      class="text-lg sm:text-xl text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Videos<br />$360
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                  <div
+                    data-modal-open="sample-modal-2"
+                    class="text-center space-y-3"
+                  >
+                    <img
+                      src="../public/RE26_Emblem.png"
+                      alt="Emblem"
+                      class="mx-auto w-full max-w-xs cursor-pointer"
+                    />
+                    <p
+                      class="text-lg sm:text-xl text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Emblem<br />$360
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                </div>
+
+                <div class="mt-6 border-b border-[#2A78A0] pb-2">
+                  <p class="text-lg sm:text-xl">
+                    <span class="font-semibold text-[#0B5F8A]"
+                      >Direct-mail tools</span
+                    >
+                    that will get you noticed!
+                  </p>
+                </div>
+                <div class="mt-5 grid gap-8 sm:grid-cols-4">
+                  <div
+                    data-modal-open="sample-modal-6"
+                    class="text-center space-y-3"
+                  >
+                    <img
+                      src="../public/RE26_AnnouncementBands.png"
+                      alt="Announcement bands"
+                      class="mx-auto w-full max-w-[10rem] cursor-pointer"
+                    />
+                    <p
+                      class="text-lg leading-snug text-[#0b6a97] sm:text-xl underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Announcement<br />Bands (25)<br />$355
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                  <div
+                    data-modal-open="sample-modal-7"
+                    class="text-center space-y-3"
+                  >
+                    <img
+                      src="../public/RE26_Reprints.png"
+                      alt="Profile reprints"
+                      class="mx-auto w-full max-w-[10rem] cursor-pointer"
+                    />
+                    <p
+                      class="text-lg leading-snug text-[#0b6a97] sm:text-xl underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Profile Reprints (100)<br />$265
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                  <div
+                    data-modal-open="sample-modal-8"
+                    class="text-center space-y-3"
+                  >
+                    <img
+                      src="../public/RE26_Postcard_Front.png"
+                      alt="Announcement postcards"
+                      class="mx-auto w-full max-w-sm cursor-pointer"
+                    />
+                    <p
+                      class="text-lg leading-snug text-[#0b6a97] sm:text-xl underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Award Announcement Postcards (250)<br />$210
+                    </p>
+                  </div>
+                  <div
+                    data-modal-open="sample-modal-9"
+                    class="text-center space-y-3"
+                  >
+                    <img
+                      src="../public/RE26_AwardBrochure.png"
+                      alt="Award brochures"
+                      class="mx-auto w-full max-w-[12rem] cursor-pointer"
+                    />
+                    <p
+                      class="text-lg leading-snug sm:text-xl text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Award Brochures (100)<br />$385
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                </div>
+
+                <div class="mt-6 border-b border-[#2A78A0] pb-2">
+                  <p class="text-lg sm:text-xl">
+                    <span class="font-semibold text-[#0B5F8A]"
+                      >Display tools</span
+                    >
+                    that do the talking for you
+                  </p>
+                </div>
+                <div class="mt-5 grid gap-8 sm:grid-cols-2 sm:max-w-4xl">
+                  <div
+                    data-modal-open="sample-modal-10"
+                    class="text-center space-y-3"
+                  >
+                    <img
+                      src="../public/RE26_SingleWallPlaque.png"
+                      alt="Wall plaques"
+                      class="mx-auto w-full max-w-xs cursor-pointer"
+                    />
+                    <p
+                      class="text-lg sm:text-xl text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Wall plaques<br />$405
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                  <div
+                    data-modal-open="sample-modal-11"
+                    class="text-center space-y-3"
+                  >
+                    <img
+                      src="../public/RE26_DeskAward.png"
+                      alt="Desk award"
+                      class="mx-auto w-full max-w-[8rem] cursor-pointer"
+                    />
+                    <p
+                      class="text-lg sm:text-xl text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                    >
+                      Desk award<br />$385
+                    </p>
+                    <button
+                      class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                    >
+                      Buy now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="menu-panel hidden" data-tab-panel="non-award">
+              <div
+                class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
+              >
+                <h1 class="text-xl text-black sm:text-3xl">
+                  Market Your Personal Brand and Your Properties
+                </h1>
+                <p class="text-base font-light sm:text-lg">
+                  Click on images for more details!
+                </p>
+              </div>
+
+              <div class="mt-3 border-b border-[#2A78A0] pb-2">
+                <p class="text-lg sm:text-xl">
+                  <span class="font-semibold text-[#0B5F8A]"
+                    >Activate and Captivate</span
+                  >
+                  your existing network
+                </p>
+              </div>
+
+              <div class="mt-5 grid gap-8 sm:grid-cols-2">
+                <div class="text-center space-y-3">
+                  <img
+                    src="../public/RE26_MS_SocialMedia.png"
+                    alt="Social media"
+                    class="mx-auto w-full max-w-sm"
+                  />
+                  <p class="text-lg leading-snug sm:text-xl">
+                    Stay in Touch Social Media Program $49
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+                <div class="text-center space-y-3">
+                  <img
+                    src="../public/Referral_BeautifulDay_619660.png"
+                    alt="Postcards"
+                    class="mx-auto w-full max-w-md"
+                  />
+                  <p class="text-lg leading-snug sm:text-xl">Postcards</p>
+                </div>
+                <div class="text-center space-y-3">
+                  <img
+                    src="../public/RE26_Newsletter_Nugget2.png"
+                    alt="Inbox essentials"
+                    class="mx-auto w-full max-w-sm"
+                  />
+                  <p class="text-lg leading-snug sm:text-xl">
+                    Inbox Essentials $45
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+                <div class="text-center space-y-3">
+                  <div class="grid gap-4 sm:grid-cols-2">
+                    <img
+                      src="../public/RE26_MS_Happiness_Throwback_7.png"
+                      alt="Lighthearted"
+                      class="mx-auto w-full max-w-xs"
+                    />
+                    <img
+                      src="../public/RE26_MS_Testimonial_Professional_1.png"
+                      alt="Professional"
+                      class="mx-auto w-full max-w-xs"
+                    />
+                  </div>
+                  <p class="text-lg leading-snug sm:text-xl">
+                    Testimonial Service: Essential Experiences $69
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+                <div class="text-center space-y-3">
+                  <img
+                    src="../public/EL_Cover_1.png"
+                    alt="Essential Living"
+                    class="mx-auto w-full max-w-xs"
+                  />
+                  <p class="text-lg leading-snug sm:text-xl">
+                    Essential Living Personal Magazine $3.99
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+                <div class="text-center space-y-3">
+                  <img
+                    src="../public/EE_FC_1.png"
+                    alt="Escapes + Experiences"
+                    class="mx-auto w-full max-w-xs"
+                  />
+                  <p class="text-lg leading-snug sm:text-xl">
+                    Escapes + Experiences Personal Magazine $5.99
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+                <div class="text-center space-y-3">
+                  <img
+                    src="../public/RW_FC_1.png"
+                    alt="Retiring Well"
+                    class="mx-auto w-full max-w-xs"
+                  />
+                  <p class="text-lg leading-snug sm:text-xl">
+                    Retiring Well Magazine $5.99
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+              </div>
+
+              <div class="mt-8 border-b border-[#2A78A0] pb-2">
+                <p class="text-lg sm:text-xl">
+                  <span class="font-semibold text-[#0B5F8A]">Cultivate</span>
+                  new leads
+                </p>
+              </div>
+
+              <div class="mt-5 grid gap-8 sm:grid-cols-2">
+                <div class="text-center space-y-3">
+                  <img
+                    src="../public/EL_Cover_1.png"
+                    alt="Essential Living"
+                    class="mx-auto w-full max-w-xs"
+                  />
+                  <p class="text-lg leading-snug sm:text-xl">
+                    Essential Living Personal Magazine $3.99
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+                <div class="text-center space-y-3">
+                  <img
+                    src="../public/EE_FC_1.png"
+                    alt="Escapes + Experiences"
+                    class="mx-auto w-full max-w-xs"
+                  />
+                  <p class="text-lg leading-snug sm:text-xl">
+                    Escapes + Experiences Personal Magazine $5.99
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+                <div class="text-center space-y-3">
+                  <img
+                    src="../public/RW_FC_1.png"
+                    alt="Retiring Well"
+                    class="mx-auto w-full max-w-xs"
+                  />
+                  <p class="text-lg leading-snug sm:text-xl">
+                    Retiring Well Magazine $5.99
+                  </p>
+                  <button
+                    class="cursor-pointer rounded-xl bg-[#0B5F8A] px-12 py-2 text-sm text-white sm:text-base"
+                  >
+                    Buy now
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div
+      id="sample-modal-1"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto w-full max-w-4xl space-y-4">
+              <img
+                src="../public/RE26_PremiumProfile.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Features
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>Large photo area</li>
+              <li>Full contact information</li>
+              <li>
+                Digital ad "campaign ready" with pixel technology built in
+              </li>
+              <li>An area to create content and share about yourself</li>
+              <li>Highlight other professional accomplishments</li>
+              <li>Click here to see a sample!</li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                An opportunity to highlight and feature yourself as a Five Star
+                Professional where your full persona comes to life
+              </li>
+              <li>Show yourself as an expert with your custom content</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-2"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section
+            class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto flex items-center justify-center"
+          >
+            <div class="max-w-4xl space-y-6 text-base sm:text-lg font-light">
+              <p>Horizontal emblem with years rolled up.</p>
+              <p>Vertical emblem with years listed separately</p>
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Personalized Award Emblem
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Include your award winner emblem on digital media like email
+                signatures and websites, and on print materials such as
+                brochures
+              </li>
+              <li>
+                Stand out from your competition by showcasing your award status
+              </li>
+              <li>
+                Easily configure the emblem that’s right for your marketing;
+                choose your orientation and file type, as well as how you want
+                your award years displayed.
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-3"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto w-full max-w-4xl space-y-4">
+              <video controls>
+                <source
+                  src="//ags.s3.amazonaws.com/2026/re/RE26_AnnouncementVideo.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Announcement Video
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Personalized award video with your name, logo, and contact info
+              </li>
+              <li>
+                Show why you stand out and are better than your competition
+              </li>
+              <li>Include in your digital media</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-4"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto max-h-screen bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+        <h2 class="text-center text-lg sm:text-2xl font-bold p-5">
+          Sample images of social posts, videos and announcement letter
+        </h2>
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-full sm:overflow-y-auto space-y-6">
+            <div class="mx-auto w-full max-w-4xl">
+              <img
+                src="../public/RE26_Emblem.png"
+                alt="Announcement Letter"
+                class="w-full bg-white"
+              />
+            </div>
+            <div class="mx-auto w-full max-w-4xl">
+              <img
+                src="../public/RE26_FSPOnline_tn.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+            <div class="mx-auto w-full max-w-4xl">
+              <img
+                src="../public/RE26_AnnouncementLetter.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section
+            class="flex min-w-0 flex-col justify-start sm:overflow-y-auto"
+          >
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Social Campaign (3x Posts; 5x Announcement Videos):
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>3-month social media campaign promoting you, your</li>
+              <li>award and what it means to be an award winner.</li>
+              <li>Provide one more reason why you are the right choice!</li>
+              <li>Generate likes and shares to expand your audience</li>
+              <li>
+                Choose whether you want us to manage the campaign (recommended)
+                or share posts directly from your Essential Engine account.
+              </li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">
+              Announcement Letter and Videos:
+            </h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Announcement letter tells everyone in your network that you are
+                an award winner. This comes from us, so you don’t have to be the
+                one “bragging” about your selection
+              </li>
+              <li>
+                In addition to videos being part of your social media campaign
+                (above), insert announcement video files from the library on to
+                your website and email signature.
+              </li>
+            </ul>
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Share your pride in being an award winner and the joy and
+                satisfaction you have gotten over the years providing client’s
+                great service.
+              </li>
+              <li>
+                Activate your sphere of influence by encouraging them to share
+                the good news about you … and referring your services.
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-5"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto w-full max-w-4xl space-y-4">
+              <img
+                src="../public/RE26_EReprint_Listing.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Listing in the publication e-reprint
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>One winner featured</li>
+              <li>Space for brief amount of text</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-7"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto w-full max-w-4xl space-y-2">
+              <img
+                src="../public/RE26_Reprints.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+              <p class="text-center font-light text-sm sm:text-base">
+                Magazine Profile Reprints
+              </p>
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Reprints: Starting at $265 for 100
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                One-page marketing piece highlighting your differentiation!
+              </li>
+              <li>
+                Easy to distribute at client meetings, conferences and
+                professional events
+              </li>
+              <li>
+                Your profile on one side, and a copy of the article on the
+                opposite side
+              </li>
+              <li>
+                Wall Street Journal profile reprints available only to WSJ
+                profilers and valid for one year
+              </li>
+              <li>Highlight other professional accomplishments</li>
+              <li>Click here to see a sample!</li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Highlight your differentiation in a way that other professionals
+                can’t
+              </li>
+              <li>
+                Take the power of your profile in the magazine and leverage
+                throughout the year
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-8"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto w-full max-w-2xl space-y-4">
+              <img
+                src="../public/RE26_Postcard.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Features
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Two-sided postcard that highlights your distinction as an award
+                winner
+              </li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                These ready to mail postcards make prospecting for new clients
+                easier
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-9"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto w-full max-w-4xl space-y-4">
+              <img
+                src="../public/RE26_AwardBrochure.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Brochures: Starting at $385 for 100
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>Tri-fold brochures that highlight your distinction</li>
+              <li>Areas for custom created content</li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Easily communicate your status as a Five Star award winner to
+                clients and prospects
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-6"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto max-w-[80%]">
+              <img
+                src="../public/RE26_AnnouncementBands.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Announcement Cover Bands
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Hot off the presses: Our new announcement cover bands put you on
+                the front page!
+              </li>
+              <li>
+                Use the Five Star announcement cover band to activate your
+                referral network, making sure your key contacts see you winning
+                this award
+              </li>
+              <li>Closely associate your brand with the magazine</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-11"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto max-w-[50%]">
+              <img
+                src="../public/RE26_DeskAward.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Desk award: $385
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>Attractive crystal</li>
+              <li>
+                Desk piece for your that highlights your status as an award
+                winner
+              </li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>Quickly shows your status as a Five Star award winner</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-10"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[1.25fr_0.95fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto space-y-4">
+              <img
+                src="../public/RE26_SingleWallPlaque.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+              <img
+                src="../public/RE26_DoubleWallPlaque.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+            <h2 class="text-sm text-black text-center sm:text-base">
+              Pro and Platinum packages receive an upgraded double wall plaque
+            </h2>
+          </section>
+
+          <section
+            class="flex min-w-0 flex-col justify-start sm:overflow-y-auto"
+          >
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Wall Plaque: Single for $295, Double for $405
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>Advertising compliant - includes required disclosures</li>
+              <li>
+                Attractive office piece for your “Brag Wall” that highlights
+                your selection as a Five Star award winner
+              </li>
+              <li>
+                Single wall plaque dimensions: Dimensions: 12" x 16", Double
+                wall plaque dimensions: Dimensions: 17.5" x 15"
+              </li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Quickly shows your status as a Five Star award winner and your
+                appearance in the magazine
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-12"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto max-h-screen bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-full sm:overflow-y-auto space-y-6">
+            <div class="mx-auto w-full max-w-4xl">
+              <img
+                src="../public/RE26_LeaveBehind.png"
+                alt="Announcement Letter"
+                class="w-full bg-white"
+              />
+            </div>
+            <div class="mx-auto w-full max-w-4xl">
+              <img
+                src="../public/RE26_LeaveBehind_2.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+            <div class="mx-auto w-full max-w-4xl">
+              <img
+                src="../public/RE26_LeaveBehind_3.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+            <div class="mx-auto w-full max-w-4xl">
+              <img
+                src="../public/RE26_LeaveBehind_4.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section
+            class="flex min-w-0 flex-col justify-start sm:overflow-y-auto"
+          >
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Award Winner Leave Behinds
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                A one-page marketing tool highlighting your award-winning work!
+              </li>
+              <li>
+                Profile featuring your photo, contact information and tagline
+              </li>
+              <li>Features QR code – set the destination yourself</li>
+              <li>5x5; printed on postcard stock</li>
+              <li>
+                Use for client presentation, lead-generation mailers, or as
+                marketing leave behinds
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-13"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto max-h-screen bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-13"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="space-y-6">
+          <section class="min-w-0">
+            <div class="mx-auto w-full max-w-3xl">
+              <img
+                src="../public/RE26_EighthPage.png"
+                alt="Top profile sample"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section class="grid gap-6 sm:grid-cols-2 sm:items-start">
+            <div class="mx-auto w-full max-w-sm">
+              <img
+                src="../public/RE26_Reprint_Eighth.png"
+                alt="Eighth page sample"
+                class="w-full bg-white"
+              />
+            </div>
+
+            <div class="mx-auto w-full max-w-md">
+              <img
+                src="../public/RE26_EReprint_Eighth.png"
+                alt="Online sample"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2
+              id="sample-modal-title-13"
+              class="text-lg text-black sm:text-xl"
+            >
+              Eighth-page profile
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>One winner featured</li>
+              <li>Space for brief amount of text</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+      }
+      function openModal(modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeModal(modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        modal.setAttribute("aria-hidden", "true");
+
+        const openModals = document.querySelectorAll("[data-modal].flex");
+        if (openModals.length === 0) {
+          document.body.classList.remove("overflow-hidden");
+        }
+      }
+
+      document.querySelectorAll("[data-modal-open]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const modalId = button.getAttribute("data-modal-open");
+          const modal = document.getElementById(modalId);
+          if (modal) openModal(modal);
+        });
+      });
+
+      document.querySelectorAll("[data-modal]").forEach((modal) => {
+        const panel = modal.querySelector("[data-modal-panel]");
+
+        modal.querySelectorAll("[data-modal-close]").forEach((button) => {
+          button.addEventListener("click", () => closeModal(modal));
+        });
+
+        modal.addEventListener("click", (event) => {
+          if (!panel.contains(event.target)) {
+            closeModal(modal);
+          }
+        });
+      });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          document.querySelectorAll("[data-modal].flex").forEach((modal) => {
+            closeModal(modal);
+          });
+        }
+      });
+
+      function setupTabs() {
+        const tabs = document.querySelectorAll(".menu-tab");
+        const panels = document.querySelectorAll(".menu-panel");
+        const subtabs = document.querySelectorAll(".sub-tab");
+        const subpanels = document.querySelectorAll(".subtab-panel");
+
+        function activateTab(target) {
+          tabs.forEach((tab) => {
+            const active = tab.dataset.tabTarget === target;
+            tab.classList.toggle("bg-[#0B5F8A]", active);
+            tab.classList.toggle("bg-[#4A4A4A]", !active);
+          });
+          panels.forEach((panel) => {
+            panel.classList.toggle("hidden", panel.dataset.tabPanel !== target);
+          });
+        }
+
+        function activateSubtab(target) {
+          subtabs.forEach((tab) => {
+            const active = tab.dataset.subtabTarget === target;
+            tab.classList.toggle("bg-[#0B5F8A]", active);
+            tab.classList.toggle("bg-[#4A4A4A]", !active);
+          });
+          subpanels.forEach((panel) => {
+            panel.classList.toggle(
+              "hidden",
+              panel.dataset.subtabPanel !== target,
+            );
+          });
+        }
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () =>
+            activateTab(tab.dataset.tabTarget),
+          );
+        });
+
+        subtabs.forEach((tab) => {
+          tab.addEventListener("click", () =>
+            activateSubtab(tab.dataset.subtabTarget),
+          );
+        });
+
+        activateTab("marketing-tools");
+        activateSubtab("standard-tools");
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", () => {
+        scalePage();
+        setupTabs();
+      });
+    </script>
+  </body>
+</html>

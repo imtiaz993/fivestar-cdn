@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Sample Double Column Popup</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+
+  <body class="min-h-screen">
+    <main
+      class="mx-auto flex min-h-screen w-full max-w-7xl items-center justify-center px-4 py-10 sm:px-6"
+    >
+      <section
+        class="w-full rounded-md border border-[#d9e2e8] bg-white px-6 py-10 shadow-xl sm:px-10 sm:py-14"
+      >
+        <div class="mx-auto max-w-3xl text-center">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-[#0B5F8A] sm:text-base"
+          >
+            Reusable Pattern
+          </p>
+          <h1 class="mt-3 text-3xl text-black sm:text-5xl">
+            Sample Double Column Popup Modal
+          </h1>
+          <p class="mt-4 text-xl leading-snug sm:text-2xl">
+            A responsive popup layout that works for product details, feature
+            callouts, or any split visual-and-copy presentation.
+          </p>
+        </div>
+
+        <div class="mt-8 flex justify-center">
+          <button
+            id="open-modal-1"
+            data-modal-open="sample-modal-1"
+            type="button"
+            class="cursor-pointer rounded-2xl bg-[#0B5F8A] px-8 py-4 text-xl text-white shadow-md transition hover:bg-[#094b6d] sm:text-2xl"
+          >
+            Open Sample Popup
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="sample-modal-1"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[1.25fr_0.95fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto w-full max-w-4xl space-y-4">
+              <img
+                src="../public/RE26_PremiumProfile.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2
+              id="sample-modal-title"
+              class="text-lg text-black sm:text-xl"
+            >
+              Features
+            </h2>
+            <ul class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base">
+              <li>Large photo area</li>
+              <li>Full contact information</li>
+              <li>Digital ad "campaign ready" with pixel technology built in</li>
+              <li>An area to create content and share about yourself</li>
+              <li>Highlight other professional accomplishments</li>
+              <li>Click here to see a sample!</li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base">
+              <li>
+                An opportunity to highlight and feature yourself as a Five Star
+                Professional where your full persona comes to life
+              </li>
+              <li>Show yourself as an expert with your custom content</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script>
+      function openModal(modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeModal(modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        modal.setAttribute("aria-hidden", "true");
+
+        const openModals = document.querySelectorAll("[data-modal].flex");
+        if (openModals.length === 0) {
+          document.body.classList.remove("overflow-hidden");
+        }
+      }
+
+      document.querySelectorAll("[data-modal-open]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const modalId = button.getAttribute("data-modal-open");
+          const modal = document.getElementById(modalId);
+          if (modal) openModal(modal);
+        });
+      });
+
+      document.querySelectorAll("[data-modal]").forEach((modal) => {
+        const panel = modal.querySelector("[data-modal-panel]");
+
+        modal.querySelectorAll("[data-modal-close]").forEach((button) => {
+          button.addEventListener("click", () => closeModal(modal));
+        });
+
+        modal.addEventListener("click", (event) => {
+          if (!panel.contains(event.target)) {
+            closeModal(modal);
+          }
+        });
+      });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          document.querySelectorAll("[data-modal].flex").forEach((modal) => {
+            closeModal(modal);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

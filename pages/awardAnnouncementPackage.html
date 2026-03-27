@@ -8,10 +8,12 @@
     <link rel="shortcut icon" href="../public/favicon.ico" />
   </head>
 
-  <body class="min-h-screen overflow-x-hidden bg-white">
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
     <div
       id="clip-path"
-      class="absolute top-0 left-0 hidden h-60 w-34 bg-[#F0592B] sm:h-full sm:w-[26%] sm:opacity-90"
+      class="absolute top-0 left-0 hidden h-60 w-34 bg-[#F0592B] sm:h-full sm:w-[26%]"
       style="clip-path: polygon(0 0, 70% 0, 0% 100%, 0 100%)"
     ></div>
     <div
@@ -30,7 +32,7 @@
           <div class="border-2 border-white sm:border-4"></div>
           <div class="space-y-1">
             <h1 class="text-start text-3xl text-white sm:text-6xl">
-                Announcement Package: $455
+              Announcement Package: $455
             </h1>
           </div>
         </div>
@@ -38,12 +40,12 @@
 
       <main class="flex flex-1 items-center justify-center px-5 sm:px-0">
         <section
-          class="mx-auto w-full max-w-7xl px-0 py-4 text-[#444444] sm:px-8 sm:py-8"
+          class="mx-auto w-full max-w-7xl px-0 sm:px-8 sm:py-8"
         >
           <div
             class="mt-8 flex flex-col gap-8 sm:mt-12 sm:flex-row sm:items-start sm:justify-center sm:gap-12"
           >
-            <div class="w-full pt-0 sm:w-[36%] sm:pt-10">
+            <div class="w-full pt-0 mx-auto sm:w-[36%] sm:pt-10">
               <ul
                 class="pl-6 text-xl leading-snug list-disc sm:pl-8 sm:text-2xl"
               >
@@ -53,7 +55,7 @@
               <div class="mt-4 sm:mt-6">
                 <p class="text-xl sm:text-2xl">Includes:</p>
                 <ul
-                  class="mt-3 pl-6 text-xl leading-snug list-disc sm:mt-4 sm:pl-8 sm:text-2xl"
+                  class="mt-3 pl-6 text-lg leading-snug font-light list-disc sm:mt-4 sm:pl-8 sm:text-2xl"
                 >
                   <li>Listing in publication</li>
                   <li>Listing e-reprint</li>
@@ -62,14 +64,14 @@
               </div>
             </div>
 
-            <div class="w-full space-y-8 sm:w-[50%] sm:space-y-10">
+            <div class="w-full space-y-8 sm:w-[50%] sm:space-y-10 font-light">
               <div>
                 <img
                   src="../public/RE26_Listing.png"
                   alt="Sample listing"
                   class="w-full"
                 />
-                <p class="mt-3 text-xl text-black sm:mt-4 sm:text-2xl">
+                <p class="mt-3 text-lg text-black text-center sm:text-left sm:mt-4 sm:text-2xl">
                   Sample listing
                 </p>
               </div>
@@ -83,7 +85,7 @@
                     alt="Sample emblem"
                     class="w-full sm:w-[20rem]"
                   />
-                  <p class="mt-3 text-xl text-black sm:mt-4 sm:text-2xl">
+                  <p class="mt-3 text-lg text-black text-center sm:text-left sm:mt-4 sm:text-2xl">
                     Sample emblem
                   </p>
                 </div>
@@ -94,7 +96,7 @@
                     alt="Sample listing e-reprint"
                     class="w-full border border-gray-300 bg-white p-1 shadow-sm sm:w-[22rem]"
                   />
-                  <p class="mt-3 text-xl text-black sm:mt-4 sm:text-2xl">
+                  <p class="mt-3 text-lg text-black text-center sm:text-left sm:mt-4 sm:text-2xl">
                     Sample listing e-reprint
                   </p>
                 </div>

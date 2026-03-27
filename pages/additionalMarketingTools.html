@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Additional Award Marketing Tools</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+
+  <body class="min-h-screen">
+    <div
+      class="hidden flex-col justify-start sm:w-384 sm:origin-top-left"
+      id="app-wrapper"
+    >
+      <div
+        id="clip-path"
+        class="absolute top-0 left-0 hidden h-16 w-16 bg-[#F0592B] sm:fixed sm:h-40 sm:w-40"
+        style="clip-path: polygon(0 0, 100% 0, 0 100%)"
+      ></div>
+
+      <div
+        id="clip-path-2"
+        class="absolute top-0 right-0 hidden h-16 w-16 bg-[#0389A0] sm:fixed sm:h-40 sm:w-40"
+        style="clip-path: polygon(100% 0, 100% 100%, 0 0)"
+      ></div>
+      <img
+        src="../public/eelogo.png"
+        alt="Essential Engine logo"
+        class="m-5 ml-10 max-w-32 font-medium text-wrap mr-auto sm:absolute sm:top-0 sm:right-0 sm:mt-10 sm:mb-0 sm:mr-40 sm:max-w-48"
+      />
+      <section
+        class="relative z-10 w-full bg-[#0389A0] p-5 text-white shadow-md shadow-black sm:absolute sm:top-6 sm:left-25 sm:max-w-190 sm:px-7 sm:py-6"
+      >
+        <div class="flex gap-4">
+          <div class="border-2 border-white sm:border-4"></div>
+          <div class="space-y-1">
+            <h1 class="text-start text-3xl text-white sm:text-6xl">
+              Additional Marketing Tools
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <main class="flex flex-1 items-center px-5 sm:px-0 sm:mt-20">
+        <section class="mx-auto w-full max-w-7xl sm:px-8 sm:py-8">
+          <div class="mt-8 space-y-8 sm:mt-12 sm:space-y-7">
+            <section>
+              <h2 class="text-xl text-black sm:text-3xl">Digital Tools</h2>
+              <div class="mb-1 h-px flex-1 bg-[#2A78A0]"></div>
+
+              <div
+                class="mt-6 grid gap-8 text-center sm:grid-cols-2 sm:items-end sm:justify-items-center"
+              >
+                <div
+                  data-modal-open="sample-modal-1"
+                  class="space-y-3 text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                >
+                  <img
+                    src="../public/RE26_Emblem.png"
+                    alt="Emblem"
+                    class="mx-auto w-full max-w-xs sm:max-w-sm"
+                  />
+                  <p
+                    class="font-light cursor-pointer text-[#0b6a97] text-base sm:text-lg"
+                  >
+                    Emblem
+                  </p>
+                </div>
+
+                <div
+                  data-modal-open="sample-modal-2"
+                  class="space-y-3 text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                >
+                  <img
+                    src="../public/RE26_Video.png"
+                    alt="Videos"
+                    class="mx-auto w-full max-w-xs sm:max-w-md"
+                  />
+                  <p
+                    class="font-light cursor-pointer text-[#0b6a97] text-base sm:text-lg"
+                  >
+                    Videos
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 class="text-xl text-black sm:text-3xl">Print Tools</h2>
+              <div class="mb-1 h-px flex-1 bg-[#2A78A0]"></div>
+
+              <div
+                class="mt-6 grid gap-8 text-center sm:grid-cols-4 sm:items-end sm:justify-items-center sm:gap-6"
+              >
+                <div
+                  data-modal-open="sample-modal-3"
+                  class="space-y-3 text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                >
+                  <img
+                    src="../public/RE26_Reprints.png"
+                    alt="Reprints"
+                    class="mx-auto w-full max-w-[12rem] sm:max-w-[14rem]"
+                  />
+                  <div class="space-y-1">
+                    <p
+                      class="font-light cursor-pointer text-[#0b6a97] text-base sm:text-lg"
+                    >
+                      Reprints
+                    </p>
+                    <p
+                      class="font-light cursor-pointer text-[#0b6a97] text-sm sm:text-base"
+                    >
+                      (with profile purchase)
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  data-modal-open="sample-modal-4"
+                  class="space-y-3 text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                >
+                  <img
+                    src="../public/RE26_Postcard.png"
+                    alt="Postcards"
+                    class="mx-auto w-full max-w-[12rem] sm:max-w-[14rem]"
+                  />
+                  <p
+                    class="font-light cursor-pointer text-[#0b6a97] text-base sm:text-lg"
+                  >
+                    Postcards
+                  </p>
+                </div>
+
+                <div
+                  data-modal-open="sample-modal-5"
+                  class="space-y-3 text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                >
+                  <img
+                    src="../public/RE26_AwardBrochure.png"
+                    alt="Award Brochures"
+                    class="mx-auto w-full max-w-[12rem] sm:max-w-[14rem]"
+                  />
+                  <p
+                    class="font-light cursor-pointer text-[#0b6a97] text-base sm:text-lg"
+                  >
+                    Award Brochures
+                  </p>
+                </div>
+
+                <div
+                  data-modal-open="sample-modal-6"
+                  class="space-y-3 text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                >
+                  <img
+                    src="../public/RE26_AnnouncementBands.png"
+                    alt="Cover Bands"
+                    class="mx-auto w-full max-w-[10rem] sm:max-w-[12rem]"
+                  />
+                  <p
+                    class="font-light cursor-pointer text-[#0b6a97] text-base sm:text-lg"
+                  >
+                    Cover Bands
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 class="text-xl text-black sm:text-3xl">Display Tools</h2>
+              <div class="mb-1 h-px flex-1 bg-[#2A78A0]"></div>
+
+              <div
+                class="mt-6 grid gap-8 text-center sm:grid-cols-2 sm:items-end sm:justify-items-center"
+              >
+                <div
+                  data-modal-open="sample-modal-7"
+                  class="space-y-3 text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer"
+                >
+                  <img
+                    src="../public/RE26_DeskAward.png"
+                    alt="Desk Award"
+                    class="mx-auto w-full max-w-[10rem] sm:max-w-[12rem]"
+                  />
+                  <p class="font-light cursor-pointer text-base sm:text-lg">
+                    Desk Award
+                  </p>
+                </div>
+
+                <div
+                  data-modal-open="sample-modal-8"
+                  class="space-y-3 text-[#0b6a97] underline-offset-4 hover:underline cursor-pointer text-[#0b6a97]"
+                >
+                  <img
+                    src="../public/RE26_SingleWallPlaque.png"
+                    alt="Wall Plaques"
+                    class="mx-auto w-full max-w-[14rem] sm:max-w-[18rem]"
+                  />
+                  <p class="font-light cursor-pointer text-base sm:text-lg">
+                    Wall Plaques
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div
+      id="sample-modal-1"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[1.25fr_0.95fr] sm:gap-6">
+          <section
+            class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto flex items-center justify-center"
+          >
+            <div class="max-w-4xl space-y-6 text-base sm:text-lg font-light">
+              <p>Horizontal emblem with years rolled up.</p>
+              <p>Vertical emblem with years listed separately</p>
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Personalized Award Emblem
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Include your award winner emblem on digital media like email
+                signatures and websites, and on print materials such as
+                brochures
+              </li>
+              <li>
+                Stand out from your competition by showcasing your award status
+              </li>
+              <li>
+                Easily configure the emblem that’s right for your marketing;
+                choose your orientation and file type, as well as how you want
+                your award years displayed.
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-2"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto w-full max-w-4xl space-y-4">
+              <video controls>
+                <source
+                  src="//ags.s3.amazonaws.com/2026/re/RE26_AnnouncementVideo.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Announcement Video: $360
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Personalized award video with your name, logo, and contact info
+              </li>
+              <li>
+                Show why you stand out and are better than your competition
+              </li>
+              <li>Include in your digital media</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-3"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto w-full max-w-4xl space-y-2">
+              <img
+                src="../public/RE26_Reprints.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+              <p class="text-center font-light text-sm sm:text-base">
+                Magazine Profile Reprints
+              </p>
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Reprints: Starting at $265 for 100
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                One-page marketing piece highlighting your differentiation!
+              </li>
+              <li>
+                Easy to distribute at client meetings, conferences and
+                professional events
+              </li>
+              <li>
+                Your profile on one side, and a copy of the article on the
+                opposite side
+              </li>
+              <li>
+                Wall Street Journal profile reprints available only to WSJ
+                profilers and valid for one year
+              </li>
+              <li>Highlight other professional accomplishments</li>
+              <li>Click here to see a sample!</li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Highlight your differentiation in a way that other professionals
+                can’t
+              </li>
+              <li>
+                Take the power of your profile in the magazine and leverage
+                throughout the year
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-4"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-1 sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto w-full max-w-2xl space-y-4">
+              <img
+                src="../public/RE26_Postcard.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+            <h2 class="text-sm text-black text-center sm:text-base">
+              Postcards
+            </h2>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-5"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto w-full max-w-4xl space-y-4">
+              <img
+                src="../public/RE26_AwardBrochure.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Brochures: Starting at $385 for 100
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>Tri-fold brochures that highlight your distinction</li>
+              <li>Areas for custom created content</li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Easily communicate your status as a Five Star award winner to
+                clients and prospects
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-6"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto max-w-[80%]">
+              <img
+                src="../public/RE26_AnnouncementBands.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Announcement Cover Bands
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Hot off the presses: Our new announcement cover bands put you on
+                the front page!
+              </li>
+              <li>
+                Use the Five Star announcement cover band to activate your
+                referral network, making sure your key contacts see you winning
+                this award
+              </li>
+              <li>Closely associate your brand with the magazine</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-7"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[0.95fr_1.25fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto max-w-[50%]">
+              <img
+                src="../public/RE26_DeskAward.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Desk award: $385
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>Attractive crystal</li>
+              <li>
+                Desk piece for your that highlights your status as an award
+                winner
+              </li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>Quickly shows your status as a Five Star award winner</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-8"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-[1.25fr_0.95fr] sm:gap-6">
+          <section class="min-w-0 sm:max-h-[70vh] sm:overflow-y-auto">
+            <div class="mx-auto space-y-4">
+              <img
+                src="../public/RE26_SingleWallPlaque.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+              <img
+                src="../public/RE26_DoubleWallPlaque.png"
+                alt="Sample double-column preview"
+                class="w-full bg-white"
+              />
+            </div>
+            <h2 class="text-sm text-black text-center sm:text-base">
+              Pro and Platinum packages receive an upgraded double wall plaque
+            </h2>
+          </section>
+
+          <section class="flex min-w-0 flex-col justify-start sm:overflow-y-auto">
+            <h2 id="sample-modal-title" class="text-lg text-black sm:text-xl">
+              Wall Plaque: Single for $295, Double for $405
+            </h2>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>Advertising compliant - includes required disclosures</li>
+              <li>
+                Attractive office piece for your “Brag Wall” that highlights
+                your selection as a Five Star award winner
+              </li>
+              <li>
+                Single wall plaque dimensions: Dimensions: 12" x 16", Double
+                wall plaque dimensions: Dimensions: 17.5" x 15"
+              </li>
+            </ul>
+
+            <h3 class="mt-4 text-lg text-black sm:text-xl">Benefits</h3>
+            <ul
+              class="mt-2 list-disc pl-6 text-sm font-light leading-snug sm:pl-8 sm:text-base"
+            >
+              <li>
+                Quickly shows your status as a Five Star award winner and your
+                appearance in the magazine
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const clipPath2 = document.getElementById("clip-path-2");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+        clipPath.style.display = "block";
+        clipPath2.style.display = "block";
+      }
+      function openModal(modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeModal(modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        modal.setAttribute("aria-hidden", "true");
+
+        const openModals = document.querySelectorAll("[data-modal].flex");
+        if (openModals.length === 0) {
+          document.body.classList.remove("overflow-hidden");
+        }
+      }
+
+      document.querySelectorAll("[data-modal-open]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const modalId = button.getAttribute("data-modal-open");
+          const modal = document.getElementById(modalId);
+          if (modal) openModal(modal);
+        });
+      });
+
+      document.querySelectorAll("[data-modal]").forEach((modal) => {
+        const panel = modal.querySelector("[data-modal-panel]");
+
+        modal.querySelectorAll("[data-modal-close]").forEach((button) => {
+          button.addEventListener("click", () => closeModal(modal));
+        });
+
+        modal.addEventListener("click", (event) => {
+          if (!panel.contains(event.target)) {
+            closeModal(modal);
+          }
+        });
+      });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          document.querySelectorAll("[data-modal].flex").forEach((modal) => {
+            closeModal(modal);
+          });
+        }
+      });
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>
