@@ -40,9 +40,7 @@
       <main
         class="flex flex-1 items-center justify-center px-5 sm:px-0 sm:pb-0"
       >
-        <section
-          class="mx-auto w-full max-w-7xl sm:px-8 sm:py-8"
-        >
+        <section class="mx-auto w-full max-w-7xl sm:px-8 sm:py-8">
           <div class="mt-8 space-y-8 sm:mt-12 sm:space-y-8">
             <section
               class="grid gap-6 px-4 py-4 sm:grid-cols-[1.05fr_0.95fr] sm:items-center sm:px-6 sm:py-6"
@@ -52,6 +50,7 @@
                   src="https://ags.s3.amazonaws.com/2026/re/RE26_Half.png"
                   alt="Half-page profile ad"
                   class="w-full cursor-pointer"
+                  data-modal-open="sample-modal-1"
                 />
               </div>
 
@@ -82,11 +81,13 @@
                     src="https://ags.s3.amazonaws.com/2026/re/RE26_Reprint_Half.png"
                     alt="Half-page reprint set"
                     class="col-span-2 w-full sm:col-span-1 cursor-pointer"
+                    data-modal-open="sample-modal-2"
                   />
                   <img
                     src="https://ags.s3.amazonaws.com/2026/re/RE26_EReprint_Half.png"
                     alt="Half-page e-reprint"
                     class="w-full col-span-2 sm:col-span-1 cursor-pointer"
+                    data-modal-open="sample-modal-2"
                   />
                 </div>
               </div>
@@ -95,7 +96,8 @@
                 <div class="border border-[#d9e2e8] bg-white px-4 py-4 sm:px-5">
                   <button
                     type="button"
-                    class="cursor-pointer text-[#0b6a97]  text-lg sm:text-xl underline-offset-4 hover:underline"
+                    class="cursor-pointer text-[#0b6a97] text-lg sm:text-xl underline-offset-4 hover:underline"
+                    data-modal-open="sample-modal-2"
                   >
                     100 Reprints and E-Reprint
                   </button>
@@ -146,6 +148,84 @@
         </section>
       </main>
     </div>
+    <div
+      id="sample-modal-1"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div>
+          <img
+            src="https://ags.s3.amazonaws.com/2026/re/RE26_SampleLetter.png"
+            alt="RE26_SampleLetter"
+            class="w-full"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      id="sample-modal-2"
+      data-modal
+      class="fixed inset-0 z-50 hidden items-center justify-center overflow-y-auto bg-black/70 px-4 py-6 sm:px-8"
+      aria-hidden="true"
+    >
+      <div
+        data-modal-panel
+        class="relative my-auto w-full max-w-6xl rounded-lg bg-white px-4 py-4 shadow-2xl sm:px-6 sm:py-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="sample-modal-title-1"
+      >
+        <button
+          data-modal-close
+          type="button"
+          class="absolute -top-3 -right-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[#d9e2e8] bg-white text-2xl leading-none text-[#0B5F8A] shadow-md"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div>
+          <img
+            src="https://ags.s3.amazonaws.com/2026/re/RE26_Reprint_Half_Page.png"
+            alt="Sample listing e-reprint 1"
+            class="w-full"
+          />
+          <p
+            class="text-xl text-black font-light text-center sm:text-2xl my-10"
+          >
+            Reprint
+          </p>
+
+          <img
+            src="https://ags.s3.amazonaws.com/2026/re/RE26_Reprint_Article_Page.png"
+            alt="Sample listing e-reprint 2"
+            class="w-full"
+          />
+          <p
+            class="text-xl text-black font-light text-center sm:text-2xl my-10"
+          >
+            Reprint (article page)
+          </p>
+        </div>
+      </div>
+    </div>
     <script>
       function scalePage() {
         const baseWidth = 1536;
@@ -164,6 +244,54 @@
 
         wrapper.style.display = "flex";
       }
+
+      function openModal(modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeModal(modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        modal.setAttribute("aria-hidden", "true");
+
+        const openModals = document.querySelectorAll("[data-modal].flex");
+        if (openModals.length === 0) {
+          document.body.classList.remove("overflow-hidden");
+        }
+      }
+
+      document.querySelectorAll("[data-modal-open]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const modalId = button.getAttribute("data-modal-open");
+          const modal = document.getElementById(modalId);
+          if (modal) openModal(modal);
+        });
+      });
+
+      document.querySelectorAll("[data-modal]").forEach((modal) => {
+        const panel = modal.querySelector("[data-modal-panel]");
+
+        modal.querySelectorAll("[data-modal-close]").forEach((button) => {
+          button.addEventListener("click", () => closeModal(modal));
+        });
+
+        modal.addEventListener("click", (event) => {
+          if (!panel.contains(event.target)) {
+            closeModal(modal);
+          }
+        });
+      });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          document.querySelectorAll("[data-modal].flex").forEach((modal) => {
+            closeModal(modal);
+          });
+        }
+      });
 
       window.addEventListener("resize", scalePage);
       window.addEventListener("load", scalePage);
