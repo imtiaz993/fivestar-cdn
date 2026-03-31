@@ -688,14 +688,25 @@
         const wrapper = document.getElementById("app-wrapper");
         const clipPath = document.getElementById("clip-path");
         const clipPath2 = document.getElementById("clip-path-2");
+        const modalPanels = document.querySelectorAll("[data-modal-panel]");
         const isDesktopLayout = window.innerWidth >= 640;
 
         if (isDesktopLayout) {
           wrapper.style.transform = "scale(" + scale + ")";
           wrapper.style.height = `${(1 / scale) * 100}vh`;
+
+          modalPanels.forEach((panel) => {
+            panel.style.transform = "none";
+            panel.style.zoom = scale;
+          });
         } else {
           wrapper.style.transform = "none";
           wrapper.style.height = "auto";
+
+          modalPanels.forEach((panel) => {
+            panel.style.zoom = "1";
+            panel.style.transform = "none";
+          });
         }
 
         wrapper.style.display = "flex";
