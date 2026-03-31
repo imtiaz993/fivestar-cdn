@@ -5255,14 +5255,15 @@
           wrapper.style.height = `${(1 / scale) * 100}vh`;
 
           modalPanels.forEach((panel) => {
-            panel.style.transform = `scale(${scale})`;
-            panel.style.transformOrigin = "center center";
+            panel.style.transform = "none";
+            panel.style.zoom = scale;
           });
         } else {
           wrapper.style.transform = "none";
           wrapper.style.height = "auto";
 
           modalPanels.forEach((panel) => {
+            panel.style.zoom = "1";
             panel.style.transform = "none";
           });
         }
