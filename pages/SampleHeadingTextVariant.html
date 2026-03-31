@@ -1,68 +1,83 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Sample</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Essential Engine - Sample</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="shortcut icon" href="../public/favicon.ico" />
-</head>
+  <body class="min-h-screen">
+    <div
+      id="clip-path"
+      class="absolute top-0 left-0 hidden h-16 w-16 bg-[#F0592B] sm:fixed sm:h-40 sm:w-40"
+      style="clip-path: polygon(0 0, 100% 0, 0 100%)"
+    ></div>
 
-<body class="min-h-screen">
-  <div id="clip-path" class="absolute top-0 left-0 hidden h-16 w-16 bg-[#F0592B] sm:fixed sm:h-40 sm:w-40"
-    style="clip-path: polygon(0 0, 100% 0, 0 100%)"></div>
+    <div
+      id="clip-path-2"
+      class="absolute top-0 right-0 hidden h-16 w-16 bg-[#0389A0] sm:fixed sm:h-40 sm:w-40"
+      style="clip-path: polygon(100% 0, 100% 100%, 0 0)"
+    ></div>
 
-  <div id="clip-path-2" class="absolute top-0 right-0 hidden h-16 w-16 bg-[#0389A0] sm:fixed sm:h-40 sm:w-40"
-    style="clip-path: polygon(100% 0, 100% 100%, 0 0)"></div>
-
-
-  <div class="hidden flex-col justify-start sm:w-384 sm:origin-top-left" id="app-wrapper">
-    <div class="flex items-center justify-center sm:mx-40 mt-2 sm:mt-6">
-      <img src="../public/eelogo.png" alt="Essential Engine logo"
-        class="max-w-32 sm:max-w-48 mx-auto sm:ml-0 sm:mr-auto" />
-    </div>
-    <section class="relative flex flex-1 flex-col items-center gap-2 max-w-11/12 sm:max-w-3/4 mx-auto mb-5">
-      <!-- <h1 class="text-left text-2xl text-[#F0592B] font-medium sm:text-4xl">
+    <div
+      class="hidden flex-col justify-start sm:w-384 sm:origin-top-left"
+      id="app-wrapper"
+    >
+      <div class="mt-2 flex items-center justify-center sm:mx-40 sm:mt-6">
+        <img
+          src="../public/eelogo.png"
+          alt="Essential Engine logo"
+          class="mx-auto max-w-32 sm:mr-auto sm:ml-0 sm:max-w-48"
+        />
+      </div>
+      <section
+        class="relative mx-auto mb-5 flex max-w-11/12 flex-1 flex-col items-center gap-2 sm:max-w-3/4"
+      >
+        <!-- <h1 class="text-left text-2xl text-[#F0592B] font-medium sm:text-4xl">
         Sample Cover Letter
       </h1>
       <p class="text-lg text-center sm:text-2xl">To accompany profile reprints being sent to your clients
       </p>
       <p class="text-sm text-center sm:text-base">Page 1 of 7</p> -->
-      <p class="text-xl text-center sm:text-3xl font-medium mt-5"> With the Keep-It-Personal social
-        media Expert Package, we’ll consult with you every step of the way. Professionalize your Facebook, Instagram or
-        LinkedIn page with one simple service.
-      </p>
-      <img class="mt-5" src="https://ags.s3.amazonaws.com/2026/re/RE26_SampleLetter_2.png" alt="image">
-    </section>
-  </div>
-  <script>
-    function scalePage() {
-      const baseWidth = 1536;
-      const scale = window.innerWidth / baseWidth;
+        <p class="mt-5 text-center text-xl font-medium sm:text-3xl">
+          With the Keep-It-Personal social media Expert Package, we’ll consult
+          with you every step of the way. Professionalize your Facebook,
+          Instagram or LinkedIn page with one simple service.
+        </p>
+        <img
+          class="mt-5"
+          src="https://ags.s3.amazonaws.com/2026/re/RE26_SampleLetter_2.png"
+          alt="image"
+        />
+      </section>
+    </div>
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
 
-      const wrapper = document.getElementById("app-wrapper");
-      const clipPath = document.getElementById("clip-path");
-      const clipPath2 = document.getElementById("clip-path-2");
-      const isDesktopLayout = window.innerWidth >= 640;
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const clipPath2 = document.getElementById("clip-path-2");
+        const isDesktopLayout = window.innerWidth >= 640;
 
-      if (isDesktopLayout) {
-        wrapper.style.transform = "scale(" + scale + ")";
-        wrapper.style.height = `${(1 / scale) * 100}vh`;
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
 
-      } else {
-        wrapper.style.transform = "none";
-        wrapper.style.height = "auto";
+        wrapper.style.display = "flex";
+        clipPath.style.display = "block";
+        clipPath2.style.display = "block";
       }
 
-      wrapper.style.display = "flex";
-      clipPath.style.display = "block";
-      clipPath2.style.display = "block";
-    }
-
-    window.addEventListener("resize", scalePage);
-    window.addEventListener("load", scalePage);
-  </script>
-</body>
-
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
 </html>
