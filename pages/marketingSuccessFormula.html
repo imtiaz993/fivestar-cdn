@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Marketing Success Formula</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <div
+      class="hidden flex-col justify-start bg-white pt-5 sm:w-384 sm:origin-top-left"
+      id="app-wrapper"
+    >
+      <main class="flex flex-1 sm:h-screen sm:min-h-0 sm:px-16 sm:py-10">
+        <section class="flex w-full flex-col justify-center gap-10 sm:gap-14">
+          <div
+            class="flex flex-col gap-8 px-5 sm:flex-row sm:items-stretch sm:justify-between sm:gap-12 sm:px-0"
+          >
+            <div class="flex w-full items-center sm:w-1/2">
+              <h1
+                class="w-full text-center leading-[0.85] font-semibold tracking-tight sm:text-left"
+              >
+                <span class="block text-[44px] text-[#0389A0] sm:text-8xl"
+                  >MARKETING</span
+                >
+                <span class="block text-[55px] text-[#F0592B] sm:text-[118px]"
+                  >SUCCESS</span
+                >
+                <span
+                  class="block text-[50px] tracking-[3px] text-[#0389A0] sm:text-[110px]"
+                  >FORMULA</span
+                >
+              </h1>
+            </div>
+
+            <div
+              class="flex w-full items-center border border-stone-300 bg-white p-4 shadow-[0_0_8px_rgba(0,0,0,0.3)] sm:w-5/12 sm:px-10"
+            >
+              <p
+                class="text-center text-lg leading-tight font-thin sm:text-justify sm:text-2xl"
+              >
+                With over 20 years of experience, we have discovered the formula
+                to help you market your business, attract your ideal clients,
+                help more people and create more impact.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative pt-4 sm:pt-8">
+            <div
+              class="absolute top-5 left-5 hidden h-60 w-full border-2 border-[#F0592B] sm:block"
+            ></div>
+
+            <div
+              class="relative z-10 bg-[#0389A0] p-4 shadow-[0_0_8px_rgba(0,0,0,0.5)] sm:mt-4 sm:px-4 sm:py-6"
+            >
+              <div
+                class="flex flex-col gap-6 text-white sm:flex-row sm:items-start sm:justify-between"
+              >
+                <div
+                  class="flex flex-col items-center justify-center gap-6 sm:flex-row sm:items-start sm:gap-6"
+                >
+                  <div class="w-full sm:w-72">
+                    <div
+                      class="text-center sm:grid sm:grid-cols-2 sm:justify-items-center"
+                    >
+                      <span
+                        class="text-8xl leading-[0.8] font-bold tracking-tight sm:text-[12rem]"
+                        >E</span
+                      >
+                      <span
+                        class="text-8xl leading-[0.8] font-bold tracking-tight sm:text-[12rem]"
+                        >E</span
+                      >
+                    </div>
+
+                    <div
+                      class="text-center text-lg font-thin sm:grid sm:grid-cols-2 sm:justify-items-center sm:text-2xl"
+                    >
+                      <span class="text-center">Essential</span>
+                      <span class="text-center">Engine</span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="text-7xl font-bold text-[#F0592B] sm:text-[12rem] sm:leading-[0.69]"
+                  >
+                    =
+                  </div>
+                </div>
+
+                <div
+                  class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-start sm:gap-0"
+                >
+                  <div class="text-center sm:w-56">
+                    <div
+                      class="text-8xl leading-[0.8] font-bold sm:text-[12rem]"
+                    >
+                      C
+                    </div>
+                    <div
+                      class="w-full text-center text-lg font-thin sm:text-2xl"
+                    >
+                      Connection
+                    </div>
+                  </div>
+
+                  <div
+                    class="text-center text-7xl font-bold text-[#F0592B] sm:text-[12rem] sm:leading-[0.69]"
+                  >
+                    +
+                  </div>
+
+                  <div class="text-center sm:w-56">
+                    <div
+                      class="text-8xl leading-[0.8] font-bold sm:text-[12rem]"
+                    >
+                      C
+                    </div>
+                    <div
+                      class="w-full text-center text-lg font-thin sm:text-2xl"
+                    >
+                      Content
+                    </div>
+                  </div>
+
+                  <div
+                    class="text-center text-7xl font-bold text-[#F0592B] sm:text-[12rem] sm:leading-[0.69]"
+                  >
+                    +
+                  </div>
+
+                  <div class="text-center sm:w-64">
+                    <div
+                      class="text-8xl leading-[0.8] font-bold sm:text-[12rem]"
+                    >
+                      C
+                    </div>
+                    <div
+                      class="w-full text-center text-lg font-thin sm:text-2xl"
+                    >
+                      Credibility
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>
