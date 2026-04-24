@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Welcome Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <div
+      id="clip-path"
+      class="top-0 right-8 hidden h-[120%] bg-[#0389A0] sm:fixed sm:w-160"
+      style="clip-path: polygon(0px 0px, 43% 0px, 100% 100%, 60% 100%)"
+    ></div>
+
+    <div
+      id="clip-path-2"
+      class="top-0 right-0 hidden h-[120%] bg-[#F0592B] sm:fixed sm:w-100"
+      style="clip-path: polygon(0 0, 30% 0, 118% 97%, 92% 100%)"
+    ></div>
+
+    <div
+      class="hidden min-h-screen w-full flex-col justify-start overflow-x-hidden pt-5 sm:min-h-auto sm:w-384 sm:origin-top-left sm:justify-center sm:overflow-hidden sm:py-0"
+      id="app-wrapper"
+    >
+      <img
+        src="../public/eelogo.png"
+        alt="Essential Engine logo"
+        class="mb-8 ml-4 max-w-42 sm:absolute sm:top-0 sm:left-0 sm:mt-10 sm:mb-0 sm:ml-10 sm:max-w-70"
+      />
+      <div class="flex h-full flex-col px-5 sm:mt-20 sm:px-10">
+        <main class="flex flex-1 flex-col justify-center gap-8 sm:gap-18">
+          <h1 class="max-w-full text-3xl font-extrabold text-black sm:text-8xl">
+            HELLO, %NAME%
+          </h1>
+
+          <div class="space-y-1 sm:space-y-2">
+            <p class="text-xl sm:text-5xl">Welcome to Your</p>
+            <p class="text-xl font-bold sm:text-5xl">Five Star Award</p>
+            <p class="text-xl font-bold sm:text-5xl">
+              Certification Presentation!
+            </p>
+          </div>
+
+          <p
+            class="inline-flex items-center gap-4 self-start text-xl leading-none font-semibold text-black sm:text-5xl"
+          >
+            <span>Let&rsquo;s get started</span>
+
+            <span
+              class="h-0 w-0 border-y-[0.5em] border-l-[0.8em] border-y-transparent border-l-[#3E8EA4]"
+            ></span>
+          </p>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const clipPath2 = document.getElementById("clip-path-2");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+          clipPath.style.display = "block";
+          clipPath2.style.display = "block";
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>
