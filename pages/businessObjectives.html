@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Business Objectives</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <div
+      id="app-wrapper"
+      class="hidden min-h-screen sm:min-h-auto w-full overflow-x-hidden py-5 sm:w-384 sm:origin-top-left sm:overflow-hidden sm:py-0"
+    >
+      <div
+        class="mb-6 flex items-center justify-start px-5 sm:absolute sm:top-0 sm:right-0 sm:mt-10 sm:mr-10 sm:mb-0 sm:w-full sm:justify-end sm:px-0"
+      >
+        <div class="-mt-5 mr-4 hidden h-0.5 flex-1 bg-[#FB2C37] sm:block"></div>
+        <img
+          src="../public/eelogo.png"
+          alt="eelogo"
+          class="max-w-32 sm:max-w-48"
+        />
+      </div>
+
+      <section class="relative mt-4 sm:mt-0 sm:min-h-0">
+        <div
+          class="relative z-10 flex h-20 w-full max-w-[calc(100%-1em)] items-center justify-center bg-[#0389A0] px-5 py-5 sm:absolute sm:top-0 sm:left-0 sm:h-50 sm:w-120 sm:p-10"
+        >
+          <h1 class="text-3xl font-bold text-white sm:text-6xl">
+            Business Objectives
+          </h1>
+        </div>
+        <div
+          class="absolute top-5 left-0 z-0 h-20 w-full bg-[#F0592B] sm:h-53 sm:w-lg"
+        ></div>
+      </section>
+
+      <main class="px-5 pt-10 sm:px-16 sm:pt-20 sm:pb-0">
+        <div
+          class="flex flex-col gap-8 sm:flex-row sm:justify-between sm:gap-14 sm:p-10"
+        >
+          <div class="w-full sm:w-[38%] sm:pt-45 sm:pb-45">
+            <div class="max-w-lg">
+              <h1
+                class="text-center text-2xl leading-tight font-medium text-[#20242A] sm:text-justify sm:text-4xl sm:leading-[1.18]"
+              >
+                Which of the following business objectives would you say are
+                your highest priority over the next 12 months?
+              </h1>
+            </div>
+          </div>
+
+          <div
+            class="relative grid w-full min-w-0 gap-4 pt-0 sm:h-168 sm:w-1/2 sm:pt-6"
+          >
+            <div
+              class="relative flex min-h-32 w-full flex-col justify-center gap-3 rounded-md bg-[#0389A0] px-5 py-5 text-center text-white shadow-[0_6px_18px_rgba(0,0,0,0.08)] sm:absolute sm:top-0 sm:left-0 sm:h-40 sm:w-80 sm:px-6 sm:py-0"
+            >
+              <h2 class="text-xl font-bold uppercase sm:text-3xl">Activate</h2>
+              <p class="text-lg leading-6 sm:text-xl sm:leading-[1.18]">
+                Generate more referrals from your current network
+              </p>
+            </div>
+            <div
+              class="relative flex min-h-32 w-full flex-col justify-center gap-3 rounded-md bg-[#0389A0] px-5 py-5 text-center text-white shadow-[0_6px_18px_rgba(0,0,0,0.08)] sm:absolute sm:top-28 sm:right-0 sm:h-40 sm:w-80 sm:px-6 sm:py-0"
+            >
+              <h2 class="text-xl font-bold uppercase sm:text-3xl">Captivate</h2>
+              <p class="text-lg leading-6 sm:text-xl sm:leading-[1.18]">
+                Win greater % of new prospective client presentations
+              </p>
+            </div>
+            <div
+              class="relative flex min-h-32 w-full flex-col justify-center gap-3 rounded-md bg-[#0389A0] px-5 py-5 text-center text-white shadow-[0_6px_18px_rgba(0,0,0,0.08)] sm:absolute sm:top-64 sm:left-0 sm:h-40 sm:w-80 sm:px-6 sm:py-0"
+            >
+              <h2 class="text-xl font-bold uppercase sm:text-3xl">Cultivate</h2>
+              <p class="text-lg leading-6 sm:text-xl sm:leading-[1.18]">
+                Generate leads outside of your current network
+              </p>
+            </div>
+            <div
+              class="relative flex min-h-32 w-full flex-col justify-center gap-3 rounded-md bg-[#0389A0] px-5 py-5 text-center text-white shadow-[0_6px_18px_rgba(0,0,0,0.08)] sm:absolute sm:top-92 sm:right-0 sm:h-40 sm:w-80 sm:px-6 sm:py-0"
+            >
+              <h2 class="text-xl font-bold uppercase sm:text-3xl">Elevate</h2>
+              <p class="text-lg leading-6 sm:text-xl sm:leading-[1.18]">
+                Improve brand recognition and what makes you different ... "the
+                right choice"
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+        } else {
+          wrapper.style.transform = "none";
+        }
+        wrapper.style.display = "block";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>

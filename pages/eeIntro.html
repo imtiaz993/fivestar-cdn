@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - EE Company Intro / FS Award Program Intro</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <div
+      id="clip-path"
+      class="absolute top-0 left-0 hidden h-60 w-34 bg-[#F0592B] sm:h-full sm:w-[26%]"
+      style="clip-path: polygon(0 0, 70% 0, 0% 100%, 0 100%)"
+    ></div>
+    <div
+      class="hidden min-h-screen w-full overflow-x-hidden py-5 sm:mt-10 sm:min-h-auto sm:w-384 sm:origin-top-left sm:overflow-hidden sm:py-0"
+      id="app-wrapper"
+    >
+      <div class="flex justify-end px-5 pb-5 sm:hidden">
+        <img src="../public/eelogo.png" alt="eelogo" class="max-w-32" />
+      </div>
+      <section
+        class="relative z-10 w-full bg-[#0389A0] px-5 py-5 text-white shadow-md shadow-black sm:absolute sm:top-6 sm:left-25 sm:max-w-190 sm:px-7 sm:py-6"
+      >
+        <div class="flex gap-4">
+          <div class="border-2 border-white sm:border-4"></div>
+          <div class="space-y-1">
+            <h1 class="text-start text-3xl text-white sm:text-6xl">
+              Essential Engine Programs and Services
+            </h1>
+          </div>
+        </div>
+      </section>
+      <main class="px-5 sm:px-0">
+        <div class="sm:h-screen sm:px-4 sm:py-8">
+          <div class="mt-6 hidden justify-end sm:mt-10 sm:flex">
+            <img
+              src="../public/eelogo.png"
+              alt="eelogo"
+              class="max-w-32 sm:max-w-48"
+            />
+          </div>
+          <div class="mx-auto mt-8 w-full sm:mt-28 sm:w-220">
+            <div class="flex items-center justify-center gap-8">
+              <div>
+                <h2
+                  class="text-2xl leading-tight font-semibold text-[#2f3843] sm:text-4xl"
+                >
+                  Five Star Professional Award Program:
+                </h2>
+
+                <p
+                  class="mt-4 max-w-full text-lg leading-7 font-light text-[#454545] sm:mt-6 sm:max-w-225 sm:text-2xl sm:leading-[1.45]"
+                >
+                  This program conducts research to define and promote
+                  professional excellence and is the largest and longest running
+                  (established 2001) award program in the United States for the
+                  real estate, mortgage, home/auto insurance, and wealth
+                  management industries.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mx-auto mt-10 sm:mt-14">
+            <div class="mt-6 sm:mt-8">
+              <div class="flex justify-center">
+                <img
+                  src="../public/eeintro.png"
+                  alt="Essential Living"
+                  class="w-full max-w-4xl sm:w-220"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+        } else {
+          wrapper.style.transform = "none";
+        }
+
+        wrapper.style.display = "block";
+        clipPath.style.display = "block";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>

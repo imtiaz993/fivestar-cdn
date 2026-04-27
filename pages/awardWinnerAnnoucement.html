@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Award Winners Announcement</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <div
+      id="clip-path"
+      class="absolute top-0 right-0 z-50 hidden h-24 w-24 bg-[#F0592B] sm:fixed sm:h-75 sm:w-75"
+      style="clip-path: polygon(100% 0, 100% 100%, 0 0)"
+    ></div>
+
+    <div
+      id="clip-path-2"
+      class="absolute bottom-0 left-0 z-50 hidden h-24 w-24 bg-[#0389A0] sm:fixed sm:h-75 sm:w-75"
+      style="clip-path: polygon(0 0, 100% 100%, 0 100%)"
+    ></div>
+    <div
+      class="hidden min-h-screen w-full flex-col justify-start overflow-x-hidden p-5 sm:min-h-auto sm:w-384 sm:origin-top-left sm:justify-center sm:overflow-hidden sm:py-0"
+      id="app-wrapper"
+    >
+      <img
+        src="../public/eelogo.png"
+        alt="Essential Engine logo"
+        class="mb-8 max-w-32 sm:absolute sm:top-0 sm:left-0 sm:mt-10 sm:mb-0 sm:ml-10 sm:max-w-48"
+      />
+      <main class="relative flex-1 sm:flex-none pb-18 sm:pb-0">
+        <section
+          class="relative z-10 flex flex-col items-center justify-center gap-8 sm:flex-row sm:gap-0"
+        >
+          <div
+            class="flex w-full flex-col pt-2 pb-4 sm:w-[46%] sm:px-18 sm:pt-12 sm:pb-12"
+          >
+            <div
+              class="space-y-1 text-center uppercase sm:mt-28 sm:space-y-2 sm:text-left"
+            >
+              <h1
+                class="text-5xl leading-none font-bold text-[#F0592B] sm:text-8xl"
+              >
+                Award
+              </h1>
+              <h2
+                class="text-5xl leading-[0.95] font-bold tracking-tight text-[#0389A0] sm:text-8xl"
+              >
+                Winners
+              </h2>
+            </div>
+
+            <div
+              class="mt-6 space-y-5 text-center leading-7 text-[#4A4F55] sm:mt-10 sm:space-y-8 sm:text-left sm:leading-[1.45]"
+            >
+              <p class="text-xl sm:text-3xl">
+                At no expense to you, you will be featured on
+                FiveStarProfessional.com
+              </p>
+              <p class="text-lg font-light sm:text-2xl">
+                You also have free rights to mention the award and add it to
+                your list of titles and awards.
+              </p>
+            </div>
+          </div>
+          <img
+            src="../public/award-announcement.jpg"
+            alt="Award Announcement"
+            class="max-w-200"
+          />
+        </section>
+        <div
+          class="absolute -bottom-5 -left-5 h-24 w-24 bg-[#0389A0] sm:hidden"
+          style="clip-path: polygon(0 0, 100% 100%, 0 100%)"
+        ></div>
+      </main>
+    </div>
+
+    <script>
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const clipPath2 = document.getElementById("clip-path-2");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+          clipPath2.style.display = "block";
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+        clipPath.style.display = "block";
+
+        wrapper.style.display = "flex";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", scalePage);
+    </script>
+  </body>
+</html>

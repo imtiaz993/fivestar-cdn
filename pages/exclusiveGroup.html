@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essential Engine - Exclusive Group</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="../public/favicon.ico" />
+  </head>
+  <body
+    class="min-h-screen overflow-x-hidden bg-white sm:max-h-dvh sm:min-h-dvh sm:overflow-hidden"
+  >
+    <div
+      id="clip-path"
+      style="clip-path: polygon(41% 0, 100% 0%, 100% 100%, 6% 100%)"
+      class="absolute top-0 right-0 bottom-0 z-0 hidden h-72 w-full bg-[#0389A0] sm:h-auto sm:w-1/2"
+    ></div>
+    <div
+      class="hidden min-h-screen sm:min-h-auto w-full flex-col justify-start overflow-x-hidden pt-5 sm:mt-10 sm:w-384 sm:origin-top-left sm:justify-center sm:overflow-hidden sm:px-0 sm:py-0"
+      id="app-wrapper"
+    >
+      <img
+        src="../public/eelogo.png"
+        alt="Essential Engine logo"
+        class="mb-6 ml-5 max-w-32 sm:absolute sm:top-0 sm:left-0 sm:mt-0 sm:mb-0 sm:max-w-48"
+      />
+      <section>
+        <div
+          class="flex w-full flex-col gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-0"
+        >
+          <div
+            class="flex w-full flex-col items-center justify-center gap-6 sm:w-1/2 sm:gap-8"
+          >
+            <h1 class="text-3xl font-bold text-[#0389A0] sm:text-6xl">
+              Exclusive!
+            </h1>
+            <div
+              class="relative flex h-72 w-72 items-center justify-center rounded-full bg-[#efefef] shadow-[0_10px_18px_rgba(0,0,0,0.22)] sm:h-104 sm:w-104"
+              id="donut-chart"
+              style="
+                background: conic-gradient(
+                  #0f8aa0 0deg,
+                  #0f8aa0 0deg,
+                  #efefef 0deg,
+                  #efefef 360deg
+                );
+              "
+            >
+              <div
+                class="flex h-52 w-52 items-center justify-center rounded-full bg-[#f7f7f7] shadow-[inset_0_2px_8px_rgba(0,0,0,0.14)] sm:h-75 sm:w-75"
+              >
+                <span
+                  class="text-[4.5rem] leading-none font-bold tracking-[-0.06em] text-black sm:text-[7rem]"
+                  id="donut-value"
+                >
+                  0%
+                </span>
+              </div>
+            </div>
+            <p class="text-center text-lg font-light sm:text-2xl">
+              San Diego Real Estate Agents
+            </p>
+          </div>
+          <div
+            class="relative flex w-full flex-col items-center justify-center gap-6 bg-[#0389A0] py-8 text-center text-white shadow-[0_20px_60px_rgba(3,137,160,0.18)] sm:w-1/3 sm:gap-8 sm:rounded-none sm:bg-transparent sm:px-12 sm:py-0 sm:shadow-none"
+          >
+            <div class="flex flex-col items-center gap-3">
+              <h1
+                class="text-6xl leading-none font-bold text-white sm:text-9xl"
+              >
+                2026
+              </h1>
+              <div
+                style="clip-path: polygon(50% 100%, 0 0, 100% 0)"
+                class="h-10 w-44 bg-white sm:h-15 sm:w-80"
+              ></div>
+            </div>
+            <div class="space-y-2">
+              <p class="text-lg leading-tight font-bold sm:text-2xl">
+                Size of Your Market:
+              </p>
+              <p
+                class="bg-[#F0592B] px-4 py-3 text-3xl leading-none font-semibold sm:px-2 sm:py-4 sm:text-5xl"
+              >
+                32,507
+              </p>
+            </div>
+            <div class="space-y-2">
+              <p class="text-lg leading-tight font-bold sm:text-2xl">
+                Projected Winners:
+              </p>
+              <p
+                class="bg-[#F0592B] px-4 py-3 text-3xl leading-none font-semibold sm:px-2 sm:py-4 sm:text-5xl"
+              >
+                326
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-8 hidden w-full border border-[#F0592B] sm:block sm:w-[99vw]"
+        ></div>
+      </section>
+    </div>
+    <script>
+      function animateDonut(targetPercent) {
+        const donut = document.getElementById("donut-chart");
+        const value = document.getElementById("donut-value");
+
+        if (!donut || !value) return;
+
+        const duration = 1200;
+        const startTime = performance.now();
+
+        function updateFrame(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const currentPercent = targetPercent * progress;
+          const currentDegrees = (currentPercent / 100) * 360;
+
+          donut.style.background = `conic-gradient(#0f8aa0 0deg, #0f8aa0 ${currentDegrees}deg, #efefef ${currentDegrees}deg, #efefef 360deg)`;
+          value.textContent = `${Math.round(currentPercent)}%`;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateFrame);
+          }
+        }
+
+        requestAnimationFrame(updateFrame);
+      }
+
+      function scalePage() {
+        const baseWidth = 1536;
+        const scale = window.innerWidth / baseWidth;
+
+        const wrapper = document.getElementById("app-wrapper");
+        const clipPath = document.getElementById("clip-path");
+        const isDesktopLayout = window.innerWidth >= 640;
+
+        if (isDesktopLayout) {
+          wrapper.style.transform = "scale(" + scale + ")";
+          wrapper.style.height = `${(1 / scale) * 100}vh`;
+          clipPath.style.display = "block";
+        } else {
+          wrapper.style.transform = "none";
+          wrapper.style.height = "auto";
+        }
+
+        wrapper.style.display = "flex";
+      }
+
+      window.addEventListener("resize", scalePage);
+      window.addEventListener("load", () => {
+        scalePage();
+        animateDonut(2);
+      });
+    </script>
+  </body>
+</html>
