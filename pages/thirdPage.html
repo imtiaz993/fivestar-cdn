@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Content Submission</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        font-family: "Lato", Arial, sans-serif;
+        background: linear-gradient(
+          to bottom,
+          #d8d8d8 0%,
+          #d8d8d8 52%,
+          #b8202c 52%,
+          #b8202c 100%
+        );
+        min-height: 100vh;
+      }
+
+      input,
+      select {
+        width: 100%;
+        height: 34px;
+        background: #edeef0;
+        outline: none;
+      }
+
+      textarea {
+        width: 100%;
+        font-family: "Lato", Arial, sans-serif;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        box-shadow: 0 0 0 2px #0b5f78;
+      }
+
+      input[type="radio"] {
+        width: 18px;
+        height: 18px;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      input[type="radio"]:focus,
+      input[type="radio"]:focus-visible {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+      input, select {
+        border: 1px solid #005f7f;
+      }
+      select{
+        cursor: pointer;
+      }
+
+      @media (max-width: 640px) {
+        body {
+          background: #d8d8d8;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main
+      class="mx-3 my-4 max-w-full overflow-hidden bg-white px-5 py-8 shadow-xl sm:mx-6 sm:px-8 md:px-16 md:py-12 lg:mx-10 lg:px-28"
+    >
+      <header>
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <img
+            src="image.png"
+            alt="Five Star Professional Logo"
+            class="w-32 sm:w-40 md:w-44"
+          />
+
+          <h1
+            class="text-left text-[16px] font-normal uppercase tracking-wide text-[#a8a8a8] sm:text-right sm:text-[18px]"
+          >
+            Content Submission
+          </h1>
+        </div>
+
+        <div class="mt-6 h-[20px] bg-[#bd202c] sm:mt-8 sm:h-[28px]"></div>
+      </header>
+
+      <section class="py-8">
+        <div class="mb-10 text-center sm:mb-16">
+          <h2
+            class="mx-auto max-w-[760px] text-[30px] font-bold leading-[1.15] text-[#bd202c] sm:text-[40px] md:text-[48px]"
+          >
+            Thank you for completing your candidate form.
+          </h2>
+
+          <p
+            class="mx-auto mt-3 max-w-[760px] text-[20px] font-medium leading-[1.35] text-[#333] sm:text-[28px] md:text-[32px]"
+          >
+            We will be notifying award winners in the next few weeks.
+          </p>
+        </div>
+
+        <div
+          class="space-y-6 text-[17px] font-medium leading-[1.7] text-[#333] sm:text-[20px] md:text-[22px]"
+        >
+          <p>
+            We are currently accepting nominations for the
+            <strong>Rising Star awards!</strong> The Rising Star awards
+            recognize up-and-coming <strong>real estate</strong> and
+            <strong>mortgage</strong> professionals that have been in the
+            industry for <strong>less than 5 years</strong>, embody professional
+            excellence, exhibit superior customer service and show great
+            potential to excel in their profession.
+          </p>
+
+          <p>
+            If you know an outstanding real estate agent or mortgage
+            professional that is getting started in their career and you feel
+            they fit this description, nominate them here!
+          </p>
+
+          <div class="border-t border-[#e1e1e1] pt-5">
+            <p>Let the nominations begin!</p>
+          </div>
+
+          <p>
+            You may submit up to 3 nominations.
+            <strong>Please provide their information below:</strong>
+          </p>
+        </div>
+
+        <form class="mt-6">
+          <div class="border-t border-[#e1e1e1] py-5">
+            <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+              What type of professional are you nominating?
+              <span class="text-[#bd202c]">*</span>
+            </label>
+
+            <select class="px-3 font-normal">
+              <option label="-- Please Select --" value="NoAnswer">
+                -- Please Select --
+              </option>
+              <option value="10326" label="Real estate agent">
+                Real estate agent
+              </option>
+              <option value="10327" label="Mortgage professional">
+                Mortgage professional
+              </option>
+            </select>
+          </div>
+
+          <div class="grid gap-6 border-t border-[#e1e1e1] py-5 md:grid-cols-2">
+            <div>
+              <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+                First Name <span class="text-[#bd202c]">*</span>
+              </label>
+              <input type="text" class="px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+                Last Name <span class="text-[#bd202c]">*</span>
+              </label>
+              <input type="text" class="px-3" />
+            </div>
+          </div>
+
+          <div class="grid gap-6 border-t border-[#e1e1e1] py-5 md:grid-cols-2">
+            <div>
+              <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+                Company <span class="text-[#bd202c]">*</span>
+              </label>
+              <input type="text" class="px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+                Email <span class="text-[#bd202c]">*</span>
+              </label>
+              <input type="email" class="px-3" />
+            </div>
+          </div>
+
+          <div class="border-t border-[#e1e1e1] py-5">
+            <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+              Address
+            </label>
+            <input type="text" class="px-3" />
+          </div>
+
+          <div class="grid gap-6 border-t border-[#e1e1e1] py-5 md:grid-cols-[2fr_1fr_1fr]">
+            <div>
+              <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+                City <span class="text-[#bd202c]">*</span>
+              </label>
+              <input type="text" class="px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+                State <span class="text-[#bd202c]">*</span>
+              </label>
+
+              <select class="px-3">
+                <option label="-- Please Select --" value="NoAnswer">
+                  -- Please Select --
+                </option>
+                <option value="10404" label="Alabama">Alabama</option>
+                <option value="10405" label="Alaska">Alaska</option>
+                <option value="10406" label="Arizona">Arizona</option>
+                <option value="10407" label="Arkansas">Arkansas</option>
+                <option value="10408" label="California">California</option>
+                <option value="10409" label="Colorado">Colorado</option>
+                <option value="10410" label="Connecticut">Connecticut</option>
+                <option value="10411" label="Delaware">Delaware</option>
+                <option value="10412" label="District of Columbia">
+                  District of Columbia
+                </option>
+                <option value="10413" label="Florida">Florida</option>
+                <option value="10414" label="Georgia">Georgia</option>
+                <option value="10415" label="Hawaii">Hawaii</option>
+                <option value="10416" label="Idaho">Idaho</option>
+                <option value="10417" label="Illinois">Illinois</option>
+                <option value="10418" label="Indiana">Indiana</option>
+                <option value="10419" label="Iowa">Iowa</option>
+                <option value="10420" label="Kansas">Kansas</option>
+                <option value="10421" label="Kentucky">Kentucky</option>
+                <option value="10422" label="Louisiana">Louisiana</option>
+                <option value="10423" label="Maine">Maine</option>
+                <option value="10424" label="Maryland">Maryland</option>
+                <option value="10425" label="Massachusetts">
+                  Massachusetts
+                </option>
+                <option value="10426" label="Michigan">Michigan</option>
+                <option value="10427" label="Minnesota">Minnesota</option>
+                <option value="10428" label="Mississippi">Mississippi</option>
+                <option value="10429" label="Missouri">Missouri</option>
+                <option value="10430" label="Montana">Montana</option>
+                <option value="10431" label="Nebraska">Nebraska</option>
+                <option value="10432" label="Nevada">Nevada</option>
+                <option value="10433" label="New Hampshire">
+                  New Hampshire
+                </option>
+                <option value="10434" label="New Jersey">New Jersey</option>
+                <option value="10435" label="New Mexico">New Mexico</option>
+                <option value="10436" label="New York">New York</option>
+                <option value="10437" label="North Carolina">
+                  North Carolina
+                </option>
+                <option value="10438" label="North Dakota">North Dakota</option>
+                <option value="10439" label="Ohio">Ohio</option>
+                <option value="10440" label="Oklahoma">Oklahoma</option>
+                <option value="10441" label="Oregon">Oregon</option>
+                <option value="10442" label="Pennsylvania">Pennsylvania</option>
+                <option value="10443" label="Rhode Island">Rhode Island</option>
+                <option value="10444" label="South Carolina">
+                  South Carolina
+                </option>
+                <option value="10445" label="South Dakota">South Dakota</option>
+                <option value="10446" label="Tennessee">Tennessee</option>
+                <option value="10447" label="Texas">Texas</option>
+                <option value="10448" label="Utah">Utah</option>
+                <option value="10449" label="Vermont">Vermont</option>
+                <option value="10450" label="Virginia">Virginia</option>
+                <option value="10451" label="Washington">Washington</option>
+                <option value="10452" label="West Virginia">
+                  West Virginia
+                </option>
+                <option value="10453" label="Wisconsin">Wisconsin</option>
+                <option value="10454" label="Wyoming">Wyoming</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+                Zip Code
+              </label>
+              <input type="text" class="px-3" />
+            </div>
+          </div>
+
+          <div class="grid gap-6 border-t border-[#e1e1e1] py-5 md:grid-cols-2">
+            <div>
+              <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+                Phone
+              </label>
+              <input type="tel" class="px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+                Mobile
+              </label>
+              <input type="tel" class="px-3" />
+            </div>
+          </div>
+
+          <div class="border-t border-[#e1e1e1] py-5">
+            <label class="mb-2 block text-[17px] font-normal sm:text-[18px]">
+              Please share with us why you think this person deserves
+              recognition:
+            </label>
+
+            <textarea
+              class="h-[140px] rounded border border-[#999] bg-white p-2 outline-none"
+            ></textarea>
+          </div>
+
+          <div class="border-t border-[#e1e1e1] py-5">
+            <p class="mb-4 text-[17px] font-normal sm:text-[18px]">
+              Would you like to nominate a second Rising Star professional?
+              <span class="text-[#bd202c]">*</span>
+            </p>
+
+            <div class="flex flex-col gap-3 sm:flex-row sm:gap-8">
+              <label class="flex items-center gap-3 text-[17px] font-normal cursor-pointer">
+                <input
+                  type="radio"
+                  name="second_nomination"
+                  class="accent-[#005f7f]"
+                />
+                Yes
+              </label>
+
+              <label class="flex items-center gap-3 text-[17px] font-normal cursor-pointer">
+                <input
+                  type="radio"
+                  name="second_nomination"
+                  class="accent-[#005f7f]"
+                />
+                No
+              </label>
+            </div>
+          </div>
+
+          <div class="border-t border-[#e1e1e1] pt-8">
+            <div class="flex justify-center gap-4">
+              <button
+                type="button"
+                class="rounded bg-[#005f7f] px-6 py-3 text-[15px] font-bold text-white sm:px-8 cursor-pointer"
+              >
+                Back
+              </button>
+
+              <button
+                type="button"
+                class="rounded bg-[#005f7f] px-6 py-3 text-[15px] font-bold text-white sm:px-8 cursor-pointer"
+              >
+                Next
+              </button>
+            </div>
+
+            <div class="mt-10 flex justify-center">
+              <div
+                class="h-[22px] w-full max-w-[220px] overflow-hidden rounded-full bg-[#c4c4c4]"
+              >
+                <div
+                  class="flex h-full w-[50%] items-center justify-center bg-[#005f7f] text-[15px] font-bold text-white"
+                >
+                  50%
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

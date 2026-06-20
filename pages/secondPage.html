@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Content Submission</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        font-family: "Lato", Arial, sans-serif;
+        background: linear-gradient(
+          to bottom,
+          #d8d8d8 0%,
+          #d8d8d8 52%,
+          #b8202c 52%,
+          #b8202c 100%
+        );
+        min-height: 100vh;
+      }
+
+      input,
+      select {
+        background: #edeef0;
+        height: 34px;
+        outline: none;
+      }
+
+      input:focus,
+      select:focus {
+        box-shadow: 0 0 0 2px #0b5f78;
+      }
+
+      input[type="radio"] {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      input[type="radio"]:focus,
+      input[type="radio"]:focus-visible {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+      input, select {
+        border: 1px solid #005f7f;
+      }
+
+      select{
+        cursor: pointer;
+      }
+      @media (max-width: 640px) {
+        body {
+          background: #d8d8d8;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main
+      class="mx-3 my-4 max-w-full overflow-hidden bg-white px-5 py-8 shadow-xl sm:mx-6 sm:px-8 md:px-16 md:py-12 lg:mx-10 lg:px-28"
+    >
+      <header>
+        <div
+          class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <img
+            src="image.png"
+            alt="Five Star Professional Logo"
+            class="w-32 sm:w-40 md:w-44"
+          />
+
+          <h1
+            class="text-left text-[16px] font-normal uppercase tracking-wide text-[#a8a8a8] sm:text-right sm:text-[18px]"
+          >
+            Content Submission
+          </h1>
+        </div>
+
+        <div class="mt-6 h-[20px] bg-[#bd202c] sm:mt-8 sm:h-[28px]"></div>
+      </header>
+
+      <section class="py-8 sm:py-12">
+        <p
+          class="max-w-full text-[18px] font-medium leading-[1.55] text-[#333333] sm:text-[21px] md:text-[24px]"
+        >
+          Join us for a quick, insight-packed session on how top professionals
+          turn their Five Star Award into a powerful tool for building trust and
+          winning new business. You’ll learn practical ways to showcase your
+          credibility, stand out in a crowded market, and deepen relationships
+          with clients and prospects.
+        </p>
+
+        <button
+          type="button"
+          class="mt-10 w-full bg-[#f45b2b] px-6 py-4 text-[17px] font-semibold text-white sm:mt-12 sm:w-auto sm:px-8 cursor-pointer"
+        >
+          Register for the Webinar
+        </button>
+
+        <div class="mt-12 space-y-6 sm:mt-16">
+          <label
+            class="flex items-start gap-4 text-[18px] font-normal leading-[1.45] text-[#333] sm:items-center sm:text-[20px] cursor-pointer"
+          >
+            <input
+              type="radio"
+              name="webinar_status"
+              class="mt-1 h-5 w-5 shrink-0 accent-[#005f7f] outline-none focus:outline-none focus:ring-0 sm:mt-0 sm:h-6 sm:w-6"
+            />
+            <span>I have registered for an upcoming webinar</span>
+          </label>
+
+          <label
+            class="flex items-start gap-4 text-[18px] font-normal leading-[1.45] text-[#333] sm:items-center sm:text-[20px] cursor-pointer"
+          >
+            <input
+              type="radio"
+              checked
+              name="webinar_status"
+              class="mt-1 h-5 w-5 shrink-0 accent-[#005f7f] outline-none focus:outline-none focus:ring-0 sm:mt-0 sm:h-6 sm:w-6"
+            />
+            <span>I will complete my webinar registration at a later time</span>
+          </label>
+        </div>
+
+        <div class="mt-10 border-t border-[#d9d9d9] pt-8">
+          <div class="flex justify-center gap-4">
+            <button
+              type="button"
+              class="rounded bg-[#005f7f] px-6 py-3 text-[15px] font-semibold text-white sm:px-8 cursor-pointer"
+            >
+              Back
+            </button>
+
+            <button
+              type="button"
+              class="rounded bg-[#005f7f] px-6 py-3 text-[15px] font-semibold text-white sm:px-8 cursor-pointer"
+            >
+              Next
+            </button>
+          </div>
+
+          <div class="mt-10 flex justify-center sm:mt-12">
+            <div
+              class="h-[22px] w-full max-w-[220px] overflow-hidden rounded-full bg-[#c4c4c4]"
+            >
+              <div
+                class="flex h-full w-[25%] items-center justify-center bg-[#005f7f] text-[15px] font-bold text-white"
+              >
+                25%
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

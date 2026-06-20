@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Content Submission</title>
+
+    <style>
+      body {
+        font-family: "Lato", Arial, sans-serif;
+        background: linear-gradient(
+          to bottom,
+          #d8d8d8 0%,
+          #d8d8d8 52%,
+          #b8202c 52%,
+          #b8202c 100%
+        );
+        min-height: 100vh;
+      }
+
+      input,
+      select {
+        background: #edeef0;
+        height: 32px;
+        outline: none;
+      }
+
+      input:focus,
+      select:focus {
+        box-shadow: 0 0 0 2px #0b5f78;
+      }
+
+      .section-title {
+        background: #005f7f;
+        color: #ffffff;
+      }
+
+      .required {
+        color: #111;
+        font-weight: 900;
+      }
+      input[type="radio"] {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      input[type="radio"]:focus,
+      input[type="radio"]:focus-visible {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+      input, select {
+        border: 1px solid #005f7f;
+      }
+      select{
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main
+      class="my-8 max-w-full bg-white px-8 py-10 shadow-xl md:px-28 md:py-12 lg:mx-10"
+    >
+      <header class="mb-8">
+        <img
+          src="image.png"
+          alt="Five Star Professional Logo"
+          class="mb-8 lg:w-44 md:w-36 w-28"
+        />
+
+        <div
+          class="flex flex-col flex-col-reverse gap-12 lg:grid lg:grid-cols-[1fr_420px] md:items-start"
+        >
+          <div>
+            <p
+              class="w-full text-[26px] font-black leading-tight text-black font-semibold mb-8"
+            >
+              The following form must be completed to be considered for the Five
+              Star Wealth Manager award.
+            </p>
+            <div
+              class="section-title mb-8 px-5 py-2 text-[19px] text-white font-medium w-full mt-14"
+            >
+              Name of person providing the evaluation form data today: *
+            </div>
+            <div class="grid gap-6">
+              <div class="grid items-center gap-3 md:grid-cols-[auto_1fr]">
+                <label class="text-[18px] font-black font-normal">Full Name:</label>
+<input
+  type="text"
+  class="w-full border border-[#005f7f]  px-3"
+/>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col bg-[#d9d9d9] px-14 py-10 text-[19px] font-medium text-black"
+          >
+            <div class="h-16 mb-6"></div>
+            <p class="leading-tight text-justify">
+              We are committed to running the finest independent research
+              process in America. Should you experience any problems or have any
+              questions filling out your form, please contact Five Star
+              Professional.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <form class="space-y-8">
+        <!-- <section>
+          <div class="section-title mb-8 px-5 py-3 text-[19px] font-black">
+            Name of person completing the evaluation form today:
+            <span class="required">*</span>
+          </div>
+
+          <div class="grid gap-6">
+            <div class="grid items-center gap-3 md:grid-cols-[190px_1fr]">
+              <label class="text-[18px] font-black">Full Name:</label>
+              <input type="text" class="w-full px-3" />
+            </div>
+          </div>
+        </section> -->
+
+        <section>
+          <div
+            class="section-title mb-8 px-5 py-3 text-[19px] text-white w-full font-medium"
+          >
+            Please answer the following questions about the award candidate:
+          </div>
+
+          <div class="grid gap-x-8 gap-y-7 md:grid-cols-2">
+            <div class="md:col-span-2">
+              <label class="mb-2 block text-[18px] font-black font-normal">
+                In what metro area, state or region do you practice?
+                <span class="required">*</span>
+              </label>
+              <select class="w-full px-3 font-normal">
+                <option value="NoAnswer">-- Please Select --</option>
+                <option value="10334">Atlanta</option>
+                <option value="10335">Austin/San Antonio/Central TX</option>
+                <option value="10336">Baltimore</option>
+                <option value="10337">Boston</option>
+                <option value="10338">Charlotte</option>
+                <option value="10339">Chicago</option>
+                <option value="10340">Cincinnati</option>
+                <option value="10341">Cleveland</option>
+                <option value="10342">Coastal Virginia</option>
+                <option value="10343">Columbus</option>
+                <option value="10344">Connecticut</option>
+                <option value="10345">Dallas/Fort Worth</option>
+                <option value="10346">Delaware</option>
+                <option value="10347">Denver</option>
+                <option value="10348">Detroit</option>
+                <option value="10349">East Bay (CA)</option>
+                <option value="10350">Fresno</option>
+                <option value="10351">Houston</option>
+                <option value="10352">Hudson Valley (NY)</option>
+                <option value="10353">Indianapolis</option>
+                <option value="10354">Jacksonville</option>
+                <option value="10355">Kansas City</option>
+                <option value="10356">Las Vegas</option>
+                <option value="10357">Los Angeles</option>
+                <option value="10358">Madison</option>
+                <option value="10359">Milwaukee</option>
+                <option value="10360">Minneapolis/St. Paul</option>
+                <option value="10361">Nashville</option>
+                <option value="10362">New Jersey</option>
+                <option value="10363">New Orleans</option>
+                <option value="10364">New York City</option>
+                <option value="10365">Oklahoma City</option>
+                <option value="10366">Orange County (CA)</option>
+                <option value="10367">Orlando</option>
+                <option value="10368">Philadelphia</option>
+                <option value="10369">Phoenix</option>
+                <option value="10370">Pittsburgh</option>
+                <option value="10371">Portland</option>
+                <option value="10372">Rhode Island</option>
+                <option value="10373">Richmond</option>
+                <option value="10374">Sacramento</option>
+                <option value="10375">Salt Lake City</option>
+                <option value="10376">San Diego</option>
+                <option value="10377">San Francisco</option>
+                <option value="10378">Sarasota</option>
+                <option value="10379">Seattle</option>
+                <option value="10380">Southwest Florida</option>
+                <option value="10381">St. Louis</option>
+                <option value="10382">Tampa</option>
+                <option value="10383">Upstate New York</option>
+                <option value="10384">Washington D.C.</option>
+                <option value="10385">Westchester County (NY)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >First Name <span class="required">*</span></label
+              >
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >Middle Name</label
+              >
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >Last Name <span class="required">*</span></label
+              >
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal">Nickname</label>
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal">Title</label>
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >Company <span class="required">*</span></label
+              >
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="mb-2 block text-[18px] font-black font-normal">
+                Company Address (a physical location must be provided)
+                <span class="required">*</span>
+              </label>
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal">
+                City (a physical location must be provided)
+                <span class="required">*</span>
+              </label>
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-2">
+              <div>
+                <label class="mb-2 block text-[18px] font-black font-normal">
+                  State <span class="required">*</span>
+                </label>
+                <select class="w-full px-3 font-normal">
+                  <option label="-- Please Select --" value="NoAnswer">
+                    -- Please Select --
+                  </option>
+                  <option value="10587" label="AL">AL</option>
+                  <option value="10588" label="AK">AK</option>
+                  <option value="10589" label="AZ">AZ</option>
+                  <option value="10590" label="AR">AR</option>
+                  <option value="10591" label="CA">CA</option>
+                  <option value="10592" label="CO">CO</option>
+                  <option value="10593" label="CT">CT</option>
+                  <option value="10637" label="DC">DC</option>
+                  <option value="10594" label="DE">DE</option>
+                  <option value="10595" label="FL">FL</option>
+                  <option value="10596" label="GA">GA</option>
+                  <option value="10597" label="HI">HI</option>
+                  <option value="10598" label="ID">ID</option>
+                  <option value="10599" label="IL">IL</option>
+                  <option value="10600" label="IN">IN</option>
+                  <option value="10601" label="IA">IA</option>
+                  <option value="10602" label="KS">KS</option>
+                  <option value="10603" label="KY">KY</option>
+                  <option value="10604" label="LA">LA</option>
+                  <option value="10605" label="ME">ME</option>
+                  <option value="10606" label="MD">MD</option>
+                  <option value="10607" label="MA">MA</option>
+                  <option value="10608" label="MI">MI</option>
+                  <option value="10609" label="MN">MN</option>
+                  <option value="10610" label="MS">MS</option>
+                  <option value="10611" label="MO">MO</option>
+                  <option value="10612" label="MT">MT</option>
+                  <option value="10613" label="NE">NE</option>
+                  <option value="10614" label="NV">NV</option>
+                  <option value="10615" label="NH">NH</option>
+                  <option value="10616" label="NJ">NJ</option>
+                  <option value="10617" label="NM">NM</option>
+                  <option value="10618" label="NY">NY</option>
+                  <option value="10619" label="NC">NC</option>
+                  <option value="10620" label="ND">ND</option>
+                  <option value="10621" label="OH">OH</option>
+                  <option value="10622" label="OK">OK</option>
+                  <option value="10623" label="OR">OR</option>
+                  <option value="10624" label="PA">PA</option>
+                  <option value="10625" label="RI">RI</option>
+                  <option value="10626" label="SC">SC</option>
+                  <option value="10627" label="SD">SD</option>
+                  <option value="10628" label="TN">TN</option>
+                  <option value="10629" label="TX">TX</option>
+                  <option value="10630" label="UT">UT</option>
+                  <option value="10631" label="VT">VT</option>
+                  <option value="10632" label="VA">VA</option>
+                  <option value="10633" label="WA">WA</option>
+                  <option value="10634" label="WV">WV</option>
+                  <option value="10635" label="WI">WI</option>
+                  <option value="10636" label="WY">WY</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="mb-2 block text-[18px] font-black font-normal">
+                  Zip <span class="required">*</span>
+                </label>
+                <input type="text" class="w-full px-3" />
+              </div>
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >Phone <span class="required">*</span></label
+              >
+              <input type="tel" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >Phone Ext.</label
+              >
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >Mobile <span class="required">*</span></label
+              >
+              <input type="tel" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >Email <span class="required">*</span></label
+              >
+              <input type="email" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal">Website</label>
+              <input type="url" class="w-full px-3" />
+            </div>
+          </div>
+        </section>
+
+        <section class="border-t border-gray-200 pt-7">
+          <p class="mb-4 text-[18px] font-black leading-tight font-normal">
+            I have verified the following information is correct:
+            first/middle/last name/preferred, company name, address, email
+            address and phone number(s). If named an award winner, your
+            complimentary listing is a combination of how you listed your
+            first/middle/last name, or preferred name, and company name.
+            <span class="required">*</span>
+          </p>
+
+          <label class="inline-flex items-center gap-2 text-[18px] font-black font-normal cursor-pointer">
+            <input
+              type="radio"
+              name="verified"
+              class="h-4 w-4 accent-[#005f7f] outline-none ring-0 focus:outline-none focus:ring-0 focus:ring-offset-0"
+            />
+            Yes
+          </label>
+        </section>
+
+        <section>
+          <div class="section-title mb-8 px-5 py-3 text-[19px] font-medium">
+            Professional Information
+          </div>
+
+          <div class="grid gap-x-8 gap-y-7 md:grid-cols-2">
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal">
+                How many years have you been actively employed and licensed in
+                the real estate industry?
+                <span class="required">*</span>
+              </label>
+              <input type="number" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal cursor-pointer">
+                Your Date of Birth (Example: 01/31/1944)
+              </label>
+              <input type="date" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >License number: <span class="required">*</span></label
+              >
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div class="md:col-span-2">
+              <p class="mb-4 text-[18px] font-black leading-tight font-normal">
+                I certify that I hold an active real estate license in my state
+                and have had NO disciplinary actions taken by the state or any
+                other regulating authority. <span class="required">*</span>
+              </p>
+
+              <div class="flex flex-wrap gap-8">
+                <label
+                  class="inline-flex items-center gap-2 text-[18px] font-black font-normal cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="license_cert"
+                    class="h-4 w-4 accent-[#005f7f]"
+                  />
+                  Yes, I certify this to be true
+                </label>
+
+                <label
+                  class="inline-flex items-center gap-2 text-[18px] font-black font-normal cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="license_cert"
+                    class="h-4 w-4 accent-[#005f7f]"
+                  />
+                  No, this is not true
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title mb-8 px-5 py-3 text-[19px] font-medium">
+            Transaction Information
+          </div>
+
+          <div class="grid gap-x-8 gap-y-7 md:grid-cols-2">
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal">
+                How many transactions have you completed in the past 12 months?
+                <span class="required">*</span>
+              </label>
+              <select class="w-full px-3 font-normal">
+                <option label="-- Please Select --" value="NoAnswer">
+                  -- Please Select --
+                </option>
+                <option value="10664" label="0 to 3">0 to 3</option>
+                <option value="10665" label="4 to 10">4 to 10</option>
+                <option value="10666" label="11 to 20">11 to 20</option>
+                <option value="10667" label="21+">21+</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal">
+                What was the total sales value of the past 12 months of
+                transactions? <span class="required">*</span>
+              </label>
+              <select class="w-full px-3 font-normal">
+                <option label="-- Please Select --" value="NoAnswer">
+                  -- Please Select --
+                </option>
+                <option value="10055" label="Less than $1,000,000">
+                  Less than $1,000,000
+                </option>
+                <option value="10056" label="$1,000,000 to $1,499,999">
+                  $1,000,000 to $1,499,999
+                </option>
+                <option value="10057" label="$1,500,000 to $1,999,999">
+                  $1,500,000 to $1,999,999
+                </option>
+                <option value="10324" label="$2,000,000 to $2,499,999">
+                  $2,000,000 to $2,499,999
+                </option>
+                <option value="10058" label="$2,500,000 to $4,999,999">
+                  $2,500,000 to $4,999,999
+                </option>
+                <option value="10059" label="$5,000,000 to $7,499,999">
+                  $5,000,000 to $7,499,999
+                </option>
+                <option value="10060" label="$7,500,000 to $9,999,999">
+                  $7,500,000 to $9,999,999
+                </option>
+                <option value="10061" label="$10,000,000 to $12,499,999">
+                  $10,000,000 to $12,499,999
+                </option>
+                <option value="10062" label="$12,500,000 to $14,999,999">
+                  $12,500,000 to $14,999,999
+                </option>
+                <option value="10063" label="$15,000,000 to $17,499,999">
+                  $15,000,000 to $17,499,999
+                </option>
+                <option value="10064" label="$17,500,000 to $19,999,999">
+                  $17,500,000 to $19,999,999
+                </option>
+                <option value="10065" label="$20,000,000 or more">
+                  $20,000,000 or more
+                </option>
+              </select>
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal">
+                How many transactions have you completed within the past 36
+                months? <span class="required">*</span>
+              </label>
+              <select class="w-full px-3 font-normal">
+                <option label="-- Please Select --" value="NoAnswer">
+                  -- Please Select --
+                </option>
+                <option value="10066" label="0 to 10">0 to 10</option>
+                <option value="10067" label="11 to 20">11 to 20</option>
+                <option value="10068" label="21 to 40">21 to 40</option>
+                <option value="10069" label="40+">40+</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-black font-normal">
+                What was the total sales value of the past 36 months of
+                transactions? <span class="required">*</span>
+              </label>
+              <select class="w-full px-3 font-normal">
+                <option label="-- Please Select --" value="NoAnswer">
+                  -- Please Select --
+                </option>
+                <option value="10077" label="Less than $1,000,000">
+                  Less than $1,000,000
+                </option>
+                <option value="10078" label="$1,000,000 to $1,499,999">
+                  $1,000,000 to $1,499,999
+                </option>
+                <option value="10079" label="$1,500,000 to $1.999,999">
+                  $1,500,000 to $1.999,999
+                </option>
+                <option value="10325" label="$2,000,000 to $2,4999,999">
+                  $2,000,000 to $2,4999,999
+                </option>
+                <option value="10080" label="$2,500,000 to $4,999,999">
+                  $2,500,000 to $4,999,999
+                </option>
+                <option value="10081" label="$5,000,000 to $7,499,999">
+                  $5,000,000 to $7,499,999
+                </option>
+                <option value="10082" label="$7,500,000 to $9,999,999">
+                  $7,500,000 to $9,999,999
+                </option>
+                <option value="10083" label="$10,000,000 to $12,499,999">
+                  $10,000,000 to $12,499,999
+                </option>
+                <option value="10084" label="$12,500,000 to $14,999,999">
+                  $12,500,000 to $14,999,999
+                </option>
+                <option value="10085" label="$15,000,000 to $17,499,999">
+                  $15,000,000 to $17,499,999
+                </option>
+                <option value="10086" label="$17,500,000 to $19,999,999">
+                  $17,500,000 to $19,999,999
+                </option>
+                <option value="10087" label="$20,000,000 to $29,999,999">
+                  $20,000,000 to $29,999,999
+                </option>
+                <option value="10088" label="$30,000,000 to $39,999,999">
+                  $30,000,000 to $39,999,999
+                </option>
+                <option value="10089" label="$40,000,000 to $49,999,999">
+                  $40,000,000 to $49,999,999
+                </option>
+                <option value="10090" label="$50,000,000 or more">
+                  $50,000,000 or more
+                </option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title mb-8 px-5 py-3 text-[19px] font-medium">
+            City of Focus
+          </div>
+
+          <label class="mb-2 block text-[18px] font-black leading-tight font-normal">
+            Please input your city of focus (please list one city only; multiple
+            cities or counties will not be accepted). If you serve more than one
+            city, input the text: "All Areas." You will then be listed under the
+            "All Areas" section should you be awarded.
+            <span class="required">*</span>
+          </label>
+
+          <input type="text" maxlength="30" class="w-full px-3" />
+          <p class="mt-2 text-[14px] font-bold text-gray-600">
+            Characters used: 0 out of 30.
+          </p>
+        </section>
+
+        <section class="border-t border-gray-200 pt-7">
+          <p class="mb-4 text-[18px] font-black leading-tight font-normal">
+            I certify the responses provided are true and correct to the best of
+            my knowledge.
+            <span class="required">*</span>
+          </p>
+
+          <div class="flex gap-8">
+            <label
+              class="inline-flex items-center gap-2 text-[18px] font-black font-normal cursor-pointer"
+            >
+              <input
+                type="radio"
+                name="final_cert"
+                class="h-4 w-4 accent-[#005f7f]"
+              />
+              Yes
+            </label>
+
+            <label
+              class="inline-flex items-center gap-2 text-[18px] font-black font-normal cursor-pointer"
+            >
+              <input
+                type="radio"
+                name="final_cert"
+                class="h-4 w-4 accent-[#005f7f]"
+              />
+              No
+            </label>
+          </div>
+        </section>
+
+        <section class="border-t border-gray-200 pt-7">
+          <p class="text-[18px] font-medium leading-tight text-black">
+            By submitting this form, you acknowledge your intention to be
+            considered for the Five Star award and give Five Star Professional
+            permission to contact you by phone and email with information
+            pertaining to your award status.
+          </p>
+        </section>
+
+        <section class="border-t border-gray-200 pt-8">
+          <div class="flex justify-center">
+            <button
+              type="submit"
+              class="rounded bg-[#005f7f] px-8 py-3 text-[15px] font-bold text-white cursor-pointer transition hover:bg-[#004a63]"
+            >
+              Next
+            </button>
+          </div>
+
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
+
+<!-- 
+fiels bg color -->

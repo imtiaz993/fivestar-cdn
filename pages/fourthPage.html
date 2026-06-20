@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Content Submission</title>
+
+    <style>
+      body {
+        font-family: "Lato", Arial, sans-serif;
+        background: linear-gradient(
+          to bottom,
+          #d8d8d8 0%,
+          #d8d8d8 52%,
+          #b8202c 52%,
+          #b8202c 100%
+        );
+        min-height: 100vh;
+      }
+
+      input,
+      select {
+        background: #edeef0;
+        height: 34px;
+        outline: none;
+      }
+
+      input:focus,
+      select:focus {
+        box-shadow: 0 0 0 2px #0b5f78;
+      }
+
+      .section-title {
+        background: #005f7f;
+        color: #ffffff;
+      }
+
+      .required {
+        color: #111;
+        font-weight: 900;
+      }
+
+      input[type="radio"] {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      input[type="radio"]:focus,
+      input[type="radio"]:focus-visible {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+      input, select {
+        border: 1px solid #005f7f;
+      }
+      select{
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main
+      class="my-8 max-w-full bg-white px-8 py-10 shadow-xl md:px-28 md:py-12 lg:mx-10"
+    >
+      <header>
+        <div class="flex items-center justify-between">
+          <img src="image.png" alt="Five Star Professional Logo" class="mb-8 lg:w-44 md:w-36 w-28" />
+
+          <h1 class="text-[18px] font-normal uppercase tracking-wide text-[#a8a8a8]">
+            Content Submission
+          </h1>
+        </div>
+
+        <div class="mt-8 h-[28px] bg-[#bd202c]"></div>
+      </header>
+
+      <section class="py-8">
+        <p class="text-[20px] font-medium leading-[1.7] text-[#333]">
+          To ensure we talk with as many of your clients and peers as possible,
+          please provide the name(s) and contact information of up to 3 clients
+          and/or peers we could connect with as references. Please know, we will
+          ask these clients and/or peers to submit a short 1 minute evaluation on
+          your services. A final assessment of evaluations, candidate forms, and a
+          peer industry review will be used to make our final selection of award
+          winners.
+        </p>
+
+        <div class="mt-12 border-t border-[#e1e1e1] pt-8">
+          <h3 class="mb-6 text-[22px] font-semibold text-[#333]">
+            Reference contact # 1
+          </h3>
+
+          <p class="mb-5 text-[18px] font-normal">
+            What type of relationship do you have with this person?
+          </p>
+
+          <div class="mb-8 flex gap-16">
+            <label class="inline-flex items-center gap-3 text-[18px] font-normal cursor-pointer">
+              <input
+                type="radio"
+                name="ref1_relationship"
+                class="h-4 w-4 accent-[#005f7f]"
+              />
+              Client
+            </label>
+
+            <label class="inline-flex items-center gap-3 text-[18px] font-normal cursor-pointer">
+              <input
+                type="radio"
+                name="ref1_relationship"
+                class="h-4 w-4 accent-[#005f7f]"
+              />
+              Peer
+            </label>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-2">
+            <div>
+              <label class="mb-2 block text-[18px] font-normal">
+                Name of person
+              </label>
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-normal">
+                Contact information (email)
+              </label>
+              <input type="email" class="w-full px-3" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 border-t border-[#e1e1e1] pt-8">
+          <h3 class="mb-6 text-[22px] font-semibold text-[#333]">
+            Reference contact # 2
+          </h3>
+
+          <p class="mb-5 text-[18px] font-normal">
+            What type of relationship do you have with this person?
+          </p>
+
+          <div class="mb-8 flex gap-16">
+            <label class="inline-flex items-center gap-3 text-[18px] font-normal cursor-pointer">
+              <input
+                type="radio"
+                name="ref2_relationship"
+                class="h-4 w-4 accent-[#005f7f]"
+              />
+              Client
+            </label>
+
+            <label class="inline-flex items-center gap-3 text-[18px] font-normal cursor-pointer">
+              <input
+                type="radio"
+                name="ref2_relationship"
+                class="h-4 w-4 accent-[#005f7f]"
+              />
+              Peer
+            </label>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-2">
+            <div>
+              <label class="mb-2 block text-[18px] font-normal">
+                Name of person
+              </label>
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-normal">
+                Contact information (email)
+              </label>
+              <input type="email" class="w-full px-3" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 border-t border-[#e1e1e1] pt-8">
+          <h3 class="mb-6 text-[22px] font-semibold text-[#333]">
+            Reference contact # 3
+          </h3>
+
+          <p class="mb-5 text-[18px] font-normal">
+            What type of relationship do you have with this person?
+          </p>
+
+          <div class="mb-8 flex gap-16">
+            <label class="inline-flex items-center gap-3 text-[18px] font-normal cursor-pointer">
+              <input
+                type="radio"
+                name="ref3_relationship"
+                class="h-4 w-4 accent-[#005f7f]"
+              />
+              Client
+            </label>
+
+            <label class="inline-flex items-center gap-3 text-[18px] font-normal cursor-pointer">
+              <input
+                type="radio"
+                name="ref3_relationship"
+                class="h-4 w-4 accent-[#005f7f]"
+              />
+              Peer
+            </label>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-2">
+            <div>
+              <label class="mb-2 block text-[18px] font-normal">
+                Name of person
+              </label>
+              <input type="text" class="w-full px-3" />
+            </div>
+
+            <div>
+              <label class="mb-2 block text-[18px] font-normal">
+                Contact information (email)
+              </label>
+              <input type="email" class="w-full px-3" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 border-t border-[#e1e1e1] pt-8">
+          <div class="flex justify-center gap-4">
+
+            <button
+              type="button"
+              class="rounded bg-[#005f7f] px-10 py-4 text-[15px] font-bold text-white cursor-pointer"
+            >
+              Submit
+            </button>
+          </div>
+
+          <div class="mt-10 flex justify-center">
+            <div class="h-[22px] w-[220px] overflow-hidden rounded-full bg-[#c4c4c4]">
+              <div
+                class="flex h-full w-[75%] items-center justify-center bg-[#005f7f] text-[15px] font-bold text-white"
+              >
+                75%
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
