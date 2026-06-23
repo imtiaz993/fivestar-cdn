@@ -56,10 +56,11 @@
         outline: none !important;
         box-shadow: none !important;
       }
-      input, select {
+      input,
+      select {
         border: 1px solid #005f7f;
       }
-      select{
+      select {
         cursor: pointer;
       }
     </style>
@@ -93,11 +94,50 @@
             </div>
             <div class="grid gap-6">
               <div class="grid items-center gap-3 md:grid-cols-[auto_1fr]">
-                <label class="text-[18px] font-black font-normal">Full Name:</label>
-<input
-  type="text"
-  class="w-full border border-[#005f7f]  px-3"
-/>
+                <label class="text-[18px] font-normal"> Full Name: </label>
+
+                <input
+                  type="text"
+                  class="w-full border border-[#005f7f] bg-[#fbfdfe] px-3"
+                />
+              </div>
+
+              <div class="mt-4">
+                <div
+                  class="flex flex-col gap-4 text-[18px] font-normal sm:flex-row sm:items-center sm:gap-8"
+                >
+                  <p class="font-medium">
+                    This form is being completed:
+                    <span class="required">*</span>
+                  </p>
+
+                  <div class="flex flex-wrap items-center gap-6 sm:gap-10">
+                    <label
+                      class="inline-flex cursor-pointer items-center gap-3"
+                    >
+                      <input
+                        type="radio"
+                        name="form_completion_method"
+                        value="online"
+                        checked
+                        class="h-5 w-5 shrink-0 accent-[#005f7f]"
+                      />
+                      <span>Online</span>
+                    </label>
+
+                    <label
+                      class="inline-flex cursor-pointer items-center gap-3"
+                    >
+                      <input
+                        type="radio"
+                        name="form_completion_method"
+                        value="phone"
+                        class="h-5 w-5 shrink-0 accent-[#005f7f]"
+                      />
+                      <span>Over the phone</span>
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -105,7 +145,11 @@
           <div
             class="flex flex-col bg-[#d9d9d9] px-10 py-10 text-[19px] font-medium text-black"
           >
-            <img class="h-16 mb-6" src="godaddy-verified.png" alt="Godaddy Verified"/>
+            <img
+              class="h-16 mb-6"
+              src="godaddy-verified.png"
+              alt="Godaddy Verified"
+            />
             <p class="leading-tight text-justify">
               We are committed to running the finest independent research
               process in America. Should you experience any problems or have any
@@ -223,12 +267,16 @@
             </div>
 
             <div>
-              <label class="mb-2 block text-[18px] font-black font-normal">Nickname</label>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >Nickname</label
+              >
               <input type="text" class="w-full px-3" />
             </div>
 
             <div>
-              <label class="mb-2 block text-[18px] font-black font-normal">Title</label>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >Title</label
+              >
               <input type="text" class="w-full px-3" />
             </div>
 
@@ -355,7 +403,9 @@
             </div>
 
             <div>
-              <label class="mb-2 block text-[18px] font-black font-normal">Website</label>
+              <label class="mb-2 block text-[18px] font-black font-normal"
+                >Website</label
+              >
               <input type="url" class="w-full px-3" />
             </div>
           </div>
@@ -371,7 +421,9 @@
             <span class="required">*</span>
           </p>
 
-          <label class="inline-flex items-center gap-2 text-[18px] font-black font-normal cursor-pointer">
+          <label
+            class="inline-flex items-center gap-2 text-[18px] font-black font-normal cursor-pointer"
+          >
             <input
               type="radio"
               name="verified"
@@ -397,7 +449,9 @@
             </div>
 
             <div>
-              <label class="mb-2 block text-[18px] font-black font-normal cursor-pointer">
+              <label
+                class="mb-2 block text-[18px] font-black font-normal cursor-pointer"
+              >
                 Your Date of Birth (Example: 01/31/1944)
               </label>
               <input type="date" class="w-full px-3" />
@@ -594,7 +648,9 @@
             City of Focus
           </div>
 
-          <label class="mb-2 block text-[18px] font-black leading-tight font-normal">
+          <label
+            class="mb-2 block text-[18px] font-black leading-tight font-normal"
+          >
             Please input your city of focus (please list one city only; multiple
             cities or counties will not be accepted). If you serve more than one
             city, input the text: "All Areas." You will then be listed under the
@@ -658,7 +714,6 @@
               Next
             </button>
           </div>
-
         </section>
       </form>
     </main>
